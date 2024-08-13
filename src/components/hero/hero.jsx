@@ -8,40 +8,77 @@ import Carousel from 'react-bootstrap/Carousel';
 function Hero() {
     return (
         <div>
-            <div className="">
+            <div className="lg:block hidden">
                 <Carousel >
                     <Carousel.Item >
                         <div>
-                            <div className="bg-[url('file:///C:/Users/Vignesh/Downloads/livewirepics/hero5.jpg')] bg-no-repeat bg-cover h-[80vh] mx-10 rounded-3xl">
+                            <div className="bg-[url('https://livewireindia.com/assets/banner/master-certificate-data-science.jpg')] bg-no-repeat bg-cover h-[70vh] mx-10 rounded-3xl">
                                 {/* <img  src={hero} /> */}
                                 
                                 <h6 className='flex justify-center pt-48 text-blue-900 font-bold text-[250%]'></h6>
-                                <p>Or menu at start with ₹149</p>
+                                <p></p>
                             </div>
                         </div>
                     </Carousel.Item>
 
                     <Carousel.Item>
                         <div >
-                        <div className="bg-[url('https://images.jdmagicbox.com/v2/comp/coimbatore/k3/0422px422.x422.240729112200.j5k3/catalogue/djaa78bemqzkiga-28zqu1qywj.jpg')] h-[100vh] mx-10 rounded-3xl">
+                        <div className="bg-[url('https://livewireindia.com/assets/banner/master-certificate-full-stack.jpg')] h-[70vh] mx-10 rounded-3xl">
                                 {/* <img src={hero2} /> */}
-                                <h6>FLAT ₹150 OFF</h6>
-                                <p>Enjoy your food</p>
+                                <h6></h6>
+                                <p></p>
                             </div>
                         </div>
                     </Carousel.Item>
 
                     <Carousel.Item >
                         <div >
-                        <div className="bg-[url('https://images.jdmagicbox.com/v2/comp/coimbatore/k3/0422px422.x422.240729112200.j5k3/catalogue/djaa78bemqzkiga-28zqu1qywj.jpg')] h-[100vh] mx-10 rounded-3xl">
+                        <div className="bg-[url('https://livewireindia.com/assets/banner/master-certificate-ai.jpg')] h-[70vh] bg-no-repeat bg-cover mx-10 rounded-3xl">
                                 {/* <img src={hero3} /> */}
-                                <h6>BIRYANI START AT ₹129</h6>
-                                <p>From Dum Safar</p>
+                                <h6></h6>
+                                <p></p>
                             </div>
                         </div>
                     </Carousel.Item>
                 </Carousel>
             </div>
+
+            <div className="lg:hidden block">
+                <Carousel >
+                    <Carousel.Item >
+                        <div>
+                            <div className="bg-[url('https://livewireindia.com/assets/banner/master-certificate-data-science-mb.jpg')] bg-no-repeat bg-cover  h-[100vh] mx-1 rounded-3xl">
+                                {/* <img  src={hero} /> */}
+                                
+                                <h6 className='flex justify-center pt-48 text-blue-900 font-bold text-[250%]'></h6>
+                                <p></p>
+                            </div>
+                        </div>
+                    </Carousel.Item>
+
+                    <Carousel.Item>
+                        <div >
+                        <div className="bg-[url('https://livewireindia.com/assets/banner/master-certificate-full-stack-mb.jpg')] h-[90vh] bg-no-repeat bg-cover  mx-1 rounded-3xl">
+                                {/* <img src={hero2} /> */}
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </div>
+                    </Carousel.Item>
+
+                    <Carousel.Item >
+                        <div >
+                        <div className="bg-[url('https://livewireindia.com/assets/banner/master-certificate-ai-mb.jpg')] h-[100vh] mx-1 rounded-3xl">
+                                {/* <img src={hero3} /> */}
+                                <h6></h6>
+                                <p></p>
+                            </div>
+                        </div>
+                    </Carousel.Item>
+                </Carousel>
+            </div>
+
+            
         </div>
     )
 }
