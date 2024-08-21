@@ -101,7 +101,7 @@ export const Footer = () => {
                             </svg>
                         </div>
 
-                        <h3 className="text-sm text-white lg:w-[25vw]">+91 8807148869</h3>
+                        <h3 className="text-sm text-white lg:w-[25vw]">+91 8807148869 / 8807028071</h3>
                     </div>
                     <div className=" flex gap-2  mt-3 ">
                         <div className="pt-2">
