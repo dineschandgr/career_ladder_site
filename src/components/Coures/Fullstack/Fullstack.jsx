@@ -27,6 +27,8 @@ import pic17 from "../../../asset/cours/fullstack/node.png"
 
 import pic18 from "../../../asset/cours/fullstack/restapi.png"
 
+import Nav from "../../nav/nav"
+
 
 import { Footer } from "../../Footer/Footer"
 
@@ -127,6 +129,7 @@ export const Fullstack = () => {
 
     return (
         <div>
+            <Nav/>
             <div>
 
                 <div className="bg-[url('https://web.archive.org/web/20240416125644im_/https://livewirecoimbatore.com/wp-content/uploads/2020/06/inner3.jpg')] bg-no-repeat lg:h-[62vh] ">

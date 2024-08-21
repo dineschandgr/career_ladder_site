@@ -10,8 +10,10 @@ import samaja from "../../asset/team/samaja.png"
 import madhi from "../../asset/team/madhi.png"
 import jo from "../../asset/team/jo.png"
 import oij from "../../asset/team/oij.png"
+import Kailas  from "../../asset/team/kailas.png"
 import teams from "../../asset/team/teams.png"
 import teams2 from "../../asset/team/teams2.png"
+import nith from "../../asset/team/nithiish.png"
 
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -28,19 +30,31 @@ function Team() {
         {
             img: mam,
             name: "GAYATHRI KANDASAMY",
-            position:"CENTER HEAD",
+            position:"Managing Director and CENTER HEAD",
             desc: ""
         },
         {
             img: sir,
             name: "DineshChand G.R",
-            position:"LEAD INSTRUCTOR",
+            position:"Chief Technical Architect and LEAD INSTRUCTOR",
             desc: ""
         },
         {
             img: vishnu,
             name: "Sri Vishnoo",
-            position:" Placement Manager",
+            position:"Placement Manager",
+            desc: ""
+        },
+        {
+            img: jo,
+            name: "Joie. M",
+            position:"Business Development Manager - Sales and Operations",
+            desc: ""
+        },
+        {
+            img: samaja,
+            name: "Samaja R V ",
+            position:"Career Counselor",
             desc: ""
         },
         {
@@ -70,7 +84,7 @@ function Team() {
         {
             img: oij,
             name: "Trilochan Ojha",
-            position:"Technical trainer",
+            position:"Technical Trainer",
             desc: ""
         },
         {
@@ -80,21 +94,21 @@ function Team() {
             desc: ""
         },
         {
-            img: samaja,
-            name: "Samaja R V ",
-            position:"Career Counselor",
-            desc: ""
-        },
-        {
             img: ashik,
             name: "Ashik K",
             position:"Technical trainer",
             desc: ""
         },
         {
-            img: jo,
-            name: "Joie. M",
-            position:"Business Development Manager",
+            img: Kailas,
+            name: "Kailas M",
+            position:"Technical trainer",
+            desc: ""
+        },
+        {
+            img: nith,
+            name: "Nithish Kumar",
+            position:"Technical trainer",
             desc: ""
         }
         
@@ -239,7 +253,7 @@ function Team() {
                     </Swiper>
                     
             </div>
-            <div className="mx-24 mb-5 flex gap-16 mt-10 ">
+            <div className="mx-24 mb-5 flex gap-16 mt-10  ">
                         <img className="h-[50vh] w-[90vh] rounded-lg" src={teams}></img>
                         <img className="h-[50vh] rounded-lg" src={teams2}></img>
                         {/* <p>ssdsa</p> */}

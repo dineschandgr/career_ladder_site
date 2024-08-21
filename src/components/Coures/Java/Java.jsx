@@ -3,6 +3,8 @@ import pic1 from "../../../asset/cours/fullstack/world.png"
 import pic2 from "../../../asset/cours/fullstack/like.png"
 import pic3 from "../../../asset/cours/fullstack/setting.png"
 import pic4 from "../../../asset/cours/fullstack/time.png"
+import Nav from "../../nav/nav"
+import { Footer } from "../../Footer/Footer"
 
 
 
@@ -41,6 +43,7 @@ export const Java = () => {
     return (
         <div>
             <div>
+            <Nav/>
                 <div className="bg-[url('https://cdn.sanity.io/images/tlr8oxjg/production/1ca7b34a8d5308a03ae186dfe72caabce0327fe2-1456x816.png?w=3840&q=80&fit=clip&auto=format')] bg-cover  lg:h-[65vh] h-[45vh] bg-no-repeat">
 
                     <h1 className="text-white text-center text-[35px] font-bold lg:pt-36 pt-14 pl-8">Java Full Stack Development</h1>
@@ -99,6 +102,7 @@ export const Java = () => {
                         This course will enable learners to build dynamic and responsive web applications that can be easily scaled to meet the demands of businesses and users.</p>
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }

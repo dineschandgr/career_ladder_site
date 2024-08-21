@@ -1,9 +1,8 @@
-import pic from "../../asset/Contact/@.png"
-import pic1 from "../../asset/Contact/email.png"
+import mail from "../../asset/Contact/email.png"
 import pic2 from "../../asset/Contact/Address-removebg-preview.png"
-
+import phone from "../../asset/Contact/phone.png"
 import pic3 from "../../asset/Contact/contact.png"
-import img from "../../asset/Contact/img.png"
+
 import Nav from "../nav/nav"
 
 import { Footer } from "../Footer/Footer"
@@ -33,13 +32,13 @@ export const Contact = () => {
     ]
     const Contact = [
         {
-            image: pic,
+            image: phone,
             tittle: "PHONE NUMBER",
             text: "+91 8807148869",
         },
         {
-            image: pic1,
-            tittle: "EMAIL ",
+            image: mail,
+            tittle: "EMAIL ADDRESS ",
             text: "tn.cbehopecollege@livewireindia.com , gayathri.it.tce@gmail.com"
         }
 
@@ -80,11 +79,11 @@ export const Contact = () => {
             <div className=" ml-28 gap-5 justify-center lg:pb-3 pb-3  px-2 pt-10">
                 {address1.map((address1, index) => (
                     <div className="flex">
-                        <div className="bg-gray-200  hover:bg-slate-300  lg:w-[25vw] h-[40vh] rounded px-2">
+                        <div className="bg-gray-200  hover:bg-slate-300  lg:w-[55vh] h-[40vh]  px-2">
 
-                            <img src={address1.image} alt="" className="h-20  lg:mt-9 lg:px-32 px-32 mt-4 " />
-                            <h3 className="text-center text-2xl pt-3 font-bold">{address1.tittle}</h3>
-                            <p className="text-center font-normal pt-2  ">{address1.text}</p>
+                            <img src={address1.image} alt="" className="h-20  lg:mt-9  ml-28 p-2 mt-4 " />
+                            <h3 className="text-center text-2xl pt-2 font-bold">{address1.tittle}</h3>
+                            <p className="text-center font-normal pt-1  ">{address1.text}</p>
 
 
                         </div>
@@ -101,11 +100,11 @@ export const Contact = () => {
             <div className="ml-28 gap-5 justify-center lg:pb-3 pb-3  px-2 pt-10">
                 {address2.map((address2, index) => (
                     <div className="flex">
-                        <div className="bg-gray-200 hover:bg-slate-300   lg:w-[25vw] h-[40vh] rounded px-2 ">
+                        <div className="bg-gray-200 hover:bg-slate-300   lg:w-[55vh] h-[40vh]  px-2 ">
 
-                            <img src={address2.image} alt="" className="h-20  lg:mt-9 lg:px-32 px-32 mt-4 " />
-                            <h3 className="text-center text-2xl pt-3 font-bold">{address2.tittle}</h3>
-                            <p className="text-center font-normal pt-2 ">{address2.text}</p>
+                            <img src={address2.image} alt="" className="h-20  lg:mt-9  ml-28 p-2 mt-4 " />
+                            <h3 className="text-center text-2xl pt-2 font-bold">{address2.tittle}</h3>
+                            <p className="text-center font-normal pt-1 ">{address2.text}</p>
 
 
                         </div>
@@ -119,16 +118,14 @@ export const Contact = () => {
                 ))}
             </div>
             <div className="  lg:flex gap-5 justify-center lg:pb-3 pb-3  px-2 pt-10 ">
-                <div>
-
-                </div>
+                
                 {Contact.map((Contact, index) => (
                     <div className="flex">
-                        <div className="bg-gray-200 hover:bg-slate-300    lg:w-[25vw] h-[40vh] rounded-2xl px-2">
+                        <div className="bg-gray-200 hover:bg-slate-300    lg:w-[55vh] h-[40vh]  px-2">
 
-                            <img src={Contact.image} alt="" className="h-20  lg:mt-9 lg:px-32 px-32 mt-4 " />
-                            <h3 className="text-center text-2xl pt-3 font-bold">{Contact.tittle}</h3>
-                            <p className="text-center font-normal pt-2 ">{Contact.text}</p>
+                            <img src={Contact.image} alt="" className="h-20  lg:mt-9  ml-36 p-2 mt-4 " />
+                            <h3 className="text-center text-2xl pt-2 font-bold">{Contact.tittle}</h3>
+                            <p className="text-center font-normal pt-1 ">{Contact.text}</p>
 
 
                         </div>

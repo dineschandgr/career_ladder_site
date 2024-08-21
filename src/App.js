@@ -14,8 +14,11 @@ import Team from "./components/team/team"
 import { Contact } from "./components/Contact/Contact";
 import { RouterProvider,createBrowserRouter } from "react-router-dom";
 import Homepage from "./components/homepage/homepage";
+import {Java} from "./components/Coures/Java/Java"
+import {Fullstack} from "./components/Coures/Fullstack/Fullstack"
 
 function App() {
+
 
 
   const router = createBrowserRouter([
@@ -31,6 +34,16 @@ function App() {
       path:"/contact",
       element:<Contact/>
     },
+    {
+      path:"/java",
+      element:<Java/>
+    },
+    {
+      path:"/fullstack",
+      element:<Fullstack/>
+    }
+
+   
     
    
 
