@@ -36,7 +36,7 @@ function Team() {
         {
             img: sir,
             name: "DineshChand G.R",
-            position:"Chief Technical Architect and LEAD INSTRUCTOR",
+            position:"Chief Technical Architect and Lead Instructor",
             desc: ""
         },
         {
