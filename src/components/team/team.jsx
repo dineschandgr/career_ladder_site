@@ -30,13 +30,13 @@ function Team() {
         {
             img: mam,
             name: "GAYATHRI KANDASAMY",
-            position:"Managing Director and CENTER HEAD",
+            position:"Managing Director and CENTER HEAD\\n B.Tech, M.S(NUS, Singapore)",
             desc: ""
         },
         {
             img: sir,
             name: "DineshChand G.R",
-            position:"Chief Technical Architect and Lead Instructor",
+            position:"Chief Technical Architect and Lead Instructor\\n B.Tech, M.S(NUS, Singapore)",
             desc: ""
         },
         {
