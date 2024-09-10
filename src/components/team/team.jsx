@@ -110,6 +110,12 @@ function Team() {
             name: "Nithish Kumar",
             position:"Technical trainer",
             desc: ""
+        },
+        {
+            img: feroz,
+            name: "Feroz",
+            position:"Technical trainer",
+            desc: ""
         }
         
        
