@@ -14,6 +14,7 @@ import Kailas  from "../../asset/team/kailas.png"
 import teams from "../../asset/team/teams.png"
 import teams2 from "../../asset/team/teams2.png"
 import nith from "../../asset/team/nithiish.png"
+import feroz from "../../asset/team/feroz.png"
 
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -113,7 +114,7 @@ function Team() {
         },
         {
             img: feroz,
-            name: "Feroz",
+            name: "Feroz S",
             position:"Technical trainer",
             desc: ""
         }
