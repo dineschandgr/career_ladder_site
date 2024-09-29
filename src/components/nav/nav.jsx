@@ -22,12 +22,12 @@ import React, { useState, useEffect, useRef } from 'react';
 function DropRight({ menuList }) {
     const [list, setList] = useState(menuList)
     const handleBlock = (index) => {
-        
-        for(let x of list){
+
+        for (let x of list) {
             x["isActive"] = false
         }
         list[index].isActive = true
-        console.log(list[index].isActive,list[index].topic );
+        console.log(list[index].isActive, list[index].topic);
         setList([...list])
     }
     return (
@@ -42,10 +42,10 @@ function DropRight({ menuList }) {
                     {
                         data.isActive ? <li className="flex gap-4">{data["subTopics"].map((sub, index1) => (
 
-                           <Link to={sub["path"]}>
-                           
-                           <p className=" bg-white p-2 mt-2 rounded-xl w-[25vh] text-sm  h-20 font-bold  ml-5  shadow-md " >{sub["name"]}</p>
-                           </Link>
+                            <Link to={sub["path"]}>
+
+                                <p className=" bg-white p-2 mt-2 rounded-xl w-[25vh] text-sm  h-20 font-bold  ml-5  shadow-md " >{sub["name"]}</p>
+                            </Link>
                         ))}</li> : <></>
                     }
                 </Link>
@@ -77,7 +77,7 @@ function Nav() {
             "topic": "Software Development",
             subTopics: [
                 // "java", "python", "Full Stack Development-MEAN/MERN stack", "Django",
-                {name:"Java",path:"/java",},{name:"Full Stack Development-MEAN/MERN stack",path:"/fullstack"},{name:"Python",path:""},{name:"Django",path:""}
+                { name: "Java", path: "/java", }, { name: "Full Stack Development-MEAN/MERN stack", path: "/fullstack" }, { name: "Python", path: "" }, { name: "Django", path: "" }
 
             ],
             isActive: true
@@ -89,7 +89,7 @@ function Nav() {
             path: "/java",
             subTopics: [
                 // "PLC & SCADA", "Electrical Power System Analysis"
-                {name:"PLC & SCADA",path:""}, {name:"Electrical Power System Analysis",path:""}
+                { name: "PLC & SCADA", path: "" }, { name: "Electrical Power System Analysis", path: "" }
             ]
             ,
             isActive: false
@@ -99,7 +99,7 @@ function Nav() {
             "topic": "Electronic Design Automation",
             subTopics: [
                 // "MATLAB", "Microcontroller", "Advanced Microcontroller"
-                {name:"MATLAB",path:""}, {name:"Microcontroller",path:""},{name:"Advanced Microcontroller",path:""}
+                { name: "MATLAB", path: "" }, { name: "Microcontroller", path: "" }, { name: "Advanced Microcontroller", path: "" }
 
             ]
 
@@ -110,7 +110,7 @@ function Nav() {
             "topic": "ITIM",
             subTopics: [
                 // "Network Engineering - Routing and Switching", "Network Security", "Ethical Hacking"
-                {name:"Network Engineering - Routing and Switching",path:""},{name:"Network Security",path:""},{name:"Ethical Hacking",path:""}
+                { name: "Network Engineering - Routing and Switching", path: "" }, { name: "Network Security", path: "" }, { name: "Ethical Hacking", path: "" }
             ],
             isActive: false
         },
@@ -118,8 +118,8 @@ function Nav() {
             "topic": "Special Programs",
             subTopics: [
                 // "Data Science", "Data Science & Data Engineering using Python", "Data Science using R"
-                {name:"Data Science",path:""},  {name:"Data Science & Data Engineering using Python",path:""},  {name:"Data Science using R",path:""},
-                {name:"Data Analytics using Power BI",path:""}
+                { name: "Data Science", path: "" }, { name: "Data Science & Data Engineering using Python", path: "" }, { name: "Data Science using R", path: "" },
+                { name: "Data Analytics using Power BI", path: "" }
             ],
             isActive: false
         }
@@ -213,6 +213,9 @@ function Nav() {
                                 <Link to={"/team"}>
 
                                     <li ><a href="#">TEAM</a></li>
+                                </Link>
+                                <Link to={"/placement"}>
+                                    <li ><a href="#">PLACEMENT</a></li>
                                 </Link>
                                 <Link to={"/contact"}>
 

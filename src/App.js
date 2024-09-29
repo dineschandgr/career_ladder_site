@@ -16,6 +16,7 @@ import { RouterProvider,createBrowserRouter } from "react-router-dom";
 import Homepage from "./components/homepage/homepage";
 import {Java} from "./components/Coures/Java/Java"
 import {Fullstack} from "./components/Coures/Fullstack/Fullstack"
+import Placement from "./components/placement/Placement";
 
 function App() {
 
@@ -41,6 +42,10 @@ function App() {
     {
       path:"/fullstack",
       element:<Fullstack/>
+    },
+    {
+      path:'/placement',
+      element:<Placement/>
     }
 
    
