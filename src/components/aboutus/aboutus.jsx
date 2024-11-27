@@ -1,6 +1,6 @@
 import about1 from "../../asset/aboutus/about1.png"
 import about2 from "../../asset/aboutus/about2.png"
-import about3 from "../../asset/aboutus/about3.png"
+
 
 
 
@@ -12,7 +12,7 @@ function About() {
                 <h1 className="mb-5 text-3xl font-bold text-blue-900 ">About Us</h1>
                 <div className="flex gap-4 ">
                 <div className="font-serif">
-                    <img className="w-[100vh] h-[80vh] rounded-2xl" src={about3}></img>
+                    <img className="w-[100vh] h-[80vh] rounded-2xl" ></img>
                     <h2 className="">Develop In-Demand Skills Best Software Training Institute In Coimbatore</h2>
                     <p>CareerLadder's on-demand courses in emerging technologies give you the knowledge you need to stay ahead of the curve and succeed in today's fast-paced world</p>
                 </div>

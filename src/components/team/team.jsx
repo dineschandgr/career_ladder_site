@@ -7,10 +7,10 @@ import ashik from "../../asset/team/ashik.png"
 
 import samaja from "../../asset/team/samaja.png"
 
-import jo from "../../asset/team/jo.png"
+
 
 import Kailas  from "../../asset/team/kailas.png"
-import teams from "../../asset/team/teams.png"
+
 import teams2 from "../../asset/team/teams2.png"
 import nith from "../../asset/team/nithiish.png"
 import feroz from "../../asset/team/feroz.png"
@@ -232,7 +232,7 @@ function Team() {
                     
             </div>
             <div className="mx-24 mb-5 flex gap-16 mt-10  ">
-                        <img className="h-[50vh] w-[90vh] rounded-lg" src={teams}></img>
+                        
                         <img className="h-[50vh] rounded-lg" src={teams2}></img>
                         {/* <p>ssdsa</p> */}
                     </div>

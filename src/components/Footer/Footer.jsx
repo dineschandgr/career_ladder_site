@@ -7,7 +7,7 @@ import instagram from "../../asset/icon/insta2.png"
 import facebook from "../../asset/icon/facebook2.png"
 import linkedin from "../../asset/icon/icon-removebg-preview.png"
 import youtube from "../../asset/icon/youtube.png"
-import live from "../../asset/Footer/lw.png"
+import career from "../../asset/img/career.png"
 
 
 
@@ -40,7 +40,7 @@ export const Footer = () => {
 
             <div className="  lg:flex justify-center gap-20 pt-2  border-t-red-500  ">
                 <div className=" lg:pt-1 pl-6">
-                <img className=" h-[10vh] bg-white rounded-2xl mb-3" src={live} />
+                <img className=" h-[10vh] bg-white rounded-2xl mb-3" src={career} />
                     <p className="text-white font-semibold lg:w-[33vw] lg:text-sm  ">CareerLadder students talk about their enjoyable learning experiences that included practical training, best practises,
                         job prospects, and exposure to reputable businesses and organisations.</p>
                     {/* <div className=""> */}
