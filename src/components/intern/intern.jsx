@@ -10,7 +10,7 @@ function Intern(){
                 </div>
                 <div className="lg:w-80 mt-28">
                 <h2 className="lg:w-96 text-blue-800">Internships for Students</h2>
-                <p className="w-[70vh]">Livewire has created internship courses that cater to a variety of topics, providing students with hands-on experience
+                <p className="w-[70vh]">CareerLadder has created internship courses that cater to a variety of topics, providing students with hands-on experience
                      in industry projects, in response to the current demand from colleges and enterprises.</p>
 
                 </div>

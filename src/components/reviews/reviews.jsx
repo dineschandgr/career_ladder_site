@@ -9,7 +9,7 @@ function Reviews() {
 
                 <div className="lg:w-80">
                     <h2 className="lg:w-[150vh] text-blue-800 pt-4 lg:pt-0 flex flex-col pl-5 lg:pl-0 justify-center ">Hear from Our Students</h2>
-                    <p className="lg:pl-0 pl-2 ">Livewire students talk about their enjoyable learning experiences that included practical training,
+                    <p className="lg:pl-0 pl-2 ">CareerLadder students talk about their enjoyable learning experiences that included practical training,
                         best practises, job prospects, and exposure to reputable businesses and organisations.</p>
                             <a href="https://youtube.com/shorts/yff1Vbg_FZ8?feature=shared">
                         <div className="flex  gap-3">

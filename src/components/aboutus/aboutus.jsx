@@ -14,7 +14,7 @@ function About() {
                 <div className="font-serif">
                     <img className="w-[100vh] h-[80vh] rounded-2xl" src={about3}></img>
                     <h2 className="">Develop In-Demand Skills Best Software Training Institute In Coimbatore</h2>
-                    <p>Livewire's on-demand courses in emerging technologies give you the knowledge you need to stay ahead of the curve and succeed in today's fast-paced world</p>
+                    <p>CareerLadder's on-demand courses in emerging technologies give you the knowledge you need to stay ahead of the curve and succeed in today's fast-paced world</p>
                 </div>
                 <div className=" hidden lg:flex flex-col gap-16 mt-5 ">
                 <img className="w-[65vh]  rounded-2xl " src={about2}></img>
@@ -33,7 +33,7 @@ function About() {
           
             <div className="mb-5 font-serif mt-3">
                 <h1 className=" text-3xl mb-2 ">Comprehensive Learning Experience</h1>
-                <p className="">Livewire is the best software Training Institute In Coimbatore, Future Skills Prime Certified courses are intended to provide practical and affordable training, as well as flexible study options and personalised attention from experienced professionals with real-world experience.</p>
+                <p className="">CareerLadder is the best software Training Institute In Coimbatore, Future Skills Prime Certified courses are intended to provide practical and affordable training, as well as flexible study options and personalised attention from experienced professionals with real-world experience.</p>
 
             </div>
             <div className="font-serif">

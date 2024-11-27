@@ -2,14 +2,13 @@ import mam from "../../asset/team/mam.png"
 import sir from "../../asset/team/sir.png"
 import vicky from "../../asset/team/vicky.png"
 import vishnu from "../../asset/team/vishnu.png"
-import Sountharya from "../../asset/team/sound2_magicstudio_87kkaexiwo.png"
 import Nirmalkumar from "../../asset/team/nirumal.png"
 import ashik from "../../asset/team/ashik.png"
-import naveen from "../../asset/team/naveen.png"
+
 import samaja from "../../asset/team/samaja.png"
-import madhi from "../../asset/team/madhi.png"
+
 import jo from "../../asset/team/jo.png"
-import oij from "../../asset/team/oij.png"
+
 import Kailas  from "../../asset/team/kailas.png"
 import teams from "../../asset/team/teams.png"
 import teams2 from "../../asset/team/teams2.png"
@@ -46,12 +45,7 @@ function Team() {
             position:"Placement Manager",
             desc: ""
         },
-        {
-            img: jo,
-            name: "Joie. M",
-            position:"Business Development Manager - Sales and Operations",
-            desc: ""
-        },
+        
         {
             img: samaja,
             name: "Samaja R V ",
@@ -70,30 +64,7 @@ function Team() {
             position:"Technical trainer",
             desc: ""
         },
-        {
-            img: Sountharya,
-            name: "Sountharya R",
-            position:"Technical trainer",
-            desc: ""
-        },
-        {
-            img: naveen,
-            name: "Naveen Dhanasekaran ",
-            position:"Technical trainer",
-            desc: ""
-        },
-        {
-            img: oij,
-            name: "Trilochan Ojha",
-            position:"Technical Trainer",
-            desc: ""
-        },
-        {
-            img: madhi,
-            name: "Mathivaanan. A",
-            position:"Technical Trainer",
-            desc: ""
-        },
+      
         {
             img: ashik,
             name: "Ashik K",

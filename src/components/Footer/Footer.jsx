@@ -41,7 +41,7 @@ export const Footer = () => {
             <div className="  lg:flex justify-center gap-20 pt-2  border-t-red-500  ">
                 <div className=" lg:pt-1 pl-6">
                 <img className=" h-[10vh] bg-white rounded-2xl mb-3" src={live} />
-                    <p className="text-white font-semibold lg:w-[33vw] lg:text-sm  ">Livewire students talk about their enjoyable learning experiences that included practical training, best practises,
+                    <p className="text-white font-semibold lg:w-[33vw] lg:text-sm  ">CareerLadder students talk about their enjoyable learning experiences that included practical training, best practises,
                         job prospects, and exposure to reputable businesses and organisations.</p>
                     {/* <div className=""> */}
 
@@ -76,7 +76,7 @@ export const Footer = () => {
                         </div>
                         <div>
 
-                        <h4  className="text-white font-serif">Livewire Hope College</h4>
+                        <h4  className="text-white font-serif">CareerLadder Hope College</h4>
                         <h3 className="text-sm text-white lg:w-[25vw]">Door No. 207, Avinasi Road, Opp GRG Ladies Hostel, B.R Puram, Coimbatore - 641004</h3>
                         </div>
                     </div>
@@ -89,7 +89,7 @@ export const Footer = () => {
                             </svg>
                         </div>
                         <div>
-                        <h4 className="text-white font-serif">Livewire Sundarapuram </h4>
+                        <h4 className="text-white font-serif">CareerLadder Sundarapuram </h4>
                         <h3 className="text-sm text-white lg:w-[25vw]">5, Bank of Baroda Upstairs, Madukkarai Main Road,Opp, Abirami Hospital, Sundarapuram, Coimbatore - 641024</h3>
                         </div>
                     </div>
@@ -111,14 +111,14 @@ export const Footer = () => {
                             </svg>
                         </div>
 
-                        <h3 className="text-sm text-white lg:w-[25vw]">tn.cbehopecollege@livewireindia.com , gayathri.it.tce@gmail.com</h3>
+                        <h3 className="text-sm text-white lg:w-[25vw]">gayathri.it.tce@gmail.com</h3>
                     </div>
                 </div>
             </div>
 
 
             <div className="lg:flex justify-between lg:px-[17%] lg:pt-2 bg-black md:flex">
-                <p className="text-sm text-white">© Copyright 2023 Livewire Coimbatore. All Rights Reserved.</p>
+                <p className="text-sm text-white">© Copyright 2023 CareerLadder Coimbatore. All Rights Reserved.</p>
                 <div className="flex cursor-pointer">
                     {Footericon.map((Footericon, index) => (
                         <div className="" key={index}>

@@ -31,7 +31,7 @@ export const Contact = () => {
     {
       image: mail,
       tittle: "EMAIL ADDRESS ",
-      text: "tn.cbehopecollege@livewireindia.com , gayathri.it.tce@gmail.com",
+      text: "gayathri.it.tce@gmail.com",
     },
   ];
 

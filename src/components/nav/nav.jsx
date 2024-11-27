@@ -1,4 +1,4 @@
-import live from "../../asset/img/new.png"
+import live from "../../asset/img/career.png"
 import { Link } from "react-router-dom";
 
 import instagram from "../../asset/icon/insta2.png"
@@ -169,7 +169,7 @@ function Nav() {
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="size-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
                             </svg>
-                            <h3 className="text-base text-white ">tn.cbehopecollege@livewireindia.com, gayathri.it.tce@gmail.com</h3>
+                            <h3 className="text-base text-white ">gayathri.it.tce@gmail.com</h3>
 
                         </div>
 
@@ -178,9 +178,9 @@ function Nav() {
                         <div className="flex pr-24  text-white">
                             <p className="pt-1 font-semibold pr-2 text-lg">Follow Us: </p>
 
-                            <a href="https://www.instagram.com/livewire_hopes_sundarapuram/"> <img className="h-9 w-9 text-white mt-1 p-1" src={instagram} /></a>
+                            <a href="https://www.instagram.com/careerladder_coimbatore/"> <img className="h-9 w-9 text-white mt-1 p-1" src={instagram} /></a>
                             <a href="https://www.facebook.com/people/Livewire-Hopes-Coimbatore/pfbid0rghW3yHGQsWhXeKnMeDnNhzG4ENsQYSNqsYbKKhMfkeSeg1JcdLNharq7Jo3PQVHl/"> <img className="h-9 w-10 text-white  mt-1" src={facebook} /></a>
-                            <a href="https://www.linkedin.com/company/livewire-coimbatore-hope-college-sundarapuram?originalSubdomain=in"> <img className="h-9 w-9 text-white mt-1 p-1 " src={linkedin} /></a>
+                            <a href="https://www.linkedin.com/company/careerladder-coimbatore-hope-college-sundarapuram?originalSubdomain=in"> <img className="h-9 w-9 text-white mt-1 p-1 " src={linkedin} /></a>
                             <a href="https://www.youtube.com/@LivewireHopeCollege"> <img className="h-11 w-9 text-white p-1  " src={youtube} /></a>
 
 
