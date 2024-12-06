@@ -1,43 +1,52 @@
-import work1 from "../../asset/workshop/workshop1.png"
-import work2 from "../../asset/workshop/workshop2.png"
-import work3 from "../../asset/workshop/workshop3.png"
+import work1 from "../../asset/workshop/workshop1.png";
+import work2 from "../../asset/workshop/workshop2.png";
+import work3 from "../../asset/workshop/workshop3.png";
 
 function Workshop() {
+  return (
+    <div className="font-sans bg-gradient-to-r from-violet-500 to-white p-5">
+      {/* Heading Section */}
+      <div className="flex justify-center lg:mb-5 text-black lg:mt-8 mt-9">
+        <h1 className="text-3xl lg:text-4xl font-bold">
+          Our <span className="text-blue-800">Workshop</span>
+        </h1>
+      </div>
 
+      {/* Workshop Content */}
+      <div className="mx-auto p-3 lg:p-0 lg:w-[80%] w-full mt-5">
+        <div className="flex justify-between gap-8">
 
+          {/* First Workshop */}
+          <div className="border p-3 rounded-2xl shadow-lg flex flex-col items-center w-[30%]">
+            <img className="h-[30vh] w-full rounded-lg mb-3 object-cover" src={work2} alt="workshop 1" />
+            <p className="font-bold text-sm lg:text-base mt-3 text-center">
+              A Seminar on Cloud Native Microservices using Spring Boot at Nehru Institute of Engineering and Technology.
+            </p>
+          </div>
 
-    return (
-        <div>
+          {/* Second Workshop (Image on Top, Text on Bottom) */}
+          <div className="border p-3 rounded-2xl shadow-lg flex flex-col items-center w-[30%]">
+            <img className="h-[30vh] w-full rounded-lg mb-3 object-cover" src={work3} alt="workshop 2" />
+            <p className="font-bold text-sm lg:text-base mt-3 text-center">
+              1-day workshop on Embedded Systems at Tamil Nadu College of Engineering.
+            </p>
+          </div>
 
-            <div className="flex justify-center lg:mb-5 text-black  lg:mt-8 mt-9 ">
-                <h1>Our <span className="text-blue-800">Workshop</span> </h1>
-            </div>
-            <div className=" ">
-                <div className="lg:mx-16 flex lg:p-0 p-3">
-                    <div >
-                        {/* <img className="h-[60vh]" src={work1} /> */}
-                    </div>
-                    <div className="ml-36">
-                        <div className="lg:flex mb-5 border p-3 rounded-2xl shadow-lg ">
-                            <img className="h-[20vh] rounded-lg mr-3" src={work2} />
-                            <p className="mt-5 font-serif">A Seminar on Cloud Native Microservices using Spring Boot at Nehru Institute of Engineering and Technology.</p>
-                        </div>
-                        <div className="lg:flex mb-5 border p-3 rounded-2xl shadow-lg gap-52"> 
-                        <p className="mt-5 font-serif">1 day workshop on Embedded Systems at Tamil Nadu College of Engineering.</p>
-                            <img className="h-[20vh] w-[40vh] rounded-lg ml-3" src={work3} />
-                        </div>
-                        <div className="lg:flex mb-5 border p-3 rounded-2xl shadow-lg ">
-                            <img className="h-[20vh] rounded-lg mr-3" src={work1} />
-                            <p className="mt-5 font-serif">Karunya University students attending Artificial Intelligence and Machine Learning Internship.</p>
-                        </div>
+          {/* Third Workshop */}
+          <div className="border p-3 rounded-2xl shadow-lg flex flex-col items-center w-[30%]">
+            <img className="h-[30vh] w-full rounded-lg mb-3 object-cover" src={work1} alt="workshop 3" />
+            <p className="font-bold text-sm lg:text-base mt-3 text-center">
+              Karunya University students attending Artificial Intelligence and Machine Learning Internship.
+            </p>
+          </div>
 
-                    </div>
-
-
-                </div>
-            </div>
         </div>
-    )
+      </div>
+
+      {/* Add more bottom spacing here */}
+      <div className="mb-16"></div> {/* This will add more space at the bottom */}
+    </div>
+  );
 }
 
 export default Workshop;

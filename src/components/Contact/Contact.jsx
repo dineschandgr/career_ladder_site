@@ -2,9 +2,7 @@ import mail from "../../asset/Contact/email.png";
 import pic2 from "../../asset/Contact/Address-removebg-preview.png";
 import phone from "../../asset/Contact/phone.png";
 import pic3 from "../../asset/Contact/contact.png";
-
 import Nav from "../nav/nav";
-
 import { Footer } from "../Footer/Footer";
 
 export const Contact = () => {
@@ -31,117 +29,95 @@ export const Contact = () => {
     {
       image: mail,
       tittle: "EMAIL ADDRESS ",
-      text: "tn.cbehopecollege@livewireindia.com , gayathri.it.tce@gmail.com",
+      text: "gayathri.it.tce@gmail.com",
     },
   ];
 
   return (
-    <div>
+    <div className="font-sans">
       <Nav />
-
-      <div className="">
-        <div className=" bg-[url('https://www.dudhwanationalpark.in/image/contact-us.jpg')] h-[75vh] w-[full] mx-2 rounded-2xl  bg-no-repeat bg-cover ">
-          <h1 className="flex justify-center pt-28 font-serif text-amber-700 ">
-            Contact
-          </h1>
-          <div>
-            <p className="flex justify-center w-[80vh] text-center ml-[70vh] text-white font-normal">
-              We are always here for you- whether it’s feedback, assistance or
-              you just want to know more about us. Please feel free to reach out
-              to us!{" "}
-            </p>
-          </div>
+      {/* Hero Section */}
+      <div className="bg-[url('/src/asset/Contact/course.png')] bg-cover bg-center h-[30vh] sm:h-[40vh] md:h-[50vh] lg:h-[80vh] lg:w-full w-full bg-no-repeat pt-24 pb-24 mt-12 mb-12">
+        <h1 className="text-center font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-amber-700 transition-all duration-300 hover:text-yellow-500"></h1>
+        <div className="text-center mt-4">
+          <p className="text-white font-normal transition-all duration-300 hover:text-gray-300"></p>
         </div>
-        {/* 
-                <div className=" ">
-
-                        <img className="h-60" src={img}/>
-
-                </div>
-
-                <div>
-                <h1 className="flex justify-center  font-serif">Contact</h1>
-                    <p className="flex justify-center ">Become a Blockchain Expert with NASSCOM Accredited Training <span className=" px-3 text-black">/</span>  Contact </p>
-
-                </div> */}
       </div>
 
-      <div className=" ml-28 gap-5 justify-center lg:pb-3 pb-3  px-2 pt-10">
-        {address1.map((address1, index) => (
-          <div className="flex">
-            <div className="bg-gray-200  hover:bg-slate-300  lg:w-[55vh] h-[40vh]  px-2">
+      {/* Gradient Background Section */}
+      <div className="bg-gradient-to-r from-violet-700 to-white">
+        {/* Address 1 Section */}
+        <div className="flex flex-col lg:flex-row gap-6 justify-center px-4 py-10">
+          {address1.map((address, index) => (
+            <div key={index} className="flex flex-col lg:flex-row w-full lg:w-[45%] gap-6">
+              <div className="bg-gray-200 hover:bg-slate-300 w-full p-6 rounded-xl hover:shadow-lg transition-all duration-300">
+                <img
+                  src={address.image}
+                  alt="Address 1"
+                  className="h-20 mx-auto mt-4 transition-transform duration-300 hover:scale-110"
+                />
+                <h3 className="text-center text-2xl font-bold mt-2">{address.tittle}</h3>
+                <p className="text-center mt-1">{address.text}</p>
+              </div>
+              <div className="w-full lg:w-[50%]">
+                <iframe
+                  className="w-full h-64 bg-gray-200 hover:bg-slate-300 p-3 rounded-2xl mt-3 transition-all duration-300 hover:scale-105"
+                  src="https://www.google.com/maps/embed?pb=..."
+                  loading="lazy"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                ></iframe>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Address 2 Section */}
+        <div className="flex flex-col lg:flex-row gap-6 justify-center px-4 py-10">
+          {address2.map((address, index) => (
+            <div key={index} className="flex flex-col lg:flex-row w-full lg:w-[45%] gap-6">
+              <div className="bg-gray-200 hover:bg-slate-300 w-full p-6 rounded-xl hover:shadow-lg transition-all duration-300">
+                <img
+                  src={address.image}
+                  alt="Address 2"
+                  className="h-20 mx-auto mt-4 transition-transform duration-300 hover:scale-110"
+                />
+                <h3 className="text-center text-2xl font-bold mt-2">{address.tittle}</h3>
+                <p className="text-center mt-1">{address.text}</p>
+              </div>
+              <div className="w-full lg:w-[50%]">
+                <iframe
+                  className="w-full h-64 bg-gray-200 hover:bg-slate-300 p-3 rounded-2xl mt-3 transition-all duration-300 hover:scale-105"
+                  src="https://www.google.com/maps/embed?pb=..."
+                  loading="lazy"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                ></iframe>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Contact Information Section */}
+        <div className="flex flex-col lg:flex-row gap-6 justify-center px-4 py-10">
+          {Contact.map((contact, index) => (
+            <div key={index} className="bg-gray-200 hover:bg-slate-300 w-full lg:w-[45%] p-6 rounded-xl flex flex-col items-center justify-center transition-all duration-300 hover:shadow-lg">
               <img
-                src={address1.image}
-                alt=""
-                className="h-20  lg:mt-9  ml-28 p-2 mt-4 "
+                src={contact.image}
+                alt="Contact"
+                className="h-20 mt-4 transition-transform duration-300 hover:scale-110"
               />
-              <h3 className="text-center text-2xl pt-2 font-bold">
-                {address1.tittle}
-              </h3>
-              <p className="text-center font-normal pt-1  ">{address1.text}</p>
+              <h3 className="text-center text-2xl font-bold mt-2">{contact.tittle}</h3>
+              <p className="text-center mt-1">{contact.text}</p>
             </div>
-            <div>
-              <iframe
-                className="mt-3 ml-2 bg-gray-200 hover:bg-slate-300   p-3 rounded-2xl"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.17492993831!2d77.01394977452014!3d11.025498654551193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba857b737df98c7%3A0xd927745afbd71500!2sLiveWire%20Coimbatore%20-%20Hope%20College%20-%20Data%20Science%2CData%20Analytics%2CAI%2CML%2CFull%20Stack%20Java%2CPython%2CWeb%2CEmbedded%2CCloud%2CPower%20BI%2CIOT!5e0!3m2!1sen!2sin!4v1723468157516!5m2!1sen!2sin"
-                width="700"
-                height="250"
-                style={{ border: 0 }}
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
+
+        {/* Contact Form */}
+        <ContactForm />
       </div>
-      <div className="ml-28 gap-5 justify-center lg:pb-3 pb-3  px-2 pt-10">
-        {address2.map((address2, index) => (
-          <div className="flex">
-            <div className="bg-gray-200 hover:bg-slate-300   lg:w-[55vh] h-[40vh]  px-2 ">
-              <img
-                src={address2.image}
-                alt=""
-                className="h-20  lg:mt-9  ml-28 p-2 mt-4 "
-              />
-              <h3 className="text-center text-2xl pt-2 font-bold">
-                {address2.tittle}
-              </h3>
-              <p className="text-center font-normal pt-1 ">{address2.text}</p>
-            </div>
-            <div className="">
-              <iframe
-                className="mt-3 ml-2 bg-gray-200 hover:bg-slate-300  p-3 rounded-2xl"
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15668.528994178068!2d76.9726205!3d10.9533814!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba85b0aecb1b883%3A0x35e06c84f5093156!2sLivewire%20Coimbatore%20-%20Sundarapuram%20-!5e0!3m2!1sen!2sin!4v1723468411177!5m2!1sen!2sin"
-                width="700"
-                height="250"
-                style={{ border: 0 }}
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-          </div>
-        ))}
-      </div>
-      <div className="  lg:flex gap-5 justify-center lg:pb-3 pb-3  px-2 pt-10 ">
-        {Contact.map((Contact, index) => (
-          <div className="flex">
-            <div className="bg-gray-200 hover:bg-slate-300    lg:w-[55vh] h-[40vh]  px-2">
-              <img
-                src={Contact.image}
-                alt=""
-                className="h-20  lg:mt-9  ml-36 p-2 mt-4 "
-              />
-              <h3 className="text-center text-2xl pt-2 font-bold">
-                {Contact.tittle}
-              </h3>
-              <p className="text-center font-normal pt-1 ">{Contact.text}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-      <ContactForm />
+      
+      {/* Footer */}
       <Footer />
     </div>
   );
@@ -149,52 +125,60 @@ export const Contact = () => {
 
 export const ContactForm = () => {
   return (
-    <div className="mt-10 pt-10 border-1 border-gray-300">
-      <h2 className="text-center">Contact Us</h2>
-      <div className="flex justify-center pb-2 px-2 pt-14 mb-7 rounded-2xl">
-        <div className="hidden lg:flex">
-          <img src={pic3} alt="" className="h-[70vh] " />
+    <div className="mt-10 pt-10 border-t-2 border-gray-300">
+      <h2 className="text-center text-2xl font-bold mb-6">Contact Us</h2>
+      <div className="flex justify-center pb-8 px-4 pt-14 mb-10 rounded-2xl flex-col lg:flex-row gap-8">
+        {/* Image Section */}
+        <div className="hidden lg:flex lg:w-[40%]">
+          <div className="bg-gradient-to-r from-violet-700 to-white h-[70vh] w-full rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+            <img
+              src={pic3}
+              alt="Contact Illustration"
+              className="object-cover w-full h-full rounded-xl"
+            />
+          </div>
         </div>
-        <div className="bg-gradient-to-r from-blue-600  to-pink-600 lg:w-[36vw] ">
-          <p className="text-1xl pl-14 pt-4 font-bold text-white font-serif">
-            Let's Talk
-          </p>
-          <h2 className="text-white pl-14 pt-4 font-bold text-3xl font-serif">
-            Get In Touch
-          </h2>
 
-          <div className="pl-6">
-            <div className="">
+        {/* Form Section */}
+        <div className="bg-gradient-to-r from-blue-600 to-pink-600 lg:w-[36vw] w-full rounded-lg p-8 space-y-6">
+          <p className="text-xl font-bold text-white">Let's Talk</p>
+          <h2 className="text-white font-bold text-3xl">Get In Touch</h2>
+
+          {/* Form Fields */}
+          <div className="space-y-4">
+            <div>
               <input
-                className="lg:w-[26vw] w-full  mt-3 placeholder:text-white pl-2 bg-gradient-to-r from-blue-800  to-pink-800 rounded h-7 font-serif"
+                className="w-full lg:w-[26vw] placeholder:text-white pl-3 bg-gradient-to-r from-blue-800 to-pink-800 rounded h-12 transition-all duration-300 hover:scale-105"
                 type="text"
                 placeholder="Name"
               />
             </div>
-            <div className="lg:flex gap-8  mt-3">
+            <div className="lg:flex gap-8 mt-4 space-y-4 lg:space-y-0">
               <input
-                className="rounded bg-gradient-to-r from-blue-800  to-pink-800  placeholder:text-white font-serif pl-2 h-7 w-full lg:w-[170px] "
-                span
-                type="text "
+                className="w-full lg:w-[170px] placeholder:text-white pl-3 bg-gradient-to-r from-blue-800 to-pink-800 rounded h-12 transition-all duration-300 hover:scale-105"
+                type="text"
                 placeholder="Email"
               />
               <input
-                className="rounded bg-gradient-to-r from-blue-800  to-pink-800 placeholder:text-white font-serif pl-2 h-7 w-full lg:w-[170px] "
+                className="w-full lg:w-[170px] placeholder:text-white pl-3 bg-gradient-to-r from-blue-800 to-pink-800 rounded h-12 transition-all duration-300 hover:scale-105"
                 type="text"
-                placeholder="Password"
+                placeholder="Phone"
               />
             </div>
+            <div>
+              <textarea
+                className="w-full lg:w-[26vw] mt-4 bg-gradient-to-r from-blue-800 to-pink-800 placeholder:text-white pl-3 rounded h-32 transition-all duration-300 hover:scale-105"
+                placeholder="Your Message Here"
+              ></textarea>
+            </div>
 
-            <textarea
-              className="lg:w-[26vw] mt-4 bg-gradient-to-r from-blue-800  to-pink-800 placeholder:text-white font-serif pl-2 "
-              name=""
-              id=""
-              placeholder="Your Message Here"
-            ></textarea>
+            {/* Submit Button */}
+            <div className="flex justify-center pt-6">
+              <button className="bg-gradient-to-r from-blue-700 to-pink-700 p-4 text-white rounded-full text-xl font-semibold transition-all duration-300 hover:from-blue-600 hover:to-pink-600 hover:scale-105">
+                Send Message
+              </button>
+            </div>
           </div>
-          <button className="text-white bg-gradient-to-r from-blue-800  to-pink-800 h-14 lg:w-[10vw] rounded ml-32 mt-10">
-            SUBMIT NOW
-          </button>
         </div>
       </div>
     </div>

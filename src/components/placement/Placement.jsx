@@ -43,237 +43,105 @@ import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 
 const itemData = [
-  {
-    img: placement4,
-    rows: 3,
-    cols: 2,
-  },
-  {
-    img: placement16,
-    rows: 2,
-  },
-  {
-    img: placement6,
-    rows: 2,
-  },
-  {
-    img: placement7,
-    rows: 4,
-    cols: 2,
-  },
-  {
-    img: placement8,
-    cols: 2,
-    rows: 5,
-  },
-  {
-    img: placement9,
-    rows: 5,
-    cols: 2,
-  },
-  {
-    img: placement10,
-    rows: 3,
-  },
-  {
-    img: placement11,
-    rows: 3,
-  },
-  {
-    img: placement12,
-    rows: 4,
-    cols: 2,
-  },
-  {
-    img: placement13,
-    rows: 3,
-  },
-  {
-    img: placement14,
-    rows: 3,
-  },
-  {
-    img: placement15,
-    rows: 5,
-    cols: 2,
-  },
-  {
-    img: placement17,
-    rows: 3,
-    cols: 1,
-  },
-  {
-    img: placement20,
-    rows: 3,
-    cols: 1,
-  },
-  {
-    img: placement18,
-    rows: 5,
-    cols: 2,
-  },
-  {
-    img: placement19,
-    rows: 3,
-    cols: 1,
-  },
-
-  {
-    img: placement21,
-    rows: 3,
-    cols: 1,
-  },
-  {
-    img: placement22,
-    rows: 5,
-    cols: 2,
-  },
-  {
-    img: placement23,
-    rows: 3,
-    cols: 1,
-  },
-  {
-    img: placement24,
-    rows: 3,
-    cols: 1,
-  },
-  {
-    img: placement25,
-    rows: 4,
-    cols: 2,
-  },
-  {
-    img: placement26,
-    rows: 3,
-    cols: 1,
-  },
-  {
-    img: placement27,
-    rows: 3,
-    cols: 1,
-  },
-  {
-    img: placement28,
-    rows: 5,
-    cols: 2,
-  },
+  { img: placement4 },
+  { img: placement16 },
+  { img: placement6 },
+  { img: placement7 },
+  { img: placement8 },
+  { img: placement9 },
+  { img: placement10 },
+  { img: placement11 },
+  { img: placement12 },
+  { img: placement13 },
+  { img: placement14 },
+  { img: placement15 },
+  { img: placement17 },
+  { img: placement20 },
+  { img: placement18 },
+  { img: placement19 },
+  { img: placement21 },
+  { img: placement22 },
+  { img: placement23 },
+  { img: placement24 },
+  { img: placement25 },
+  { img: placement26 },
+  { img: placement27 },
+  { img: placement28 },
 ];
 
 const Placement = () => {
-  //   function srcset(image, size, rows = 1, cols = 1) {
-  //     return {
-  //       src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
-  //       srcSet: `${image}?w=${size * cols}&h=${
-  //         size * rows
-  //       }&fit=crop&auto=format&dpr=2 2x`,
-  //     };
-  //   }
-
-  function srcset(image, size, rows = 1, cols = 1) {
+  function srcset(image, size) {
     return {
-      src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
-      srcSet: `${image}?w=${size * cols}&h=${
-        size * rows
-      }&fit=crop&auto=format&dpr=2 2x`,
+      src: `${image}?w=${size}&h=${size}&fit=crop&auto=format`,
+      srcSet: `${image}?w=${size}&h=${size}&fit=crop&auto=format&dpr=2 2x`,
     };
   }
-  return (
-    <div id="Placement">
-      <Nav />
-      <h1 className="text-center m-5">Internships & Placements</h1>
-      <header
-        style={{ backgroundColor: "rgba(250,250,250,255)" }}
-        className="md:flex md:h[500px]"
-      >
-        <img src={headerImg} alt="" className="md:w-1/2" />
 
-        <div
-          className=" "
-          style={{
-            display: "flex",
-            alignItems: "center",
-          }}
-        >
-          <p
-            style={{
-              alignItems: "center",
-              width: "80%",
-              textAlign: "center",
-              fontSize: "1.5vw",
-            }}
-          >
-            We bridge education and industry, empowering students with essential
-            skills through a robust placement program to meet job market
-            demands.
+  return (
+    <div id="Placement" className="font-sans">
+      <Nav />
+
+      {/* Page Header */}
+      <header className="bg-gray-100 py-10 md:flex md:items-center md:justify-between px-5">
+        <img
+          src={headerImg}
+          alt="Placement Header"
+          className="w-full md:w-1/2 object-cover rounded-lg mb-5 md:mb-0"
+        />
+        <div className="md:w-1/2 flex items-center justify-center text-center">
+          <p className="text-xl font-bold md:text-2xl px-5">
+            We bridge education and industry, empowering students with essential skills through a robust placement program to meet job market demands.
           </p>
         </div>
       </header>
 
-      <div>
-        <h2 style={{ textAlign: "center", margin: "50px 0" }}>
-          Developers have cracked careers.
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:grid-cols-4 gap-4 p-3">
-          <div className="md:w-full p-1 border-1 border-black rounded-lg">
+      {/* Section: Developers have cracked careers */}
+      <div className="my-10">
+        <h2 className="text-center text-3xl font-bold mb-10">Developers have cracked careers.</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-5">
+          <div className="flex justify-center p-2 border rounded-lg">
             <img
               src={placement1}
-              alt=""
-              className="w-full h-full object-center rounded-lg"
+              alt="Placement 1"
+              className="w-full h-full object-cover rounded-lg"
             />
           </div>
-
-          <div className="md:w-full  p-1 border-1 border-black rounded-lg">
+          <div className="flex justify-center p-2 border rounded-lg">
             <img
               src={placement2}
-              alt=""
-              className="w-full h-full object-center rounded-lg"
+              alt="Placement 2"
+              className="w-full h-full object-cover rounded-lg"
             />
           </div>
-
-          <div className="md:w-full  p-1 border-1 border-black rounded-lg">
+          <div className="flex justify-center p-2 border rounded-lg">
             <img
               src={placement3}
-              alt=""
-              className="w-full h-full object-center rounded-lg"
+              alt="Placement 3"
+              className="w-full h-full object-cover rounded-lg"
             />
           </div>
-
-          <div className="md:w-full  p-1 border-1 border-black rounded-lg">
+          <div className="flex justify-center p-2 border rounded-lg">
             <img
               src={placement29}
-              alt=""
-              className="w-full h-full object-center rounded-lg"
+              alt="Placement 29"
+              className="w-full h-full object-cover rounded-lg"
             />
           </div>
         </div>
       </div>
 
-      <div>
-        <h2
-          style={{ textAlign: "center", margin: "50px 0", fontSize: "2.5vw" }}
-        >
-          Placement Drive
-        </h2>
+      {/* Section: Placement Drive */}
+      <div className="my-10 px-5">
+        <h2 className="text-center text-3xl font-bold mb-10">Placement Drive</h2>
         <div className="flex justify-center">
-          <ImageList
-            sx={{ width: "90vw" }}
-            variant="quilted"
-            cols={4}
-            rowHeight={121}
-          >
+          <ImageList sx={{ width: "90vw" }} variant="quilted" cols={3} rowHeight={200}>
             {itemData.map((item) => (
-              <ImageListItem
-                key={item.img}
-                cols={item.cols || 1}
-                rows={item.rows || 1}
-                className="grid grid-cols-1"
-              >
+              <ImageListItem key={item.img}>
                 <img
-                  {...srcset(item.img, 121, item.rows, item.cols)}
-                  alt={item.title}
+                  {...srcset(item.img, 200)}
+                  alt={item.img}
                   loading="lazy"
-                  className="object-full w-full h-full"
+                  className="object-cover w-full h-full"
                 />
               </ImageListItem>
             ))}
@@ -281,31 +149,19 @@ const Placement = () => {
         </div>
       </div>
 
-      <div className="mt-10 mb-10 p-10 border-t-1 border-gray-300">
-        <h2 style={{ textAlign: "center", margin: "50px 0" }}>
-          Associated Companies
-        </h2>
-
-        <div className="flex justify-evenly items-center">
-          <img src={company1} alt="" className="h-10" />
-          <img src={company2} alt="" className="h-10" />
-          <div className="flex justify-center flex-col">
-            <img src={company3} alt="" className="h-20" />
-            <p
-              className="p-0"
-              style={{ fontWeight: "bold", fontSize: "1.5rem" }}
-            >
-              Knowillence
-            </p>
+      {/* Section: Associated Companies */}
+      <div className="my-10 px-5 py-10 bg-gray-50 border-t-2 border-gray-300">
+        <h2 className="text-center text-3xl font-bold mb-10">Associated Companies</h2>
+        <div className="flex flex-wrap justify-center items-center gap-10">
+          <img src={company1} alt="Company 1" className="h-16" />
+          <img src={company2} alt="Company 2" className="h-16" />
+          <div className="flex flex-col justify-center items-center">
+            <img src={company3} alt="Company 3" className="h-24" />
+            <p className="font-bold text-xl mt-2">Knowillence</p>
           </div>
-          <div className="flex justify-center flex-col">
-            <img src={company4} alt="" className="h-10 w-10" />
-            <p
-              className="p-0"
-              style={{ fontWeight: "bold", fontSize: "1.5rem" }}
-            >
-              TEKHOSL
-            </p>
+          <div className="flex flex-col justify-center items-center">
+            <img src={company4} alt="Company 4" className="h-16" />
+            <p className="font-bold text-xl mt-2">TEKHOSL</p>
           </div>
         </div>
       </div>

@@ -1,0 +1,16 @@
+.relative {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6px;
+}
+
+/* Only apply this for mobile views */
+@media (max-width: 1024px) {
+  .mobile-dropdown {
+    position: absolute;
+    top: 200px; /* Adjust this value depending on your needs */
+    left: 180px;  /* Adjust this for better positioning */
+    width: calc(60% - 10px);  /* Ensure the dropdown fits within the viewport */
+  }
+}

@@ -1,17 +1,12 @@
-import pic from "../../../asset/cours/fullstack/time.png"
-import pic1 from "../../../asset/cours/fullstack/world.png"
-import pic2 from "../../../asset/cours/fullstack/like.png"
-import pic3 from "../../../asset/cours/fullstack/setting.png"
-import pic4 from "../../../asset/cours/fullstack/time.png"
-import Nav from "../../nav/nav"
-import { Footer } from "../../Footer/Footer"
-
-
-
+import pic from "../../../asset/cours/fullstack/time.png";
+import pic1 from "../../../asset/cours/fullstack/world.png";
+import pic2 from "../../../asset/cours/fullstack/like.png";
+import pic3 from "../../../asset/cours/fullstack/setting.png";
+import pic4 from "../../../asset/cours/fullstack/time.png";
+import Nav from "../../nav/nav";
+import { Footer } from "../../Footer/Footer";
 
 export const Java = () => {
-
-
     const key = [
         {
             image: pic,
@@ -25,7 +20,7 @@ export const Java = () => {
         },
         {
             image: pic2,
-            title: "Fexible Learning",
+            title: "Flexible Learning",
             text: "In-center and online"
         },
         {
@@ -38,71 +33,117 @@ export const Java = () => {
             title: "Learn from",
             text: "Industry Experts"
         },
-    ]
+    ];
+
+    const dotStyles = {
+        dot: {
+            position: 'absolute',
+            width: '20px',
+            height: '20px',
+            borderRadius: '50%',
+            animation: 'pulseDot 2s infinite ease-in-out',
+        },
+        dot1: {
+            backgroundColor: '#4A90E2', // Blue
+            top: '10%',
+            left: '15%',
+            animationDelay: '0s',
+        },
+        dot2: {
+            backgroundColor: '#50E3C2', // Light Teal
+            top: '20%',
+            right: '10%',
+            animationDelay: '0.5s',
+        },
+        dot3: {
+            backgroundColor: '#F5A623', // Yellow
+            bottom: '10%',
+            left: '30%',
+            animationDelay: '1s',
+        },
+        dot4: {
+            backgroundColor: '#9013FE', // Purple
+            bottom: '20%',
+            right: '15%',
+            animationDelay: '1.5s',
+        },
+        dot5: {
+            backgroundColor: '#F8E71C', // Bright Yellow
+            top: '50%',
+            left: '50%',
+            animationDelay: '2s',
+        },
+    };
 
     return (
-        <div>
-            <div>
-            <Nav/>
-                <div className="bg-[url('https://cdn.sanity.io/images/tlr8oxjg/production/1ca7b34a8d5308a03ae186dfe72caabce0327fe2-1456x816.png?w=3840&q=80&fit=clip&auto=format')] bg-cover  lg:h-[65vh] h-[45vh] bg-no-repeat">
+        <div className="font-sans bg-gradient-to-r from-blue-500 to-white min-h-screen">
+            <Nav />
 
-                    <h1 className="text-white text-center text-[35px] font-bold lg:pt-36 pt-14 pl-8">Java Full Stack Development</h1>
-                    <h6 className="text-white text-center text-sm lg:pl-70 pt-2  ">Learn to Debug Java Code like A Pro. Master Advanced Java Programming!</h6>
-                </div>
-                <div className="bg-[#E6F1FF]  lg:mx-[15%] ">
-                    <h1 className="text-2xl font-bold font-serif pl-5">Course - Key highlights</h1>
-
-                    <div className="lg:flex justify-center lg:gap-14 lg:pt-10 pb-7 ">
-                        {key.map((Key, index) => (
-                            <div className="text-center lg:mt-0" key={index}> 
-                                <img src={Key.image} alt="" className="lg:pl-5 pl-[41%]" />
-                                <p className="text-sm  pt-2 ">{Key.title}</p>
-                                <h1 className="text-1xl font-bold font-serif pt-1 ">{Key.text}</h1>
-                            </div>
-
-                        ))}
-                    </div>
-
-                </div>
-
-                <div className="">
-                    <div className="">
-                        <h1 className="text-2xl pt-5 font-medium font-serif   lg:pl-56">Java and Advanced Java - Certification Training Course</h1>
-                        <p className="text-1xl lg:w-[69vw] lg:pl-56 pt-4  font-serif px-3">Java is a widely-used, versatile programming language with a vast ecosystem of libraries and frameworks.
-                            Proficiency in Java, along with advanced Java concepts such as multithreading, JDBC, and JSP/Servlets, can lead to career opportunities as a Java developer, software engineer, or application developer in various industries.</p>
-
-                        <h1 className="pt-4 lg:text-2xl text-3xl font-serif lg:pl-56">Course objective</h1>
-                        <p className="lg:text-1xl font-serif pt-3 lg:pl-56 lg:w-[69vw] px-2">This course teaches the fundamental and advanced concepts of the Java programming language.
-                            Through hands-on programming experience, the course focuses on developing scalable and robust applications using advanced Java programming techniques and frameworks.
-                            The course is intended for experienced Java programmers who want to expand their Java programming knowledge and skills.</p>
+            {/* Hero Section with Colorful Dot Animations */}
+            <div className="relative h-[10vh] flex items-center justify-center overflow-hidden">
+                <div className="absolute inset-1">
+                    {/* Add the animated colorful dots */}
+                    <div className="absolute inset-0">
+                        <div style={{ ...dotStyles.dot, ...dotStyles.dot1 }}></div>
+                        <div style={{ ...dotStyles.dot, ...dotStyles.dot2 }}></div>
+                        <div style={{ ...dotStyles.dot, ...dotStyles.dot3 }}></div>
+                        <div style={{ ...dotStyles.dot, ...dotStyles.dot4 }}></div>
+                        <div style={{ ...dotStyles.dot, ...dotStyles.dot5 }}></div>
                     </div>
                 </div>
-
-
-                <div>
-                    <h1 className="pt-4 text-2xl font-serif lg:pl-56">Key Topics Covered</h1>
-
-                    <h6 className="lg:pl-60 font-medium text-1xl">Java</h6>
-
-                    <div className="text-sm font-serif lg:pl-64">
-                        <li>Decision Constructs</li>
-                        <li className="" >Event handling & multi threading</li>
-                        <li >Interfaces </li>
-                        <li >JAVA packages and collection</li>
-                        <li >OOPs Concepts</li>
-                    </div>
-
-                </div>
-
-                <div>
-                    <h1 className="text-2xl font-serif lg:pl-60 pt-5">Scope & Career Opportunities</h1>
-
-                    <p className="text-1xl lg:pl-64 pt-3 lg:w-[70vw] font-serif pb-3 px-2">The Full Stack Development course using MEAN/MERN stack has a wide range of career opportunities.
-                        With the growing demand for web development skills, learners can expect to work as Full Stack Developers, Web Developers, Software Engineers, and more.
-                        This course will enable learners to build dynamic and responsive web applications that can be easily scaled to meet the demands of businesses and users.</p>
+                <div className="relative z-10 text-center text-black px-10 py-90">
+                    <h1 className="text-4xl lg:text-5xl font-extrabold mb-">Java Full Stack Development</h1>
+                    <h6 className="text-lg lg:text-xl font-medium">Learn to Debug Java Code like A Pro. Master Advanced Java Programming!</h6>
                 </div>
             </div>
-            <Footer/>
+
+            {/* Key Highlights Section */}
+            <div className="bg-[#E6F1FF] px-6 py-16">
+                <h1 className="text-3xl font-extrabold text-center mb-10">Course Key Highlights</h1>
+                <div className="grid lg:grid-cols-3 sm:grid-cols-1 gap-10">
+                    {key.map((Key, index) => (
+                        <div key={index} className="bg-white shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300 rounded-lg text-center p-6">
+                            <p className="text-xl font-semibold">{Key.title}</p>
+                            <h1 className="text-xl font-bold text-blue-700">{Key.text}</h1>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* Course Overview Section */}
+            <div className="lg:px-20 px-6 py-16 text-center">
+                <h1 className="text-3xl font-extrabold mb-6">Java and Advanced Java - Certification Training Course</h1>
+                <p className="text-lg mb-6">Java is a widely-used, versatile programming language with a vast ecosystem of libraries and frameworks. Proficiency in Java, along with advanced Java concepts such as multithreading, JDBC, and JSP/Servlets, can lead to career opportunities as a Java developer, software engineer, or application developer in various industries.</p>
+
+                <h2 className="text-2xl font-extrabold mb-4">Course Objective</h2>
+                <p className="text-lg">This course teaches the fundamental and advanced concepts of the Java programming language. Through hands-on programming experience, the course focuses on developing scalable and robust applications using advanced Java programming techniques and frameworks. It is intended for experienced Java programmers who want to expand their knowledge and skills.</p>
+            </div>
+
+            {/* Key Topics Section */}
+            <div className="lg:px-20 px-6 py-16">
+                <h1 className="text-3xl font-extrabold text-center mb-8">Key Topics Covered</h1>
+                <div className="bg-red-200 p-6 rounded-lg mb-6">
+                    <h6 className="font-medium text-lg text-center">Java Programming Basics</h6>
+                </div>
+
+                <div className="text-lg font-semibold">
+                    <ul className="list-disc pl-8 space-y-3">
+                        <li>Decision Constructs</li>
+                        <li>Event Handling & Multi-threading</li>
+                        <li>Interfaces & Abstract Classes</li>
+                        <li>JAVA Packages and Collections</li>
+                        <li>Object-Oriented Programming Concepts (OOP)</li>
+                    </ul>
+                </div>
+            </div>
+
+            {/* Career Opportunities Section */}
+            <div className="lg:px-20 px-6 py-16 bg-[#F8F9FA]">
+                <h1 className="text-3xl font-extrabold text-center mb-8">Scope & Career Opportunities</h1>
+                <p className="text-lg text-center mx-auto">The Full Stack Development course using Java offers a wide range of career opportunities. With the growing demand for Java developers, learners can expect to work as Full Stack Developers, Software Engineers, Web Developers, and more. This course will enable learners to build dynamic and responsive web applications that can meet the demands of businesses and users.</p>
+            </div>
+
+            <Footer />
         </div>
-    )
-}
+    );
+};
