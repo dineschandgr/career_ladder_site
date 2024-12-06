@@ -7,6 +7,7 @@
     import youtube from '../../asset/icon/youtube.png';
     import './nav.css';
 
+    
     function DropRight({ menuList, toggleSubTopic }) {
       return (
         <div className="absolute bg-white top-full right-20 ml-25 w-[250px] z-10 flex flex-col rounded-xl shadow-lg p-4 border-2 border-gradient-to-r from-red-500 to-red-700">
