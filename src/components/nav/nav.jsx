@@ -15,7 +15,7 @@ function DropRight({ menuList, toggleSubTopic }) {
         {menuList.map((data, index) => (
           <h6
             key={index}
-            className="text-lg font-bold text-black cursor-pointer text-left hover:text-red-500 py-1 px-2 hover:bg-gradient-to-r hover:from-black-200 to-red-700 rounded-md transition-colors duration-300"
+            className="text-sm font-bold text-black cursor-pointer text-left hover:text-red-500 py-1 px-2 hover:bg-gradient-to-r hover:from-black-200 to-red-700 rounded-md transition-colors duration-300"
             onClick={() => toggleSubTopic(index)}
           >
             {data.topic}
@@ -30,7 +30,7 @@ function DropRight({ menuList, toggleSubTopic }) {
               {data.subTopics.map((sub, index1) => (
                 <li key={index1}>
                   <Link to={sub.path}>
-                    <p className="p-3 rounded-xl text-lg font-bold text-black hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-400 text-left transition duration-300">
+                    <p className="p-3 rounded-xl text-sm font-bold text-black hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-400 text-left transition duration-300">
                       {sub.name}
                     </p>
                   </Link>
@@ -149,12 +149,12 @@ function Nav() {
         {/* Contact Info and Social Icons */}
         <div className="hidden sm:flex gap-6 sm:flex-row flex-col items-center sm:items-start">
           <div className="flex pt-2 ml-4" >
-            <img src={contact} height={"30px"} width="30px" alt="contact-icon" />
-            <h3 className="text-sm sm:text-lg text-white font-bold mt-1">+91 8807148869 / +91 8807028071</h3>
+            <img src={contact} height={"30px"} width="40px" alt="contact-icon" />
+            <h3 className="text-sm sm:text-10 text-white font-bold mt-2">+91 8807148869 / +91 8807028071</h3>
           </div>
           <div className="flex gap-1 pt-2">
-            <img src={mail} height={"35px"} width="35px" alt="contact-icon" />
-            <h3 className="text-sm sm:text-lg text-white font-bold mt-1" >gayathri.it.tce@gmail.com</h3>
+            <img src={mail} height={"35px"} width="40px" alt="contact-icon" />
+            <h3 className="text-sm sm:text-10 text-white font-bold mt-2" >gayathri.it.tce@gmail.com</h3>
           </div>
         </div>
 
@@ -184,35 +184,56 @@ function Nav() {
       {/* Navigation */}
       <nav className="bg-gradient-to-r from-white to-red-500 text-white p-4 sm:px-6 flex justify-between items-center sm:space-x-8">
         <Link to="/">
-          <img className="max-h-20 sm:max-h-16 w-auto" src={main} alt="Logo" />
+          <img className="max-h-24 sm:max-h-32 md:max-h-40 w-50" src={main} alt="Logo" /> {/* Increased logo size on desktop */}
         </Link>
 
-        {/* Navigation Menu (to the right of the logo) */}
+        {/* Desktop Navigation Menu */}
         <div className="hidden md:flex space-x-8 ml-auto">
-          <Link to="/" className="px-6 py-3 rounded-md cursor-pointer text-lg text-white font-bold hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-400 transition duration-300">HOME</Link>
+          <Link to="/" className="px-6 py-3 rounded-md cursor-pointer text-sm sm:text-15 text-white font-bold hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-400 transition duration-300">HOME</Link>
           <div className="relative">
-            <span onClick={handleDropDown} className="px-6 py-3 rounded-md cursor-pointer text-lg text-white font-bold hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-400 transition duration-300">COURSES</span>
+            <span onClick={handleDropDown} className="px-6 py-3 rounded-md cursor-pointer text-sm sm:text-15 text-white font-bold hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-400 transition duration-300">COURSES</span>
             {menuDrop && <DropRight menuList={menuList} toggleSubTopic={toggleSubTopic} />}
           </div>
-          <Link to="/team" className="px-6 py-3 rounded-md cursor-pointer text-lg text-white font-bold hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-400 transition duration-300">TEAM</Link>
-          <Link to="/placement" className="px-6 py-3 rounded-md cursor-pointer text-lg text-white font-bold hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-400 transition duration-300">PLACEMENT</Link>
-          <Link to="/contact" className="px-6 py-3 rounded-md cursor-pointer text-lg text-white font-bold hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-400 transition duration-300">CONTACT</Link>
+          <Link to="/team" className="px-6 py-3 rounded-md cursor-pointer text-sm sm:text-15 text-white font-bold hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-400 transition duration-300">TEAM</Link>
+          <Link to="/placement" className="px-6 py-3 rounded-md cursor-pointer text-sm sm:text-15 text-white font-bold hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-400 transition duration-300">PLACEMENT</Link>
+          <Link to="/contact" className="px-6 py-3 rounded-md cursor-pointer text-sm sm:text-15 text-white font-bold hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-400 transition duration-300">CONTACT</Link>
         </div>
 
-        {/* Mobile Navigation */}
-        <div className="lg:hidden flex justify-center items-center w-full">
-          <div className="flex flex-row justify-between w-full gap-6 items-center">
-            <Link to="/" className="text-white text-xs sm:text-lg font-bold mt-3">HOME</Link>
-            <div className="relative">
-              <span onClick={handleDropDown} className="text-white text-xs sm:text-lg font-bold">COURSES</span>
-              {menuDrop && <DropRight menuList={menuList} toggleSubTopic={toggleSubTopic} />}
-            </div>
-            <Link to="/team" className="text-white text-xs sm:text-lg font-bold mt-3">TEAM</Link>
-            <Link to="/placement" className="text-white text-xs sm:text-lg font-bold mt-3">PLACEMENT</Link>
-            <Link to="/contact" className="text-white text-xs sm:text-lg font-bold mt-3">CONTACT</Link>
-          </div>
+        {/* Mobile Navigation (Hamburger menu) */}
+        <div className="lg:hidden flex justify-center items-center ml-auto">
+          <button 
+            onClick={toggleDropdown} 
+            className="text-white text-3xl"
+            ref={buttonRef}
+          >
+            ☰
+          </button>
         </div>
       </nav>
+
+      {/* Mobile Dropdown Menu */}
+      {dropdown && (
+        <div className="lg:hidden absolute top-[110px] right-0 bg-blue-200 shadow-lg w-[250px] rounded-lg z-10">
+          <Link to="/" className="block px-6 py-3 mt-0 text-sm font-bold text-black hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-400">
+            Home
+          </Link>
+          <div className="relative">
+            <span onClick={handleDropDown} className="block px-6 py-3 mt-2 text-sm font-bold text-black hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-400">
+              Courses
+            </span>
+            {menuDrop && <DropRight menuList={menuList} toggleSubTopic={toggleSubTopic} />}
+          </div>
+          <Link to="/team" className="block px-6 py-3 mt-2 text-sm font-bold text-black hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-400">
+            Team
+          </Link>
+          <Link to="/placement" className="block px-6 py-3 mt-2 text-sm font-bold text-black hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-400">
+            Placement
+          </Link>
+          <Link to="/contact" className="block px-6 py-3 mt-2 text-sm font-bold text-black hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-400">
+            Contact
+          </Link>
+        </div>
+      )}
     </div>
   );
 }
