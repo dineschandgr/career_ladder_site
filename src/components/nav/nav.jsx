@@ -154,7 +154,7 @@ function Nav() {
           </div>
           <div className="flex gap-1 pt-2">
             <img src={mail} height={"35px"} width="40px" alt="contact-icon" />
-            <h3 className="text-sm sm:text-10 text-white font-bold mt-2" >gayathri.it.tce@gmail.com</h3>
+            <h3 className="text-sm sm:text-10 text-white font-bold mt-2" >info@careerladderedu.com</h3>
           </div>
         </div>
 

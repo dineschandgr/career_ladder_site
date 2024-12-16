@@ -29,7 +29,7 @@ export const Contact = () => {
     {
       image: mail,
       tittle: "EMAIL ADDRESS ",
-      text: "gayathri.it.tce@gmail.com",
+      text: "info@careerladderedu.com",
     },
   ];
 
