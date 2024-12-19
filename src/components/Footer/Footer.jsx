@@ -36,16 +36,16 @@ export const Footer = () => {
                     <div className="mt-8">
                         <p className="font-semibold text-lg mb-3">Follow Us:</p>
                         <div className="flex gap-6 mt-3">
-                            <a href="https://www.instagram.com/livewire_hopes_sundarapuram/">
+                            <a href="https://www.instagram.com/careerladder_coimbatore/">
                                 <img className="h-9 w-9" src={instagram} alt="Instagram" />
                             </a>
-                            <a href="https://www.facebook.com/people/Livewire-Hopes-Coimbatore/pfbid0rghW3yHGQsWhXeKnMeDnNhzG4ENsQYSNqsYbKKhMfkeSeg1JcdLNharq7Jo3PQVHl/">
+                            <a href="https://www.facebook.com/people/CareerLadder-Hopescollege-Coimbatore/61552807079875/">
                                 <img className="h-9 w-9" src={facebook} alt="Facebook" />
                             </a>
-                            <a href="https://www.linkedin.com/company/livewire-coimbatore-hope-college-sundarapuram?originalSubdomain=in">
+                            <a href="https://www.linkedin.com/company/careerladder-coimbatore-hope-college-sundarapuram">
                                 <img className="h-9 w-9" src={linkedin} alt="LinkedIn" />
                             </a>
-                            <a href="https://www.youtube.com/@LivewireHopeCollege">
+                            <a href="https://www.youtube.com/@CareerLadder-CL">
                                 <img className="h-9 w-9" src={youtube} alt="YouTube" />
                             </a>
                         </div>
