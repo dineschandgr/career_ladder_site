@@ -87,6 +87,7 @@ const Placement = () => {
           src={headerImg}
           alt="Placement Header"
           className="w-full md:w-1/2 object-cover rounded-lg mb-5 md:mb-0"
+          loading="lazy"
         />
         <div className="md:w-1/2 flex items-center justify-center text-center">
           <p className="text-xl font-bold md:text-2xl px-5">
@@ -104,6 +105,7 @@ const Placement = () => {
               src={placement1}
               alt="Placement 1"
               className="w-full h-full object-cover rounded-lg"
+              loading="lazy"
             />
           </div>
           <div className="flex justify-center p-2 border rounded-lg">
@@ -111,6 +113,7 @@ const Placement = () => {
               src={placement2}
               alt="Placement 2"
               className="w-full h-full object-cover rounded-lg"
+              loading="lazy"
             />
           </div>
           <div className="flex justify-center p-2 border rounded-lg">
@@ -118,6 +121,7 @@ const Placement = () => {
               src={placement3}
               alt="Placement 3"
               className="w-full h-full object-cover rounded-lg"
+              loading="lazy"
             />
           </div>
           <div className="flex justify-center p-2 border rounded-lg">
@@ -125,6 +129,7 @@ const Placement = () => {
               src={placement29}
               alt="Placement 29"
               className="w-full h-full object-cover rounded-lg"
+              loading="lazy"
             />
           </div>
         </div>
@@ -153,14 +158,34 @@ const Placement = () => {
       <div className="my-10 px-5 py-10 bg-gray-50 border-t-2 border-gray-300">
         <h2 className="text-center text-3xl font-bold mb-10">Associated Companies</h2>
         <div className="flex flex-wrap justify-center items-center gap-10">
-          <img src={company1} alt="Company 1" className="h-16" />
-          <img src={company2} alt="Company 2" className="h-16" />
+          <img
+            src={company1}
+            alt="Company 1"
+            className="h-16"
+            loading="lazy"
+          />
+          <img
+            src={company2}
+            alt="Company 2"
+            className="h-16"
+            loading="lazy"
+          />
           <div className="flex flex-col justify-center items-center">
-            <img src={company3} alt="Company 3" className="h-24" />
+            <img
+              src={company3}
+              alt="Company 3"
+              className="h-24"
+              loading="lazy"
+            />
             <p className="font-bold text-xl mt-2">Knowillence</p>
           </div>
           <div className="flex flex-col justify-center items-center">
-            <img src={company4} alt="Company 4" className="h-16" />
+            <img
+              src={company4}
+              alt="Company 4"
+              className="h-16"
+              loading="lazy"
+            />
             <p className="font-bold text-xl mt-2">TEKHOSL</p>
           </div>
         </div>

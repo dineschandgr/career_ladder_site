@@ -149,33 +149,33 @@ function Nav() {
         {/* Contact Info and Social Icons */}
         <div className="hidden sm:flex gap-6 sm:flex-row flex-col items-center sm:items-start">
           <div className="flex pt-2 ml-4" >
-            <img src={contact} height={"30px"} width="40px" alt="contact-icon" />
-            <h3 className="text-sm sm:text-10 text-white font-bold mt-2">+91 8807148869 / +91 8807028071</h3>
+            <img src={contact} height={"40px"} width="40px" alt="contact-icon" />
+            <h3 className="text-lg sm:text-10 text-white font-bold mt-2">+91 8807148869 / +91 8807028071</h3>
           </div>
           <div className="flex gap-1 pt-2">
             <img src={mail} height={"35px"} width="40px" alt="contact-icon" />
-            <h3 className="text-sm sm:text-10 text-white font-bold mt-2" >info@careerladderedu.com</h3>
+            <h3 className="text-lg sm:text-10 text-white font-bold mt-2" >info@careerladderedu.com</h3>
           </div>
         </div>
 
         {/* Add phone number and contact icon for mobile view */}
         <div className="block sm:hidden text-center flex items-center justify-center gap-2 mt-0">
-          <img src={contact} height={"25px"} width="25px" alt="contact-icon " />
-          <h3 className="text-xs sm:text-sm text-white font-bold mt-2">+91 8807148869 / +91 8807028071</h3>
+          <img src={contact} height={"40px"} width="40px" alt="contact-icon " />
+          <h3 className="text-lg sm:text-sm text-white font-bold mt-2">+91 8807148869 / +91 8807028071</h3>
         </div>
 
         {/* Social Icons */}
         <div className="hidden sm:flex items-center justify-center gap-6">
           <p className="text-white font-bold text-lg mt-3">Follow Us</p>
           <div className="flex items-center justify-center gap-2">
-            <a href="https://www.instagram.com/itech_industrial_training/" className="flex justify-center items-center">
+            <a href="https://www.instagram.com/careerladder_coimbatore/" className="flex justify-center items-center">
               <img className="h-6 w-6 hover:opacity-80 transition-opacity duration-300" src={instagram} alt="Instagram" />
             </a>
             <a href="https://www.linkedin.com/in/itech-industrial-training-021b52230/" className="flex justify-center items-center">
               <img className="h-6 w-6 hover:opacity-80 transition-opacity duration-300" src={linkedin} alt="LinkedIn" />
             </a>
-            <a href="https://www.facebook.com/itechindustrialtraining" className="flex justify-center items-center">
-              <img className="h-6 w-6 hover:opacity-80 transition-opacity duration-300" src={facebook} alt="Facebook" />
+            <a href="https://www.facebook.com/profile.php?id=61552807079875/" className="flex justify-center items-center">
+              <img className="h-8 w-8 hover:opacity-80 transition-opacity duration-300" src={facebook} alt="Facebook" />
             </a>
           </div>
         </div>

@@ -14,10 +14,10 @@ function Workshop() {
 
       {/* Workshop Content */}
       <div className="mx-auto p-3 lg:p-0 lg:w-[80%] w-full mt-5">
-        <div className="flex justify-between gap-8">
+        <div className="flex flex-col lg:flex-row justify-between gap-8">
 
           {/* First Workshop */}
-          <div className="border p-3 rounded-2xl shadow-lg flex flex-col items-center w-[30%]">
+          <div className="border p-3 rounded-2xl shadow-lg flex flex-col items-center w-full lg:w-[30%]">
             <img className="h-[30vh] w-full rounded-lg mb-3 object-cover" src={work2} alt="workshop 1" />
             <p className="font-bold text-sm lg:text-base mt-3 text-center">
               A Seminar on Cloud Native Microservices using Spring Boot at Nehru Institute of Engineering and Technology.
@@ -25,7 +25,7 @@ function Workshop() {
           </div>
 
           {/* Second Workshop (Image on Top, Text on Bottom) */}
-          <div className="border p-3 rounded-2xl shadow-lg flex flex-col items-center w-[30%]">
+          <div className="border p-3 rounded-2xl shadow-lg flex flex-col items-center w-full lg:w-[30%]">
             <img className="h-[30vh] w-full rounded-lg mb-3 object-cover" src={work3} alt="workshop 2" />
             <p className="font-bold text-sm lg:text-base mt-3 text-center">
               1-day workshop on Embedded Systems at Tamil Nadu College of Engineering.
@@ -33,7 +33,7 @@ function Workshop() {
           </div>
 
           {/* Third Workshop */}
-          <div className="border p-3 rounded-2xl shadow-lg flex flex-col items-center w-[30%]">
+          <div className="border p-3 rounded-2xl shadow-lg flex flex-col items-center w-full lg:w-[30%]">
             <img className="h-[30vh] w-full rounded-lg mb-3 object-cover" src={work1} alt="workshop 3" />
             <p className="font-bold text-sm lg:text-base mt-3 text-center">
               Karunya University students attending Artificial Intelligence and Machine Learning Internship.

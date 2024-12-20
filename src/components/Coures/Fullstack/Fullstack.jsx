@@ -70,7 +70,7 @@ export const Fullstack = () => {
                     <div className="grid lg:grid-cols-3 grid-cols-1 gap-10">
                         {key.map((item, index) => (
                             <div key={index} className="text-center hover:bg-[#d1eaff] rounded-lg p-4 transition-all duration-300">
-                                <img src={item.image} alt={item.title} className="mx-auto mb-4 hover:scale-105 transition-transform duration-300 ease-in-out" />
+                                <img src={item.image} alt={item.title} className="mx-auto mb-4 hover:scale-105 transition-transform duration-300 ease-in-out" loading="lazy" />
                                 <p className="text-lg font-semibold">{item.title}</p>
                                 <h1 className="text-xl font-bold">{item.text}</h1>
                             </div>
@@ -96,7 +96,7 @@ export const Fullstack = () => {
                     <div className="grid lg:grid-cols-5 grid-cols-2 gap-6 pt-4">
                         {Frontend.map((item, index) => (
                             <div key={index} className="text-center hover:scale-110 transition-transform duration-300">
-                                <img src={item.image} alt={item.title} className="h-14 mx-auto mb-2 hover:scale-125 transition-transform duration-300" />
+                                <img src={item.image} alt={item.title} className="h-14 mx-auto mb-2 hover:scale-125 transition-transform duration-300" loading="lazy" />
                                 <h5 className="text-sm font-medium">{item.title}</h5>
                             </div>
                         ))}
@@ -107,7 +107,7 @@ export const Fullstack = () => {
                     <div className="grid lg:grid-cols-4 grid-cols-2 gap-6 pt-4">
                         {Backend.map((item, index) => (
                             <div key={index} className="text-center hover:scale-110 transition-transform duration-300">
-                                <img src={item.image} alt={item.title} className="h-14 mx-auto mb-2 hover:scale-125 transition-transform duration-300" />
+                                <img src={item.image} alt={item.title} className="h-14 mx-auto mb-2 hover:scale-125 transition-transform duration-300" loading="lazy" />
                                 <h5 className="text-sm font-medium">{item.title}</h5>
                             </div>
                         ))}

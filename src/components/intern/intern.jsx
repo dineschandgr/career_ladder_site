@@ -5,13 +5,13 @@ function Intern() {
     <div className="mt-20">
       <div className="lg:flex gap-16 lg:mx-36 mx-4 flex-col lg:flex-row">
         {/* Left Column: Image */}
-        <div className="w-full lg:w-1/2 flex justify-center">
+        <div className="w-full lg:w-1/2 flex justify-center mb-8 lg:mb-0">
           <img className="h-[50vh] w-auto rounded-lg" src={intern} alt="Internship" />
         </div>
 
         {/* Right Column: Text */}
         <div className="lg:w-1/2 flex items-center justify-center mt-8 lg:mt-0">
-          <div className="text-center lg:text-left">
+          <div className="text-center lg:text-left px-4">
             <h2 className="text-2xl lg:text-3xl text-blue-800 font-sans font-bold mb-4">
               Internships for Students
             </h2>
