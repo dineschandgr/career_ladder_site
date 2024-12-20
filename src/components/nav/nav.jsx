@@ -171,10 +171,10 @@ function Nav() {
             <a href="https://www.instagram.com/careerladder_coimbatore/" className="flex justify-center items-center">
               <img className="h-6 w-6 hover:opacity-80 transition-opacity duration-300" src={instagram} alt="Instagram" />
             </a>
-            <a href="https://www.linkedin.com/in/itech-industrial-training-021b52230/" className="flex justify-center items-center">
+            <a href="https://www.linkedin.com/company/careerladder-coimbatore-hope-college-sundarapuram/" className="flex justify-center items-center">
               <img className="h-6 w-6 hover:opacity-80 transition-opacity duration-300" src={linkedin} alt="LinkedIn" />
             </a>
-            <a href="https://www.facebook.com/profile.php?id=61552807079875/" className="flex justify-center items-center">
+            <a href="https://www.facebook.com/p/Livewire-Hopecollege-Coimbatore-61552807079875/" className="flex justify-center items-center">
               <img className="h-8 w-8 hover:opacity-80 transition-opacity duration-300" src={facebook} alt="Facebook" />
             </a>
           </div>
