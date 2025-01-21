@@ -1,0 +1,145 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Classic Body Background with Wave Effect */
+  body {
+    font-family: 'Arial', sans-serif;
+    background: #f0f4f8; 
+
+    background-position: 0 0;
+    color: #333; /* Darker text for better contrast */
+    line-height: 1.6;
+    padding: 0% 0;
+    min-height: 100vh; /* Ensure body fills the viewport */
+    animation: waveEffect 10s ease-in-out infinite; /* Add animation for the wave */
+  }
+  
+  /* Font family for headers and paragraphs */
+  h1, h2, p {
+    font-family: 'Verdana', sans-serif;
+  }
+  
+  /* Header Section */
+  header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    background: black;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    color: #ddd;
+  }
+  
+  /* Blog Post Section */
+  section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Two columns */
+    gap: 30px; /* Space between columns and rows */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Styling for blog posts */
+  .blog-post {
+    background: rgba(255, 255, 255, 0.1); /* Light transparent background */
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .blog-post:hover {
+    background: rgba(255, 255, 255, 0.2); /* Slightly more opaque on hover */
+    transform: translateY(-10px);
+    box-shadow: 0 12px 18px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Header inside each blog post */
+  .blog-post header h2 {
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 10px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .blog-post header h2:hover {
+    color: #ff6347; /* Change color on hover */
+  }
+  
+  .blog-post header .post-date {
+    color: #888;
+    font-size: 0.9rem;
+  }
+  
+  /* Blog Post Content */
+  .blog-post p {
+    margin-top: 20px;
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+  
+  /* Responsive Image */
+  .blog-post-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 15px;
+  }
+  
+  /* Learn More Button Styling */
+  .blog-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  
+ 
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 2.5rem;
+    }
+  
+    .blog-post {
+      padding: 15px;
+    }
+  
+    .blog-post header h2 {
+      font-size: 1.8rem;
+    }
+  
+    .blog-post-image {
+      max-width: 100%;
+    }
+  
+    .blog-link {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  }
+  

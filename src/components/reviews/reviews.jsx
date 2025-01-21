@@ -2,7 +2,7 @@ import review from "../../asset/reviews/reviews.png";
 
 function Reviews() {
   return (
-    <div className="bg-blue-100 lg:p-8">
+    <div className="bg-blue-100 lg:p-4 shadow-md">
       <div className="lg:flex lg:justify-center lg:items-center gap-16 lg:mx-36 flex-col lg:flex-row">
 
         {/* Left Column: Text */}
@@ -25,7 +25,7 @@ function Reviews() {
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                className="w-6 h-6"
+                className="w-6 h-6 mb-3"
               >
                 <path
                   stroke-linecap="round"
@@ -39,7 +39,7 @@ function Reviews() {
 
         {/* Right Column: Image */}
         <div className="text-center lg:text-left lg:w-1/2 mt-8 lg:mt-0">
-          <a href="https://youtube.com/shorts/yff1Vbg_FZ8?feature=shared">
+          <a href="https://youtube.com/shorts/A9f1_3rfQls?si=xwMtdL64U1MzJSYr">
             <img className="h-[35vh] w-auto rounded-2xl mx-auto" src={review} alt="Review" />
           </a>
         </div>

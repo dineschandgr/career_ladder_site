@@ -1,0 +1,59 @@
+/* Scrolling Animation */
+@keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .animate-marquee {
+    animation: marquee 10s linear infinite;
+  }
+ 
+  /* Add this to your CSS file to add a checkmark before each list item */
+.checkmark-list li::before {
+    content: '✔'; /* Unicode checkmark */
+    color: red; /* You can customize the color */
+    font-size: 0.8rem; /* Adjust size of the checkmark */
+    margin-right: 8px; /* Space between checkmark and text */
+    display: inline-block;
+  }
+  /* Background Design */
+.background-container {
+    background: linear-gradient(135deg, rgba(0, 163, 255, 0.1), rgba(100, 100, 255, 0.1)), url('https://www.svgrepo.com/show/276971/abstract-pattern.svg') repeat;
+    background-size: 40px 40px;
+    padding: 10px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Add shadow effects for course cards */
+  .course-card-shadow {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1), 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Label Styles */
+  .course-label {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    background-color: rgba(243, 85, 37, 0.7);
+    color: white;
+    padding: 5px 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-transform: uppercase;
+    z-index: 10;
+  }
+  
+  .course-button {
+    transition: transform 0.5s ease;
+  }
+  
+  .course-button:hover {
+    transform: scale(1.05);
+  }
+  

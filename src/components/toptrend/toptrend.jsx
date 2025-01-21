@@ -1,69 +1,89 @@
-import master from "../../asset/toptrend/master.png";
-import java from "../../asset/toptrend/java.png";
-import python from "../../asset/toptrend/python.png";
-import data from "../../asset/toptrend/dataa.png";
+import React from "react";
+import { motion } from "framer-motion";
+import master from "../../asset/toptrend/master.webp";
+import java from "../../asset/toptrend/java.webp";
+import python from "../../asset/toptrend/python.webp";
+import data from "../../asset/toptrend/dataa.webp";
 import { Link } from "react-router-dom";
+import hack from "../../asset/toptrend/hack.webp";
 
 function Top() {
   const top = [
     {
       img: master,
       title: "Master Certificate in Data Science",
-      content: "In-Centre | Online | Hybrid"
+      content: "In-Centre | Online | Hybrid",
+      path: "/DS"
     },
     {
       img: java,
       title: "Master Program in Full Stack Development Using Java",
       content: "In-Centre | Online | Hybrid",
-      path: "/java"
+      path: "/FSD"
     },
     {
       img: data,
       title: "Master Program in Data Analytics",
-      content: "In-Centre | Online | Hybrid"
+      content: "In-Centre | Online | Hybrid",
+      path: "/DA"
     },
     {
       img: python,
       title: "Master Program Full Stack Development Using Python",
-      content: "In-Centre | Online | Hybrid"
+      content: "In-Centre | Online | Hybrid",
+      path: "/FSD"
+    },
+    {
+      img: hack,
+      title: "Master Program Data Science",
+      content: "In-Centre | Online | Hybrid",
+      path: "/DS"
     },
   ];
 
   return (
-    <div className="p-5 mt-24 mb-16"> {/* Increased the top margin for more spacing */}
+    <div className="p-5 mt-24 mb-16">
       {/* Heading Section with Bold and Centered Text */}
-      <div className="flex justify-center text-black mb-8">
-        <h1 className="text-4xl font-bold text-center text-blue-800"> {/* Increased font size for better visibility */}
-          Top Trending <span className="text-blue-800">Courses</span>
-        </h1>
-      </div>
+      <h1 className="text-4xl lg:text-5xl font-serif text-center text-blue-800 mb-10">
+        Top Trending <span className="text-blue-800">Courses</span>
+      </h1>
 
       {/* Course Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-8"> {/* Display 2 cards per row */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {top.map((course, index) => (
-          <div key={index} className="bg-white rounded-2xl shadow-md flex flex-col h-full">
-            <div className="flex h-full">
+          <motion.div
+            key={index}
+            className="bg-white rounded-2xl shadow-lg transform transition-all  "
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6 + index * 0.3, duration: 1 }}
+          >
+            <div className="flex flex-col lg:flex-row h-full">
               {/* Image Section */}
-              <div className="w-1/3 h-full">
-                <img className="w-full h-full object-cover rounded-l-2xl" src={course.img} alt={course.title} />
+              <div className="w-full lg:w-1/3 h-full rounded-t-2xl lg:rounded-l-2xl overflow-hidden">
+                <img
+                  className="w-full h-full object-cover"
+                  src={course.img}
+                  alt={course.title}
+                />
               </div>
 
               {/* Text Section */}
-              <div className="w-2/3 p-4 flex flex-col justify-between">
-                <h2 className="font-sans font-bold text-lg mb-2">{course.title}</h2>
-                <p className="font-sans text-sm text-gray-700 mb-4">{course.content}</p>
+              <div className="w-full lg:w-2/3 p-4 flex flex-col justify-between">
+                <h2 className="font-sans font-bold text-lg lg:text-xl mb-2 text-blue-800">{course.title}</h2>
+                <p className="font-sans text-sm lg:text-base text-gray-700 mb-4">{course.content}</p>
 
                 {/* Button Section */}
                 <div className="mt-auto flex justify-end">
-                  <Link to={course.path || "#"}>
-                    <button className="px-4 py-2 bg-blue-500 text-white text-sm font-semibold rounded-lg shadow-md">
+                  <Link to={course.path}>
+                    <button className="px-4 py-2 bg-blue-500 text-white text-sm font-semibold rounded-lg shadow-md hover:bg-blue-600 transition-colors duration-200">
                       Know More
                     </button>
                   </Link>
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

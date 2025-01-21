@@ -9,9 +9,8 @@
 @media (max-width: 1024px) {
   .mobile-dropdown {
     position: absolute;
-    top:40px; /* Adjust this value depending on your needs */
-    left:190px;  /* Adjust this for better positioning */
+    top: 100px; /* Increase this value to move the dropdown lower */
+    left: 190px;  /* Adjust this for better positioning */
     width: calc(60% - 5px);  /* Ensure the dropdown fits within the viewport */
-    
   }
 }

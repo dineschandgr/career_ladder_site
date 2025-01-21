@@ -1,0 +1,35 @@
+/* Animated Gradient */
+@keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradientAnimation 5s ease infinite;
+  }
+  
+  /* Wave Animation */
+  @keyframes waveAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-wave {
+    animation: waveAnimation 3s ease-in-out infinite;
+  }
+  
