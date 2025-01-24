@@ -35,74 +35,27 @@ export const Java = () => {
         },
     ];
 
-    const dotStyles = {
-        dot: {
-            position: 'absolute',
-            width: '20px',
-            height: '20px',
-            borderRadius: '50%',
-            animation: 'pulseDot 2s infinite ease-in-out',
-        },
-        dot1: {
-            backgroundColor: '#4A90E2', // Blue
-            top: '10%',
-            left: '15%',
-            animationDelay: '0s',
-        },
-        dot2: {
-            backgroundColor: '#50E3C2', // Light Teal
-            top: '20%',
-            right: '10%',
-            animationDelay: '0.5s',
-        },
-        dot3: {
-            backgroundColor: '#F5A623', // Yellow
-            bottom: '10%',
-            left: '30%',
-            animationDelay: '1s',
-        },
-        dot4: {
-            backgroundColor: '#9013FE', // Purple
-            bottom: '20%',
-            right: '15%',
-            animationDelay: '1.5s',
-        },
-        dot5: {
-            backgroundColor: '#F8E71C', // Bright Yellow
-            top: '50%',
-            left: '50%',
-            animationDelay: '2s',
-        },
-    };
-
     return (
-        <div className="font-sans bg-gradient-to-r from-blue-500 to-white min-h-screen">
+        <div className="font-sans bg-white min-h-screen">
             <Nav />
 
-            {/* Hero Section with Colorful Dot Animations */}
-            <div className="relative h-[10vh] flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-1">
-                    {/* Add the animated colorful dots */}
-                    <div className="absolute inset-0">
-                        <div style={{ ...dotStyles.dot, ...dotStyles.dot1 }}></div>
-                        <div style={{ ...dotStyles.dot, ...dotStyles.dot2 }}></div>
-                        <div style={{ ...dotStyles.dot, ...dotStyles.dot3 }}></div>
-                        <div style={{ ...dotStyles.dot, ...dotStyles.dot4 }}></div>
-                        <div style={{ ...dotStyles.dot, ...dotStyles.dot5 }}></div>
-                    </div>
-                </div>
-                <div className="relative z-10 text-center text-black px-10 py-90">
-                    <h1 className="text-4xl lg:text-5xl font-extrabold mb-">Java Full Stack Development</h1>
+            {/* Hero Section */}
+            <div className="relative flex items-center justify-center min-h-[60vh] bg-[#F3F4F6] px-6 py-16 mb-12">
+                <div className="text-center text-black z-10 animate__animated animate__fadeIn animate__delay-1s">
+                    <h1 className="text-4xl lg:text-5xl font-extrabold mb-4">Java Full Stack Development</h1>
                     <h6 className="text-lg lg:text-xl font-medium">Learn to Debug Java Code like A Pro. Master Advanced Java Programming!</h6>
                 </div>
             </div>
 
             {/* Key Highlights Section */}
-            <div className="bg-[#E6F1FF] px-6 py-16">
-                <h1 className="text-3xl font-extrabold text-center mb-10">Course Key Highlights</h1>
+            <div className="px-6 py-16 mb-12">
+                <h1 className="text-3xl font-extrabold text-left mb-10 animate__animated animate__fadeIn animate__delay-2s">Course Key Highlights</h1>
                 <div className="grid lg:grid-cols-3 sm:grid-cols-1 gap-10">
                     {key.map((Key, index) => (
-                        <div key={index} className="bg-white shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300 rounded-lg text-center p-6">
+                        <div 
+                            key={index} 
+                            className="bg-white shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300 rounded-lg text-center p-6 transform hover:translate-y-[-5px] animate__animated animate__fadeIn animate__delay-3s"
+                        >
                             <p className="text-xl font-semibold">{Key.title}</p>
                             <h1 className="text-xl font-bold text-blue-700">{Key.text}</h1>
                         </div>
@@ -111,20 +64,18 @@ export const Java = () => {
             </div>
 
             {/* Course Overview Section */}
-            <div className="lg:px-20 px-6 py-16 text-center">
+            <div className="lg:px-20 px-6 py-16 mb-12 text-left animate__animated animate__fadeIn animate__delay-4s">
                 <h1 className="text-3xl font-extrabold mb-6">Java and Advanced Java - Certification Training Course</h1>
                 <p className="text-lg mb-6">Java is a widely-used, versatile programming language with a vast ecosystem of libraries and frameworks. Proficiency in Java, along with advanced Java concepts such as multithreading, JDBC, and JSP/Servlets, can lead to career opportunities as a Java developer, software engineer, or application developer in various industries.</p>
 
                 <h2 className="text-2xl font-extrabold mb-4">Course Objective</h2>
-                <p className="text-lg">This course teaches the fundamental and advanced concepts of the Java programming language. Through hands-on programming experience, the course focuses on developing scalable and robust applications using advanced Java programming techniques and frameworks. It is intended for experienced Java programmers who want to expand their knowledge and skills.</p>
+                <p className="text-lg mb-6">This course teaches the fundamental and advanced concepts of the Java programming language. Through hands-on programming experience, the course focuses on developing scalable and robust applications using advanced Java programming techniques and frameworks. It is intended for experienced Java programmers who want to expand their knowledge and skills.</p>
             </div>
 
             {/* Key Topics Section */}
-            <div className="lg:px-20 px-6 py-16">
-                <h1 className="text-3xl font-extrabold text-center mb-8">Key Topics Covered</h1>
-                <div className="bg-red-200 p-6 rounded-lg mb-6">
-                    <h6 className="font-medium text-lg text-center">Java Programming Basics</h6>
-                </div>
+            <div className="lg:px-20 px-6 py-16 mb-12 text-left animate__animated animate__fadeIn animate__delay-5s">
+                <h1 className="text-3xl font-extrabold mb-8">Key Topics Covered</h1>
+             
 
                 <div className="text-lg font-semibold">
                     <ul className="list-disc pl-8 space-y-3">
@@ -138,9 +89,9 @@ export const Java = () => {
             </div>
 
             {/* Career Opportunities Section */}
-            <div className="lg:px-20 px-6 py-16 bg-[#F8F9FA]">
-                <h1 className="text-3xl font-extrabold text-center mb-8">Scope & Career Opportunities</h1>
-                <p className="text-lg text-center mx-auto">The Full Stack Development course using Java offers a wide range of career opportunities. With the growing demand for Java developers, learners can expect to work as Full Stack Developers, Software Engineers, Web Developers, and more. This course will enable learners to build dynamic and responsive web applications that can meet the demands of businesses and users.</p>
+            <div className="lg:px-20 px-6 py-16 bg-[#F8F9FA] mb-12 text-left animate__animated animate__fadeIn animate__delay-7s">
+                <h1 className="text-3xl font-extrabold mb-8">Scope & Career Opportunities</h1>
+                <p className="text-lg text-left mx-auto max-w-3xl">The Full Stack Development course using Java offers a wide range of career opportunities. With the growing demand for Java developers, learners can expect to work as Full Stack Developers, Software Engineers, Web Developers, and more. This course will enable learners to build dynamic and responsive web applications that can meet the demands of businesses and users.</p>
             </div>
 
             <Footer />

@@ -14,9 +14,28 @@ import Team from "./components/team/team"
 import { Contact } from "./components/Contact/Contact";
 import { RouterProvider,createBrowserRouter } from "react-router-dom";
 import Homepage from "./components/homepage/homepage";
-import {Java} from "./components/Coures/Java/Java"
-import {Fullstack} from "./components/Coures/Fullstack/Fullstack"
+import {Java} from "./components/Coures/Java/Java";
+import {Fullstack} from "./components/Coures/Fullstack/Fullstack";
 import Placement from "./components/placement/Placement";
+import Blog from "./components/blog/blog";
+import Courses from "./components/Coures/courses/courses";
+import DS from './components/Coures/courses/datascience';
+import DA from './components/Coures/courses/dataanalytics';
+import FSD from './components/Coures/courses/fullstack';
+import CS from './components/Coures/courses/cybersecurity';
+import CC from './components/Coures/courses/cloudcomputing';
+import AI from './components/Coures/courses/artificialintelligence';
+import DM from './components/Coures/courses/digitalmarketing';
+import UU from './components/Coures/courses/uiux';
+import ES from './components/Coures/courses/embeddedsystem';
+import AT from './components/Coures/courses/automationtesting';
+import Label from './components/label/label';
+import BoxCourse from "./components/boxcourse/boxcourse";
+
+
+
+
+
 
 function App() {
 
@@ -46,9 +65,65 @@ function App() {
     {
       path:'/placement',
       element:<Placement/>
-    }
+    },
+    {
+      path:'/blog',
+      element:<Blog/>
+    },
+    {
+      path:'/courses',
+      element:<Courses />
+    },
+    {
+      path:'/DS',
+      element:<DS/>
+    },
+    {
+      path:'/DA',
+      element:<DA/>
+    },
+    {
+      path:'/FSD',
+      element:<FSD/>
+    },
+    {
+      path:'/CS',
+      element:<CS/>
+    },
+    {
+      path:'/CC',
+      element:<CC/>
+    },
+    {
+      path:'/AI',
+      element:<AI/>
+    },
+    {
+      path:'/DM',
+      element:<DM/>
+    },
+    {
+      path:'/UU',
+      element:<UU/>
+    },
+    {
+      path:'/ES',
+      element:<ES/>
+    },
+    {
+      path:'/AT',
+      element:<AT/>
+    },
+     {
+       path:'/label',
+       element:<Label/>
+     },
+     {
+      path:'/boxcourse',
+      element: <BoxCourse />
+    },
 
-   
+    
     
    
 
@@ -64,6 +139,7 @@ function App() {
        {/* <Nav />
       <Hero/>
       <Partner/>
+      <boxcourse/>
       <About/>
       <Top/>
       <Workshop/>
