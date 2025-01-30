@@ -3,8 +3,8 @@ import Nav from "../nav/nav";
 import Nav2 from '../nav2/nav2';
 import { Footer } from "../Footer/Footer";
 import { Helmet } from 'react-helmet'; // For SEO optimizations
-import './blog.css'; // Make sure this CSS is properly linked
 import WhatsAppButton from '../whatsapp/whatsapp';
+import './blog.css'; // Ensure this CSS is properly linked
 
 export class Blog extends Component {
   constructor(props) {
@@ -15,7 +15,7 @@ export class Blog extends Component {
       posts: [
         {
           id: 1,
-          title: "DATA ANALYTIC",
+          title: "Data Analytics",
           content: "Data Analytics is the process of converting raw data into meaningful insights to help an organization make important decisions. It can range from analyzing a company’s performance for the past years, to analyzing stock prices, forex rates, financial markets, and so on. The below code example downloads data from the URL https://webscraper.io/test-sites/e-commerce/allinone/computers/laptops. For more details, visit [Kaggle’s Data Science Tutorials](https://www.kaggle.com/learn).",
           image: "https://img.freepik.com/free-photo/business-data-analysis_53876-95296.jpg?ga=GA1.1.1943424079.1732703638&semt=ais_hybrid", // Freepik image for software development
           date: "Dec 15, 2024",
@@ -78,23 +78,31 @@ export class Blog extends Component {
           <meta name="keywords" content="free software courses, React tutorials, Python data science, JavaScript development, full stack web development" />
         </Helmet>
 
-        {/* Blog Post Section */}
-        <section className="blog-post-section">
-          {this.state.posts.map(post => (
-            <article key={post.id} className="blog-post">
-              <header>
-                <h2>{post.title}</h2>
-                <p className="post-date">{new Date(post.date).toLocaleDateString()}</p>
-              </header>
-              <img src={post.image} alt={post.title} className="blog-post-image" />
-              <p>{post.content}</p>
-              {/* Backlink for redirection */}
-              <a href={post.link} target="_blank" rel="noopener noreferrer" className="blog-link">
-                Learn More
-              </a>
-            </article>
-          ))}
-        </section>
+        <main>
+          
+          {/* Blog Post Section */}
+          <section className="blog-post-section">
+            {this.state.posts.map(post => (
+              <article key={post.id} className="blog-post" style={{ border: '2px solid #ddd', padding: '15px', marginBottom: '20px' }}>
+                <header>
+                  <h2>{post.title}</h2>
+                  <p className="post-date">{new Date(post.date).toLocaleDateString()}</p>
+                </header>
+                <img
+                  src={post.image}
+                  alt={post.title}
+                  className="blog-post-image"
+                  style={{ maxWidth: '100%', height: 'auto', display: 'block', margin: '0 auto' }}
+                />
+                <p>{post.content}</p>
+                {/* Backlink for redirection */}
+                <a href={post.link} target="_blank" rel="noopener noreferrer" className="blog-link" style={{ color: '#00000', textDecoration: 'underline' }}>
+                  Learn More
+                </a>
+              </article>
+            ))}
+          </section>
+        </main>
 
         {/* Footer Section */}
         <Footer />

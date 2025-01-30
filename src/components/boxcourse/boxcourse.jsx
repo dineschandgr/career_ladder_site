@@ -36,7 +36,7 @@ function Top() {
   }, []);
 
   return (
-    <div className="p-6 mt-10 mb-16">
+    <div className="p-6 mt-8 mb-12">
       <h1 className="text-4xl lg:text-5xl font-serif text-center text-gray-800 mb-10">
         Trending <span className="text-blue-800">Courses</span>
       </h1>
@@ -71,41 +71,34 @@ function Top() {
 
               {/* Card Content */}
               <div className="bg-white rounded-xl p-4 mb-6">
-                <motion.h2
-                  className="font-semibold text-xl mb-4 text-blue-800"
-                  initial={{ x: -20 }}
-                  animate={{ x: 0 }}
-                  transition={{ type: "spring", stiffness: 100 }}
-                >
+                <h2 className="font-semibold text-xl mb-4 text-blue-800">
                   {course.title}
-                </motion.h2>
+                </h2>
 
                 {/* Bullet-point text with checkmark */}
                 <ul className="checkmark-list list-inside">
-                  <li className="text-md mb-2 text-black font-serif">Online & Offline class available</li>
-                  <li className="text-md mb-2 text-black font-serif">365 Days Flexi Pass</li>
-                  <li className="text-md mb-2 text-black font-serif">Internship + Job Assistance</li>
-                  <li className="text-md mb-4 text-black font-serif">25 Capstone & 1 Client Project</li>
+                  <li className="text-md mb-2 text-black font-serif">
+                    Online & Offline class available
+                  </li>
+                  <li className="text-md mb-2 text-black font-serif">
+                    365 Days Flexi Pass
+                  </li>
+                  <li className="text-md mb-2 text-black font-serif">
+                    Internship + Job Assistance
+                  </li>
+                  <li className="text-md mb-4 text-black font-serif">
+                    25 Capstone & 1 Client Project
+                  </li>
                 </ul>
 
                 {/* Price Section */}
                 <div className="flex items-center justify-between">
-                  <motion.span
-                    className="text-lg font-semibold line-through text-red-500"
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    transition={{ delay: 0.1 * course.id, type: "spring", stiffness: 100 }}
-                  >
+                  <h3 className="text-lg font-semibold line-through text-red-500">
                     ₹{course.originalPrice}
-                  </motion.span>
-                  <motion.span
-                    className="text-lg font-semibold text-green-500"
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    transition={{ delay: 0.1 * course.id, type: "spring", stiffness: 100 }}
-                  >
+                  </h3>
+                  <h3 className="text-lg font-semibold text-green-500">
                     ₹{course.discountPrice}
-                  </motion.span>
+                  </h3>
                 </div>
               </div>
 

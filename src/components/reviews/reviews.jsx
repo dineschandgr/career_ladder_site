@@ -4,19 +4,22 @@ function Reviews() {
   return (
     <div className="bg-blue-100 lg:p-4 shadow-md">
       <div className="lg:flex lg:justify-center lg:items-center gap-16 lg:mx-36 flex-col lg:flex-row">
-
+        
         {/* Left Column: Text */}
         <div className="text-center lg:text-left lg:w-1/2">
-          <h2 className="text-3xl font-sans font-bold text-blue-800 pt-4 lg:pt-0">
+          <h1 className="text-3xl font-sans font-bold text-blue-800 pt-4 lg:pt-0">
             Hear from Our Students
+          </h1>
+          <h2 className="text-lg font-sans text-gray-700 mt-4">
+            CareerLadder students talk about their enjoyable learning experiences that included practical training, best practices, job prospects, and exposure to reputable businesses and organizations.
           </h2>
-          <p className="text-lg font-sans text-gray-700 mt-4">
-            CareerLadder students talk about their enjoyable learning experiences that included practical training,
-            best practices, job prospects, and exposure to reputable businesses and organizations.
-          </p>
           
           {/* Centered See More Testimonial */}
-          <a href="https://youtube.com/shorts/yff1Vbg_FZ8?feature=shared" className="flex justify-center mt-4">
+          <a 
+            href="https://youtube.com/shorts/yff1Vbg_FZ8?feature=shared" 
+            className="flex justify-center mt-4"
+            title="Watch more student testimonials on YouTube"
+          >
             <div className="flex items-center gap-2">
               <p className="font-semibold text-black text-center">See More Testimonial</p>
               <svg
@@ -39,8 +42,16 @@ function Reviews() {
 
         {/* Right Column: Image */}
         <div className="text-center lg:text-left lg:w-1/2 mt-8 lg:mt-0">
-          <a href="https://youtube.com/shorts/A9f1_3rfQls?si=xwMtdL64U1MzJSYr">
-            <img className="h-[35vh] w-auto rounded-2xl mx-auto" src={review} alt="Review" />
+          <a 
+            href="https://youtube.com/shorts/A9f1_3rfQls?si=xwMtdL64U1MzJSYr" 
+            title="Watch student reviews video"
+          >
+            <img 
+              className="h-[35vh] w-auto rounded-2xl mx-auto" 
+              src={review} 
+              alt="CareerLadder student sharing their review" 
+              loading="lazy" 
+            />
           </a>
         </div>
       </div>

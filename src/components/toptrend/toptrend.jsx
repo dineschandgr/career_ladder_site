@@ -42,7 +42,7 @@ function Top() {
   ];
 
   return (
-    <div className="p-5 mt-24 mb-16">
+    <div className="p-5 mt-10 mb-10">
       {/* Heading Section with Bold and Centered Text */}
       <h1 className="text-4xl lg:text-5xl font-serif text-center text-blue-800 mb-10">
         Top Trending <span className="text-blue-800">Courses</span>

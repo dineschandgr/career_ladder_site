@@ -12,7 +12,7 @@ function About() {
     "name": "CareerLadder",
     "url": "https://www.careerladderedu.com",
     "logo": "https://www.careerladderedu.com/path-to-logo-image.jpg",
-    "description": "CareerLadder is the top software training institute in Coimbatore offering courses in software development, programming, data science, machine learning, and more.",
+
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+91-8807148869",
@@ -34,11 +34,11 @@ function About() {
         <Helmet>
           <meta
             name="description"
-            content="Learn about CareerLadder, the best software training institute in Coimbatore. Explore our expert-led software development, programming, and data science courses. Start your tech career today!"
+            content="Learn about CareerLadder, the best software training institute in Coimbatore. Explore our expert-led software development course, programming course, and data science courses. Start your tech career today!"
           />
           <meta
             name="keywords"
-            content="CareerLadder, software training institute, Coimbatore, software development, programming courses, data science, machine learning, full-stack web development, hands-on training, career growth, learn programming, cloud computing, digital marketing, artificial intelligence, tech career, coding bootcamp, software engineering courses, IT certifications, UI/UX design, devops training, cloud computing, AWS, cyber security, ethical hacking, best software courses, top programming courses, learn AI, IT training Coimbatore, software training, career assistance, job-oriented courses, job placement, technology courses near me"
+            content="CareerLadder,Data Science course, Data Analytics course, Full Stack Development course, Digital Marketing course, Cyber Security course, Automation Testing course, Job Assistance, Interview Support, Tech Career, Coimbatore, Best Data Science course, Top Data Analytics course, Best Full Stack Development course, Top Digital Marketing course, Best Cyber Security course, Top Automation Testing course, Certification course, Top Tech Career, Best Certification in Data Science, Best Full Stack Developer course, Online Data Science certification, Best Data Analytics certification, Tech courses near me, Top certification courses in Coimbatore, Industry-leading courses, Career-oriented certification, Job-ready certification, Online course with job assistance, Job support certification"
           />
           <meta name="robots" content="index, follow" />
           <meta property="og:title" content="About Us - CareerLadder" />
@@ -48,23 +48,15 @@ function About() {
           />
           <meta property="og:image" content={about1} />
           <meta property="og:image:alt" content="CareerLadder - About Us" />
-          <meta property="og:url" content="https://www.careerladderedu.com/about" />
+          <meta property="og:url" content="https://www.careerladderedu.com/" />
           <meta property="og:type" content="website" />
           <meta property="og:site_name" content="CareerLadder" />
           <meta property="og:image:width" content="1200" />
           <meta property="og:image:height" content="630" />
           <meta property="og:locale" content="en_IN" />
-          
-          <meta name="twitter:title" content="About Us - CareerLadder" />
-          <meta
-            name="twitter:description"
-            content="Learn about CareerLadder, the best software training institute in Coimbatore. Explore our expert-led software development, programming, and data science courses."
-          />
-          <meta name="twitter:image" content={about1} />
-          <meta name="twitter:card" content="summary_large_image" />
 
           {/* Canonical Link Tag */}
-          <link rel="canonical" href="https://www.careerladderedu.com/about" />
+          <link rel="canonical" href="https://www.careerladderedu.com/aboutus" />
 
           {/* Schema.org Structured Data (JSON-LD) */}
           <script type="application/ld+json">
@@ -74,7 +66,7 @@ function About() {
 
         {/* Centered Heading */}
         <div className="text-center mb-12">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-serif text-indigo-900">
+          <h1 className="text-4xl lg:text-5xl font-serif text-indigo-900">
             About Us
           </h1>
         </div>
@@ -118,11 +110,11 @@ function About() {
 
         {/* Text and Description Section */}
         <div className="font-sans mb-12">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mt-2 mb-2 text-indigo-800 font-roboto">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mt-2 mb-2 text-indigo-800 font-sans">
             Develop In-Demand Skills at the Best Software Training Institute in Coimbatore
           </h2>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-blue-600 leading-relaxed mb-2 font-sans ">
-             CareerLadder is the top software training institute in Coimbatore, offering comprehensive courses in software development, programming, data science, machine learning, and more. Our on-demand courses in emerging technologies equip you with the practical knowledge and hands-on experience you need to succeed in today's fast-paced tech world.
+            CareerLadder is the top software training institute in Coimbatore, offering comprehensive courses in software development, programming, data science, machine learning, and more. Our on-demand courses in emerging technologies equip you with the practical knowledge and hands-on experience you need to succeed in today's fast-paced tech world.
             Join CareerLadder today, and start building your career with the best software development training in Coimbatore. Our training programs are designed to give you a competitive edge in the tech industry. 
             <br />
             <Link to="/contact" className="text-indigo-700 underline">Contact us today</Link> to learn more about our courses!
@@ -131,7 +123,7 @@ function About() {
 
         {/* New Section: Comprehensive Learning Experience */}
         <div className="font-sans mb-12">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-2 text-indigo-800 font-roboto">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-2 text-indigo-800 font-sans">
             Comprehensive Learning Experience at the Top Software Institute
           </h2>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-blue-600 leading-relaxed mb-2 font-sans">
@@ -142,9 +134,9 @@ function About() {
 
         {/* New Course Information Section */}
         <div className="font-sans mb-8">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 text-indigo-800 font-roboto">
+          <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 text-indigo-800 font-roboto">
             Our Courses - Top 10 Software Development Courses
-          </h2>
+          </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-sm sm:text-base md:text-lg lg:text-xl text-gray-800 leading-relaxed mb-6 font-sans">
             {/* Course items */}
             {[{ icon: 'https://cdn-icons-png.freepik.com/256/5973/5973227.png', title: 'Full Stack Web Development' },

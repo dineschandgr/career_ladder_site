@@ -1,153 +1,252 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { FaRobot } from 'react-icons/fa'; // AI chatbot icon
+import { MdRobot } from 'react-icons/md'; // Material Design Robot Icon (you can use it as a fallback or use a custom image)
+import { FaRobot } from 'react-icons/fa'; // Original Robot Icon (or use your custom image directly)
 
-// ChatbotButton Component
 function ChatbotButton() {
-    const [isChatOpen, setIsChatOpen] = useState(false);
-    const [messages, setMessages] = useState([
-        { text: 'Hi! How can I assist you today?', sender: 'bot' },
-    ]);
-    const chatWindowRef = useRef(null);
+  const [isChatOpen, setIsChatOpen] = useState(false);
+  const [messages, setMessages] = useState([
+    { text: 'Hi! What is your name and phone number?', sender: 'bot' },
+  ]);
+  const [newMessageCount, setNewMessageCount] = useState(0);
+  const [userDetails, setUserDetails] = useState({ name: '', phone: '', email: '', address: '', course: '' });
+  const [userMessage, setUserMessage] = useState('');
+  const [result, setResult] = useState('');
+  const [step, setStep] = useState(0); // To track which step of contact info collection we are in
+  const chatWindowRef = useRef(null);
 
-    const handleChatToggle = () => {
-        setIsChatOpen(!isChatOpen);
+  // Automatically open the chat window when the component is mounted
+  useEffect(() => {
+    setIsChatOpen(true);
+  }, []);
+
+  // Handle open/close of the chat window
+  const handleChatToggle = () => {
+    setIsChatOpen((prevState) => !prevState);
+    if (!isChatOpen) {
+      setNewMessageCount(0); // Reset new messages counter when chat is opened
+    }
+  };
+
+  // Close the chat box when clicking outside of it
+  const handleClickOutside = (event) => {
+    if (chatWindowRef.current && !chatWindowRef.current.contains(event.target)) {
+      setIsChatOpen(false);
+      setNewMessageCount(0); // Reset new messages counter when chat is closed
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
     };
+  }, []);
 
-    // Close the chat box when clicking outside of it
-    const handleClickOutside = (event) => {
-        if (chatWindowRef.current && !chatWindowRef.current.contains(event.target)) {
-            setIsChatOpen(false);
-        }
-    };
+  // Handle user messages
+  const handleUserMessage = (message) => {
+    if (!message.trim()) return; // Ignore empty messages
 
-    useEffect(() => {
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
-        };
-    }, []);
+    const newMessages = [...messages, { text: message, sender: 'user' }];
+    setMessages(newMessages);
+    setUserMessage('');
 
-    const handleUserMessage = (message) => {
-        const newMessages = [...messages, { text: message, sender: 'user' }];
-        setMessages(newMessages);
+    setTimeout(() => {
+      let botResponse = '';
+      let formData = {};
 
-        // Simulate an AI response after a delay
-        setTimeout(() => {
-            const botResponse = getBotResponse(message);
-            setMessages((prevMessages) => [
-                ...prevMessages,
-                { text: botResponse.text, sender: 'bot', options: botResponse.options },
-            ]);
-        }, 1000);
-    };
+      switch (step) {
+        case 0: // Ask for Name and Phone Number
+          const [name, phone] = message.split(','); // Expect user to input both in a single message, separated by a comma
+          if (name && phone) {
+            setUserDetails((prevDetails) => ({ ...prevDetails, name: name.trim(), phone: phone.trim() }));
+            formData = { name: name.trim(), phone: phone.trim() };
+            botResponse = 'Thanks! Now, can you please provide your email address?';
+            setStep(1);
+          } else {
+            botResponse = 'Please provide both your name and phone number, separated by a comma.';
+          }
+          break;
+        case 1: // Ask for Email
+          setUserDetails((prevDetails) => ({ ...prevDetails, email: message }));
+          formData = { email: message }; // Send email to Web3Flow
+          botResponse = 'Thanks! Now, could you please provide your address?';
+          setStep(2);
+          break;
+        case 2: // Ask for Address
+          setUserDetails((prevDetails) => ({ ...prevDetails, address: message }));
+          formData = { address: message }; // Send address to Web3Flow
+          botResponse = 'Great! Lastly, which course are you interested in? Please choose one: Data Science, Data Analytics, Digital Marketing, Full Stack.';
+          setStep(3);
+          break;
+        case 3: // Ask for Course Selection
+          setUserDetails((prevDetails) => ({ ...prevDetails, course: message }));
+          formData = { course: message }; // Send course to Web3Flow
+          botResponse = 'Thanks for your interest! Do you need any more details or would you like to contact us further?';
+          setStep(4);
+          break;
+        case 4: // Ask for Additional Info or Contact
+          botResponse = 'Thank you for providing your information! We will contact you soon regarding your selected course.';
+          setStep(5); // Finished
+          break;
+        case 5: // Submission Step
+          onSubmit(formData);
+          botResponse = 'Thank you for providing your information!';
+          break;
+        default:
+          botResponse = 'Something went wrong. Please try again.';
+      }
 
-    const getBotResponse = (message) => {
-        // Convert user input to lowercase to handle case insensitivity
-        const userMessage = message.toLowerCase();
+      // Send form data to Web3Flow after each step
+      sendFormDataToWeb3Flow(formData);
 
-        // Simulate bot responses based on user input
-        const responses = {
-            'hello': { text: 'Welcome to Career Ladder Software Training Institute. How can I assist you today?', options: ['View Courses', 'Course Fee', 'Contact Us'] },
-            'view courses': { 
-                text: 'We offer the following courses:', 
-                options: [
-                    'Data Science',
-                    'Data Analytics',
-                    'Digital Marketing',
-                    'Full-Stack Development (Java & Python)',
-                    'Business Analytics',
-                    'DevOps',
-                    'PCB Design'
-                ] 
-            },
-            'course fee': { text: 'Special Offer: Enroll now and get up to 30% OFF! Would you like to know about flexible payment plans?', options: ['Yes, tell me more!', 'No, thanks'] },
-            'contact us': { text: 'If you need assistance, feel free to reach out to us:', options: ['Call us at +91 8807148869', 'Email us at info@careerladderedu.com', 'Visit us at Career Ladder Software Training Institute, Monday to Saturday, 9 AM to 7 PM'] },
-        };
+      setMessages((prevMessages) => [
+        ...prevMessages,
+        { text: botResponse, sender: 'bot' },
+      ]);
+      setNewMessageCount((prevCount) => prevCount + 1);
+    }, 1000);
+  };
 
-        // Return the response or fallback message if no match
-        return responses[userMessage] || { text: 'please provide your number.', options: [] };
-    };
+  // Send form data to Web3Flow API
+  const sendFormDataToWeb3Flow = async (formData) => {
+    setResult('Sending...');
 
-    const handleOptionClick = (option) => {
-        // When an option is clicked, treat it as a new message and trigger a bot response
-        handleUserMessage(option);
-    };
+    const form = new FormData();
+    form.append('access_key', '14e6eaf5-7e0f-4f80-8a0a-75a7fc675c8a'); // Your Web3Flow access key
 
-    return (
-        <div>
-            {/* Floating Chatbot Button */}
-            <div className="fixed bottom-20 right-10 z-50 mb-12">
-                <button
-                    onClick={handleChatToggle}
-                    className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-full shadow-lg hover:bg-gradient-to-r hover:from-blue-600 hover:to-indigo-700 transition duration-300"
-                >
-                    <FaRobot size={40} />
-                </button>
+    Object.keys(formData).forEach((key) => {
+      form.append(key, formData[key]);
+    });
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: form,
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        setResult('Your details have been submitted successfully!');
+      } else {
+        setResult('Failed to send your details.');
+      }
+    } catch (error) {
+      setResult('An error occurred while sending your details.');
+    }
+  };
+
+  const onSubmit = (formData) => {
+    // Final submission of all form data to Web3Flow
+    sendFormDataToWeb3Flow(formData);
+  };
+
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault(); // Prevent newline in the input field
+      handleUserMessage(userMessage);
+    }
+  };
+
+  // Clear chat history
+  const clearChat = () => {
+    setMessages([{ text: 'Hi! What is your name and phone number?', sender: 'bot' }]);
+    setStep(0);
+    setNewMessageCount(0);
+  };
+
+  // Exit the chat window
+  const exitChat = () => {
+    setIsChatOpen(false);
+    setMessages([]);
+    setNewMessageCount(0);
+  };
+
+  return (
+    <div>
+      {/* Floating Chatbot Button */}
+      <div className="fixed bottom-16 right-9 z-50 mb-12 sm:right-4 sm:bottom-16 md:right-8 md:bottom-16 lg:right-8 lg:bottom-16">
+        <button
+          onClick={handleChatToggle}
+          className="relative flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-full shadow-lg hover:bg-gradient-to-r hover:from-blue-700 hover:to-indigo-800 transition duration-300 transform hover:scale-110"
+        >
+          <img
+            src="https://cdn-icons-png.freepik.com/256/15675/15675949.png?ga=GA1.1.1943424079.1732703638&semt=ais_hybrid" // Replace this with the path to your custom woman's AI icon
+            alt="AI Woman"
+            className="m-auto w-10 h-10 object-cover"
+          />
+          {newMessageCount > 0 && (
+            <div className="absolute top-0 right-0 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">
+              {newMessageCount}
             </div>
+          )}
+        </button>
+      </div>
 
-            {/* Chat Window (Show or hide based on state) */}
-            {isChatOpen && (
+      {/* Chat Window */}
+      {isChatOpen && (
+        <div
+          ref={chatWindowRef}
+          className="fixed bottom-16 right-6 w-[60%] sm:w-[80%] md:w-[60%] lg:w-[50%] xl:w-[20%] p-6 rounded-2xl shadow-lg z-50 mb-12 mr-20 transform transition-all duration-300 ease-in-out"
+          style={{
+            backgroundColor: "white",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        >
+          {/* Chat */}
+          <div className="h-72 sm:h-96 overflow-y-auto mb-4 space-y-4">
+            {messages.map((msg, index) => (
+              <div key={index} className={`flex ${msg.sender === 'bot' ? 'flex-row' : 'flex-row-reverse'} items-start space-x-2`}>
                 <div
-                    ref={chatWindowRef}
-                    className="fixed bottom-20 right-5 w-96 bg-white p-6 rounded-lg shadow-2xl z-50 mb-12 mr-20"
-                    style={{ fontFamily: 'Poppins, sans-serif' }}
+                  className={`text-sm p-4 ${msg.sender === 'bot' ? 'bg-gradient-to-r from-blue-100 to-blue-200 text-blue-600' : 'bg-gradient-to-r from-gray-200 to-gray-300 text-gray-800'} rounded-lg shadow-md w-max max-w-[80%] break-words`}
                 >
-                    <div className="h-72 overflow-y-scroll mb-4 space-y-3">
-                        {messages.map((msg, index) => (
-                            <div
-                                key={index}
-                                className={`flex ${msg.sender === 'bot' ? 'flex-row' : 'flex-row-reverse'} items-start`}
-                            >
-                                <div
-                                    className={`text-sm p-4 ${msg.sender === 'bot' ? 'bg-gradient-to-r from-blue-100 to-blue-200 text-blue-600' : 'bg-gradient-to-r from-gray-300 to-gray-400 text-gray-800'} rounded-lg shadow-md w-max`}
-                                    style={{ maxWidth: '80%', wordWrap: 'break-word' }}
-                                >
-                                    <strong>{msg.sender === 'bot' ? 'Bot' : 'You'}:</strong> {msg.text}
-                                </div>
-                            </div>
-                        ))}
-
-                        {/* Display Options as part of bot messages */}
-                        {messages.length > 0 && messages[messages.length - 1].options && (
-                            <div className="flex flex-col space-y-2 mt-2">
-                                {messages[messages.length - 1].options.map((option, index) => (
-                                    <div key={index} className="flex flex-row space-x-2">
-                                        <div className="w-full">
-                                            <button
-                                                onClick={() => handleOptionClick(option)}
-                                                className="w-full p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300"
-                                            >
-                                                {option}
-                                            </button>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        )}
-                    </div>
-                    <div className="flex">
-                        <input
-                            type="text"
-                            className="flex-1 p-4 border border-gray-300 rounded-l-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            placeholder="Type a message..."
-                            onKeyDown={(e) => {
-                                if (e.key === 'Enter' && e.target.value.trim()) {
-                                    handleUserMessage(e.target.value);
-                                    e.target.value = ''; // Clear input
-                                }
-                            }}
-                        />
-                        <button
-                            onClick={() => handleUserMessage(document.querySelector('input').value)}
-                            className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-4 rounded-r-lg shadow-md hover:bg-gradient-to-r hover:from-blue-600 hover:to-indigo-700 transition duration-300"
-                        >
-                            Send
-                        </button>
-                    </div>
+                  <strong>{msg.sender === 'bot' ? 'Alice' : 'You'}:</strong> {msg.text}
                 </div>
-            )}
+              </div>
+            ))}
+          </div>
+
+          {/* Chat Input Area */}
+          <div className="flex items-center space-x-2 mt-4">
+            <input
+              type="text"
+              id="userMessage"
+              className="w-full p-3 border border-gray-300 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-lg"
+              placeholder="Type your message"
+              value={userMessage}
+              onChange={(e) => setUserMessage(e.target.value)}
+              onKeyDown={handleKeyPress} // Detect Enter key press
+            />
+            <button
+              onClick={() => handleUserMessage(userMessage)}
+              className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-3 rounded-lg shadow-md hover:bg-gradient-to-r hover:from-blue-700 hover:to-indigo-800 transition duration-300"
+            >
+              Send
+            </button>
+          </div>
+
+          {/* Commands */}
+          <div className="mt-4">
+            <button
+              onClick={clearChat}
+              className="text-sm text-white mr-4"
+            >
+              Clear Chat
+            </button>
+            <button
+              onClick={exitChat}
+              className="text-sm text-white"
+            >
+              Exit Chat
+            </button>
+          </div>
+
+          {/* Result Message */}
+          {result && <p className="mt-4 text-center text-sm text-white-600">{result}</p>}
         </div>
-    );
+      )}
+    </div>
+  );
 }
 
 export default ChatbotButton;

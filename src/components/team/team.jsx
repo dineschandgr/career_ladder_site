@@ -103,7 +103,7 @@ function Team() {
               className="flex flex-col items-center space-y-6 sm:space-y-4 hover:scale-105 transition-all duration-300"
             >
               <div className="relative h-[200px] w-[200px] sm:h-[250px] sm:w-[250px] mb-6 p-2 bg-gray-100 rounded-lg hover:bg-blue-100 transition-all duration-300">
-                <img className="h-full w-full rounded-lg object-cover shadow-lg transition-all duration-300" src={teamMember.img} alt={teamMember.name} loading="lazy" />
+                <img className="h-full w-full rounded-lg object-cover shadow-lg transition-all duration-300" src={teamMember.img} alt={`${teamMember.name} - ${teamMember.position}`} loading="lazy" />
               </div>
               <h6 className="text-center font-sans font-bold text-2xl sm:text-xl">{teamMember.name}</h6>
               <p className="text-center text-lg sm:text-md font-sans">{teamMember.position}</p>
@@ -125,7 +125,7 @@ function Team() {
               className="flex flex-col items-center space-y-6 sm:space-y-4 hover:scale-105 transition-all duration-300"
             >
               <div className="relative h-[200px] w-[200px] sm:h-[250px] sm:w-[250px] mb-6 p-2 bg-gray-100 rounded-lg hover:bg-blue-100 transition-all duration-300">
-                <img className="h-full w-full rounded-lg object-cover shadow-lg transition-all duration-300" src={teamMember.img} alt={teamMember.name} loading="lazy" />
+                <img className="h-full w-full rounded-lg object-cover shadow-lg transition-all duration-300" src={teamMember.img} alt={`${teamMember.name} - ${teamMember.position}`} loading="lazy" />
               </div>
               <h6 className="text-center font-sans font-bold text-2xl sm:text-xl">{teamMember.name}</h6>
               <p className="text-center text-lg sm:text-md font-sans">{teamMember.position}</p>
@@ -137,8 +137,9 @@ function Team() {
       {/* Reverse Scroll Button */}
       <div className="flex justify-center py-4">
         <button
-          className="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-700 transition-all"
+          className={`px-4 py-2 rounded-md transition-all ${reverseScroll ? 'bg-red-700' : 'bg-red-500'} text-white hover:bg-red-700`}
           onClick={toggleReverseScroll}
+          aria-label="Toggle reverse scroll direction"
         >
           Toggle Reverse Scroll
         </button>

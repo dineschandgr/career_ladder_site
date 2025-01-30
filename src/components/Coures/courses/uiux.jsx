@@ -1,7 +1,6 @@
 import React from 'react';
 // import Nav from '../../nav/nav';
 import { Footer } from '../../Footer/Footer';
-import { motion } from 'framer-motion';
 import Nav2 from '../../nav2/nav2';
 
 const UIUXDesignBlog = () => {
@@ -10,31 +9,21 @@ const UIUXDesignBlog = () => {
       <Nav2 />
 
       {/* Hero Section */}
-      <motion.div
-        className="relative bg-[#F3F4F6] px-6 lg:px-16 py-24 mb-16"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.3, duration: 1 }}
-      >
+      <div className="relative bg-[#F3F4F6] px-6 lg:px-16 py-24 mb-16">
         <div className="text-center text-black z-10">
-          <h1 className="text-5xl lg:text-6xl font-extrabold mb-4 text-blue-600">
+          <h1 className="text-2xl lg:text-4xl font-extrabold mb-4 text-blue-600">
             Unlock Your Creativity with Our UI/UX Design Course
           </h1>
           <h6 className="text-xl lg:text-2xl font-medium text-gray-700">
             Transform your career with cutting-edge design skills
           </h6>
         </div>
-      </motion.div>
+      </div>
 
       {/* Blog Content Section */}
       <div className="px-6 lg:px-16 py-16 max-w-screen-xl mx-auto">
         {/* Introduction */}
-        <motion.section
-          className="mb-16"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 1 }}
-        >
+        <section className="mb-16">
           <h2 className="text-4xl font-extrabold text-blue-600 mb-8">
             What is UI/UX Design and Why is It the Future?
           </h2>
@@ -45,15 +34,10 @@ const UIUXDesignBlog = () => {
           <p className="text-lg mb-8 leading-relaxed text-gray-600">
             UI/UX design plays a pivotal role in ensuring users have intuitive, enjoyable experiences when interacting with technology. As industries continue to prioritize customer satisfaction, the need for expert designers is growing, making this field an essential part of the tech industry's evolution.
           </p>
-        </motion.section>
+        </section>
 
         {/* Why Choose UI/UX Design? */}
-        <motion.section
-          className="mb-16"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.9, duration: 1 }}
-        >
+        <section className="mb-16">
           <h3 className="text-3xl font-bold text-blue-600 mb-8">
             Why Choose UI/UX Design?
           </h3>
@@ -65,15 +49,10 @@ const UIUXDesignBlog = () => {
             <li><strong>High Demand for Designers:</strong> As businesses shift to digital platforms, companies are actively looking for talented UI/UX designers to create user-friendly products.</li>
             <li><strong>Creative Freedom:</strong> UI/UX design offers a lot of creative freedom, allowing designers to craft visually appealing and functional designs.</li>
           </ul>
-        </motion.section>
+        </section>
 
         {/* What Will You Learn? */}
-        <motion.section
-          className="mb-16"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.2, duration: 1 }}
-        >
+        <section className="mb-16">
           <h3 className="text-3xl font-bold text-blue-600 mb-8">
             What Will You Learn in Our UI/UX Design Course?
           </h3>
@@ -88,15 +67,10 @@ const UIUXDesignBlog = () => {
             <li><strong>Responsive Design:</strong> Understand how to design for multiple devices, ensuring your products work seamlessly across platforms like desktops, tablets, and mobile phones.</li>
             <li><strong>Real-World Projects:</strong> Work on real-world design projects and build a portfolio showcasing your skills to potential employers or clients.</li>
           </ul>
-        </motion.section>
+        </section>
 
         {/* Tools Used in UI/UX Design */}
-        <motion.section
-          className="mb-16"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.5, duration: 1 }}
-        >
+        <section className="mb-16">
           <h3 className="text-3xl font-bold text-blue-600 mb-8">
             Tools Used in UI/UX Design
           </h3>
@@ -106,45 +80,31 @@ const UIUXDesignBlog = () => {
           <div className="flex justify-around items-center mb-12">
             <div className="text-center">
               <img src="https://cdn-icons-png.freepik.com/256/15563/15563419.png?ga=GA1.1.2056715411.1734277242&semt=ais_hybrid" alt="Sketch" className="w-20 h-20 mb-4 mx-auto" />
-              {/* <p className="text-lg">Sketch</p> */}
             </div>
             <div className="text-center">
               <img src="https://cdn-icons-png.freepik.com/256/5968/5968705.png?ga=GA1.1.2056715411.1734277242&semt=ais_hybrid" alt="Figma" className="w-20 h-20 mb-4 mx-auto" />
-              {/* <p className="text-lg">Figma</p> */}
             </div>
             <div className="text-center">
               <img src="https://cdn-icons-png.freepik.com/256/5611/5611129.png?ga=GA1.1.2056715411.1734277242&semt=ais_hybrid" alt="Adobe XD" className="w-20 h-20 mb-4 mx-auto" />
-              {/* <p className="text-lg">Adobe XD</p> */}
             </div>
             <div className="text-center">
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUhmgSERSZHOHPgljBtVtfzlPN_cuQ_938qw&s" alt="InVision" className="w-20 h-20 mb-4 mx-auto" />
-              {/* <p className="text-lg">InVision</p> */}
             </div>
           </div>
-        </motion.section>
+        </section>
 
         {/* How This Course Can Change Your Career */}
-        <motion.section
-          className="mb-16"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.8, duration: 1 }}
-        >
+        <section className="mb-16">
           <h3 className="text-3xl font-bold text-blue-600 mb-8">
             How This Course Can Change Your Career
           </h3>
           <p className="text-lg mb-8 leading-relaxed text-gray-600">
             By completing this course, you'll gain the practical skills needed to design impactful user experiences and beautiful interfaces. Whether you’re aiming for a career in UI/UX design or looking to switch industries, this course will open the door to a wide range of career opportunities in tech, marketing, and beyond.
           </p>
-        </motion.section>
+        </section>
 
         {/* Who Should Take This Course? */}
-        <motion.section
-          className="mb-16"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 2.1, duration: 1 }}
-        >
+        <section className="mb-16">
           <h3 className="text-3xl font-bold text-blue-600 mb-8">
             Who Should Take This Course?
           </h3>
@@ -156,15 +116,10 @@ const UIUXDesignBlog = () => {
             <li><strong>Graphic Designers:</strong> If you already have a design background, our course will help you transition into the world of UI/UX design.</li>
             <li><strong>Web Developers:</strong> If you’re a developer looking to enhance your front-end design skills, this course will complement your technical knowledge.</li>
           </ul>
-        </motion.section>
+        </section>
 
         {/* What's Included in the Course */}
-        <motion.section
-          className="mb-16"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 2.4, duration: 1 }}
-        >
+        <section className="mb-16">
           <h3 className="text-3xl font-bold text-blue-600 mb-8">
             What’s Included in the Course?
           </h3>
@@ -177,7 +132,7 @@ const UIUXDesignBlog = () => {
             <li><strong>Quizzes & Assessments:</strong> Regular assessments to help track your progress and reinforce learning.</li>
             <li><strong>Career Support:</strong> Resume building, portfolio guidance, and job interview prep to help you land your first design role.</li>
           </ul>
-        </motion.section>
+        </section>
 
         {/* Contact Us Button */}
         <div className="text-center my-12">

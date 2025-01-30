@@ -10,7 +10,9 @@ import { Footer } from "../Footer/Footer";
 import WhatsAppButton from "../whatsapp/whatsapp";
 import Label from '../label/label.jsx';  // With .jsx extension, if applicable
 import BoxCourse from "../boxcourse/boxcourse.jsx";
-// import Aichatbot from "../aichatbot/aichat.jsx";
+import Aichatbot from "../aichatbot/aichat.jsx";
+import Insights from "../insights/insights.jsx";
+// import ScrollToTopOnArrowPress from "../scrollup/scrollup.jsx";
 
 
 
@@ -23,6 +25,7 @@ function Homepage() {
         <div className="font-sans">
             <Nav />
             <Hero />
+            <Insights />
             <BoxCourse />
             <Top />
             <Partner />
@@ -31,8 +34,10 @@ function Homepage() {
             <Reviews />
             <Intern />
             <WhatsAppButton />
-            {/* <Aichatbot /> */}
+            {/* <ScrollToTopOnArrowPress /> */}
+             <Aichatbot /> 
             {<Label /> }
+           
             <Footer />
 
         </div>

@@ -14,7 +14,7 @@ function Nav2() {
     <div>
       {/* Full-Page Hero Section with a Single Background Image and Custom Height */}
       <div
-        className="relative w-full h-[15vh] sm:h-[15vh] md:h-[60vh] lg:h-[15vh] bg-cover bg-center bg-gray-100 shadow-md"
+        className="relative w-full h-[15vh] sm:h-[15vh] md:h-[60vh] lg:h-[15vh] bg-cover bg-center bg-gray-50 shadow-md"
         
       >
         {/* Navigation */}
