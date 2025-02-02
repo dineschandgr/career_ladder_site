@@ -7,6 +7,7 @@ import Nav2 from '../nav2/nav2';
 import { Footer } from "../Footer/Footer";
 import React, { useState } from "react";
 import WhatsAppButton from "../whatsapp/whatsapp";
+import ScrollToTopOnArrowPress from "../scrollup/scrollup.jsx";
 
 export const Contact = () => {
   const address1 = [
@@ -41,6 +42,7 @@ export const Contact = () => {
       <Nav />
       <Nav2 />
       <WhatsAppButton />
+      <ScrollToTopOnArrowPress/>
       {/* Contact Form and Image Section (now moved to the top) */}
       <div className="bg-gradient-to-r from-violet-100 to-blue-300 pt-14 pb-14">
         <div className="flex justify-center px-4 py-10">

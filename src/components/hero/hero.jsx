@@ -1,4 +1,4 @@
-import React, { useState, useRef, Suspense, lazy } from "react";
+import React, { useState, useRef, Suspense } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
@@ -18,10 +18,25 @@ const HeroOptimized = () => {
     <div>
       {/* SEO Meta Tags using Helmet */}
       <Helmet>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        
+        {/* Meta Tags */}
+        <meta
+          name="description"
+          content="Unlock your tech career with CareerLadder. Offering Data Science, Full Stack Development, and more with 100% job assistance. Start learning online and offline today!"
+        />
         <meta
           name="keywords"
           content="CareerLadder, Data Science course, Data Analytics course, Full Stack Development course, Digital Marketing course, Cyber Security course, Automation Testing course, Job Assistance, Interview Support, Tech Career, Coimbatore, Best Data Science course, Top Data Analytics course, Best Full Stack Development course, Top Digital Marketing course, Best Cyber Security course, Top Automation Testing course, Certification course, Top Tech Career, Best Certification in Data Science, Best Full Stack Developer course, Online Data Science certification, Best Data Analytics certification, Tech courses near me, Top certification courses in Coimbatore, Industry-leading courses, Career-oriented certification, Job-ready certification, Online course with job assistance, Job support certification"
         />
+        <meta name="robots" content="index, follow" />
+        
+        {/* Title for the page */}
+        <title>CareerLadder - Flexible Learning & Job Assistance</title>
+
+        {/* Open Graph Meta Tags */}
         <meta property="og:title" content="Unlock Flexible Learning with CareerLadder" />
         <meta
           property="og:description"
@@ -29,8 +44,9 @@ const HeroOptimized = () => {
         />
         <meta property="og:image" content={data} />
         <meta property="og:url" content="https://www.careerladderedu.com" />
+        <meta property="og:type" content="website" />
         
-        {/* Preload Hero Image and Web Font */}
+        {/* Preload Resources */}
         <link rel="preload" href={data} as="image" type="image/webp" />
         <link
           rel="preload"
@@ -38,6 +54,29 @@ const HeroOptimized = () => {
           as="font"
           type="font/woff2"
           crossorigin="anonymous"
+        />
+
+        {/* Structured Data (JSON-LD) for better search engine visibility */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "CareerLadder",
+              "url": "https://www.careerladderedu.com",
+              "logo": live,
+              "sameAs": [
+                "https://www.facebook.com/careerladder",
+                "https://www.linkedin.com/company/careerladder"
+              ],
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+91 8807148869/+91 8807028071",
+                "contactType": "Customer Service"
+              }
+            })
+          }}
         />
       </Helmet>
 

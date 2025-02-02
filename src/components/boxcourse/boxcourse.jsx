@@ -21,15 +21,15 @@ function Top() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleDotClick = (index) => {
-    setCurrentIndex(index * 2); // As we are showing two courses at a time
+    setCurrentIndex(index * 4); // Change to 4 to display 4 courses at a time
   };
 
-  const displayedCourses = courses.slice(currentIndex, currentIndex + 2);
-  const numDots = Math.ceil(courses.length / 2);
+  const displayedCourses = courses.slice(currentIndex, currentIndex + 4); // Show 4 courses at a time
+  const numDots = Math.ceil(courses.length / 4); // Update to reflect number of groups of 4
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 2) % courses.length); // Ensure it loops back to the start
+      setCurrentIndex((prevIndex) => (prevIndex + 4) % courses.length); // Ensure it loops back to the start
     }, 10000); // 10 seconds delay
 
     return () => clearInterval(interval);
@@ -128,7 +128,7 @@ function Top() {
             >
               <motion.div
                 className={`w-5 h-5 rounded-full transition-all duration-300 ease-in-out ${
-                  currentIndex === index * 2
+                  currentIndex === index * 4
                     ? "bg-purple-600 scale-125"
                     : "bg-blue-400 hover:bg-gray-500 hover:scale-110"
                 }`}

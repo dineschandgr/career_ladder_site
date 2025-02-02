@@ -45,25 +45,25 @@ export const Footer = () => {
                         <img className="h-[10vh] bg-white rounded-2xl mb-4" src={live} alt="CareerLadder Logo" />
                     </div>
 
-                    {/* Right Section - Follow Us */}
-                    <div className="mt-8 flex items-center gap-6">
-                        <h2 className="font-semibold text-lg mr-4">Social Media :</h2>
-                        <div className="flex gap-6 mt-3">
-                            <a href="https://www.instagram.com/careerladder_coimbatore/">
-                                <img className="h-9 w-9 hover:opacity-80 transition-opacity duration-300 mb-4" src={instagram} alt="Instagram" />
-                            </a>
-                            <a href="https://www.facebook.com/people/CareerLadder-Hopescollege-Coimbatore/61552807079875/">
-                                <img className="h-9 w-9 hover:opacity-80 transition-opacity duration-300" src={facebook} alt="Facebook" />
-                            </a>
-                            <a href="https://www.linkedin.com/company/careerladder-coimbatore-hope-college-sundarapuram">
-                                <img className="h-9 w-9 hover:opacity-80 transition-opacity duration-300" src={linkedin} alt="LinkedIn" />
-                            </a>
-                            <a href="https://www.youtube.com/@CareerLadder-CL">
-                                <img className="h-9 w-9 hover:opacity-80 transition-opacity duration-300" src={youtube} alt="YouTube" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                  {/* Right Section - Follow Us */}
+<div className="mt-8 flex flex-col sm:flex-row items-center gap-6">
+  <h2 className="font-semibold text-lg mr-4 mb-4 sm:mb-0">Social Media :</h2>
+  <div className="flex gap-6 mt-3 flex-wrap justify-center sm:justify-start">
+    <a href="https://www.instagram.com/careerladder_coimbatore/">
+      <img className="h-9 w-9 hover:opacity-80 transition-opacity duration-300 mb-4 sm:mb-0" src={instagram} alt="Instagram" />
+    </a>
+    <a href="https://www.facebook.com/people/CareerLadder-Hopescollege-Coimbatore/61552807079875/">
+      <img className="h-9 w-9 hover:opacity-80 transition-opacity duration-300 mb-4 sm:mb-0" src={facebook} alt="Facebook" />
+    </a>
+    <a href="https://www.linkedin.com/company/careerladder-coimbatore-hope-college-sundarapuram">
+      <img className="h-9 w-9 hover:opacity-80 transition-opacity duration-300 mb-4 sm:mb-0" src={linkedin} alt="LinkedIn" />
+    </a>
+    <a href="https://www.youtube.com/@CareerLadder-CL">
+      <img className="h-9 w-9 hover:opacity-80 transition-opacity duration-300 mb-4 sm:mb-0" src={youtube} alt="YouTube" />
+    </a>
+  </div>
+</div>
+</div>
 
 
                
@@ -126,7 +126,7 @@ export const Footer = () => {
         <Link to="/courses" className="text-sm hover:text-teal-400 transition-colors duration-300">Courses</Link>
         <Link to="/team" className="text-sm hover:text-teal-400 transition-colors duration-300">Team</Link>
         <Link to="/placement" className="text-sm hover:text-teal-400 transition-colors duration-300">Placement</Link>
-        <Link to="/contact-us" className="text-sm hover:text-teal-400 transition-colors duration-300">Contact Us</Link>
+        <Link to="/contact" className="text-sm hover:text-teal-400 transition-colors duration-300">Contact</Link>
     </div>
 </div>
 

@@ -45,6 +45,7 @@
   import company2 from "../../asset/companies/ibots.png";
   import company3 from "../../asset/companies/knowillence.jpg";
   import company4 from "../../asset/companies/tekhosl.png";
+  import ScrollToTopOnArrowPress from "../scrollup/scrollup.jsx";
 
 
   import ImageList from "@mui/material/ImageList";
@@ -110,6 +111,7 @@
       <div id="Placement" className="font-sans">
         <Nav />
         <Nav2 />
+        <ScrollToTopOnArrowPress/>
 
         {/* Page Header */}
         <header className="bg-gray-100 py-10 md:flex md:items-center md:justify-between px-5">

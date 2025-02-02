@@ -26,23 +26,23 @@
           <div className="hidden sm:flex gap-6 sm:flex-row flex-col items-center sm:items-start">
             <div className="flex pt-2 ml-4">
               <img src={contactWebP} height={"40px"} width="40px" alt="contact-icon" />
-              <h3 className="text-sm sm:text-lg md:text-xl text-black font-bold mt-2">+91 8807148869 / +91 8807028071</h3>
+              <h3 className="text-sm sm:text-lg md:text-xl text-black font-bold mt-2 font-sans">+91 8807148869 / +91 8807028071</h3>
             </div>
             <div className="flex gap-1 pt-2">
               <img src={mailWebP} height={"40px"} width="40px" alt="contact-icon" />
-              <h3 className="text-sm sm:text-lg md:text-xl text-black font-bold mt-2">info@careerladderedu.com</h3>
+              <h3 className="text-sm sm:text-lg md:text-xl text-black font-bold font-sans mt-2">info@careerladderedu.com</h3>
             </div>
           </div>
 
           {/* Add phone number and contact icon for mobile view */}
           <div className="block sm:hidden text-center flex items-center justify-center gap-2 mt-0">
             <img src={contact} height={"40px"} width="40px" alt="contact-icon " />
-            <h3 className="text-lg sm:text-lg md:text-sm text-black font-bold mt-2">+91 8807148869 / +91 8807028071</h3>
+            <h3 className="text-lg sm:text-md md:text-sm text-black font-bold font-sans mt-2">+91 8807148869 / +91 8807028071</h3>
           </div>
 
           {/* Social Icons */}
           <div className="hidden sm:flex items-center justify-center gap-2">
-            <p className="text-black font-bold text-sm sm:text-lg md:text-xl mt-4">Follow Us :</p>
+            <p className="text-black font-bold text-sm sm:text-lg md:text-xl font-sans mt-4">Follow Us :</p>
             <div className="flex items-center justify-center gap-1">
               <a href="https://www.instagram.com/careerladder_coimbatore/" className="flex justify-center items-center ml-3 mt-2">
                 <img className="h-6 w-6 hover:opacity-80 transition-opacity duration-300" src={instagram} alt="Instagram" />

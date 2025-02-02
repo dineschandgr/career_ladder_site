@@ -11,6 +11,7 @@ import FSDC from '../../../asset/csps/FSDC.webp';
 import PCB from '../../../asset/csps/PCB.webp';
 import UUC from '../../../asset/csps/UUC.webp';
 
+
 const courses = [
   {
     title: "Data Science",

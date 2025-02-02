@@ -115,13 +115,13 @@ function About() {
           </h2>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-blue-600 leading-relaxed mb-2 font-sans ">
             CareerLadder is the top software training institute in Coimbatore, offering comprehensive courses in software development, programming, data science, machine learning, and more. Our on-demand courses in emerging technologies equip you with the practical knowledge and hands-on experience you need to succeed in today's fast-paced tech world.
-            Join CareerLadder today, and start building your career with the best software development training in Coimbatore. Our training programs are designed to give you a competitive edge in the tech industry. 
+            Join CareerLadder today, and start building your career with the best software development training in Coimbatore. Our training programs are designed to give you a competitive edge in the tech industry.
             <br />
             <Link to="/contact" className="text-indigo-700 underline">Contact us today</Link> to learn more about our courses!
           </p>
         </div>
 
-        {/* New Section: Comprehensive Learning Experience */}
+        {/* Comprehensive Learning Experience Section */}
         <div className="font-sans mb-12">
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-2 text-indigo-800 font-sans">
             Comprehensive Learning Experience at the Top Software Institute
@@ -132,7 +132,7 @@ function About() {
           </p>
         </div>
 
-        {/* New Course Information Section */}
+        {/* Courses Information Section */}
         <div className="font-sans mb-8">
           <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 text-indigo-800 font-roboto">
             Our Courses - Top 10 Software Development Courses

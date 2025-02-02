@@ -1,14 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { MdRobot } from 'react-icons/md'; // Material Design Robot Icon (you can use it as a fallback or use a custom image)
-import { FaRobot } from 'react-icons/fa'; // Original Robot Icon (or use your custom image directly)
+import { FaTimes } from 'react-icons/fa'; // Close Icon from react-icons
 
 function ChatbotButton() {
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [messages, setMessages] = useState([
-    { text: 'Hi! What is your name and phone number?', sender: 'bot' },
+    { text: 'Hi! What is your name?', sender: 'bot' },
   ]);
   const [newMessageCount, setNewMessageCount] = useState(0);
-  const [userDetails, setUserDetails] = useState({ name: '', phone: '', email: '', address: '', course: '' });
+  const [userDetails, setUserDetails] = useState({ name: '', phone: '' });
   const [userMessage, setUserMessage] = useState('');
   const [result, setResult] = useState('');
   const [step, setStep] = useState(0); // To track which step of contact info collection we are in
@@ -54,51 +53,45 @@ function ChatbotButton() {
       let botResponse = '';
       let formData = {};
 
-      switch (step) {
-        case 0: // Ask for Name and Phone Number
-          const [name, phone] = message.split(','); // Expect user to input both in a single message, separated by a comma
-          if (name && phone) {
-            setUserDetails((prevDetails) => ({ ...prevDetails, name: name.trim(), phone: phone.trim() }));
-            formData = { name: name.trim(), phone: phone.trim() };
-            botResponse = 'Thanks! Now, can you please provide your email address?';
-            setStep(1);
-          } else {
-            botResponse = 'Please provide both your name and phone number, separated by a comma.';
-          }
-          break;
-        case 1: // Ask for Email
-          setUserDetails((prevDetails) => ({ ...prevDetails, email: message }));
-          formData = { email: message }; // Send email to Web3Flow
-          botResponse = 'Thanks! Now, could you please provide your address?';
-          setStep(2);
-          break;
-        case 2: // Ask for Address
-          setUserDetails((prevDetails) => ({ ...prevDetails, address: message }));
-          formData = { address: message }; // Send address to Web3Flow
-          botResponse = 'Great! Lastly, which course are you interested in? Please choose one: Data Science, Data Analytics, Digital Marketing, Full Stack.';
-          setStep(3);
-          break;
-        case 3: // Ask for Course Selection
-          setUserDetails((prevDetails) => ({ ...prevDetails, course: message }));
-          formData = { course: message }; // Send course to Web3Flow
-          botResponse = 'Thanks for your interest! Do you need any more details or would you like to contact us further?';
-          setStep(4);
-          break;
-        case 4: // Ask for Additional Info or Contact
-          botResponse = 'Thank you for providing your information! We will contact you soon regarding your selected course.';
-          setStep(5); // Finished
-          break;
-        case 5: // Submission Step
-          onSubmit(formData);
-          botResponse = 'Thank you for providing your information!';
-          break;
-        default:
-          botResponse = 'Something went wrong. Please try again.';
+      if (step === 0) {
+        // First step: Name input
+        setUserDetails((prevDetails) => ({ ...prevDetails, name: message.trim() }));
+        botResponse = 'Great! Now, please provide your phone number .';
+        setStep(1); // Move to next step after collecting name
+      } else if (step === 1) {
+        // Second step: Phone number validation
+        const phonePattern = /^[0-9+()\- ]+$/; // Only allow numbers, spaces, +, (, ), -
+        if (phonePattern.test(message)) {
+          setUserDetails((prevDetails) => ({ ...prevDetails, phone: message.trim() }));
+          formData = { name: userDetails.name, phone: message.trim() };
+          botResponse = 'Thanks! Your information has been received. Let\'s start with some questions!';
+          setStep(2); // Proceed to the Q&A session
+          sendFormDataToWeb3Flow(formData); // Send the data to Web3Flow after this step
+        } else {
+          botResponse = 'Please provide a valid phone number (only numbers and special characters like +, -, or () are allowed).';
+        }
+      } else if (step === 2) {
+        // Q&A related to software training institute
+        if (message.toLowerCase().includes('training') || message.toLowerCase().includes('course')) {
+          botResponse = 'We offer courses in Web Development, Data Science, Digital Marketing, and more! Which course are you interested in?';
+        } else if (message.toLowerCase().includes('web development')) {
+          botResponse = 'Our Web Development course covers HTML, CSS, JavaScript, and frameworks like React. The course duration is 3 months. Would you like to know the fees?';
+        } else if (message.toLowerCase().includes('data science')) {
+          botResponse = 'The Data Science course includes Python, Machine Learning, and AI fundamentals. It lasts for 4 months. Would you like to know the fees?';
+        } else if (message.toLowerCase().includes('digital marketing')) {
+          botResponse = 'Our Digital Marketing course covers SEO, Google Ads, and Social Media Marketing. It takes 2 months to complete. Do you need more details on this course?';
+        } else if (message.toLowerCase().includes('fees')) {
+          botResponse = 'Our fees vary by course, but generally they range from 10000 to 40000. Would you like to know about the upcoming batches or schedules?';
+        } else if (message.toLowerCase().includes('schedule') || message.toLowerCase().includes('batch')) {
+          botResponse = 'We have batches starting every month for most of our courses. Would you like to register for a batch?';
+        } else {
+          botResponse = 'I can help you with course details, fees, schedules, and more! Please let me know which course you are interested in.';
+        }
+      } else {
+        botResponse = 'Something went wrong. Please try again.';
       }
 
-      // Send form data to Web3Flow after each step
-      sendFormDataToWeb3Flow(formData);
-
+      // Update messages with bot response
       setMessages((prevMessages) => [
         ...prevMessages,
         { text: botResponse, sender: 'bot' },
@@ -135,11 +128,6 @@ function ChatbotButton() {
     }
   };
 
-  const onSubmit = (formData) => {
-    // Final submission of all form data to Web3Flow
-    sendFormDataToWeb3Flow(formData);
-  };
-
   const handleKeyPress = (e) => {
     if (e.key === 'Enter') {
       e.preventDefault(); // Prevent newline in the input field
@@ -149,15 +137,16 @@ function ChatbotButton() {
 
   // Clear chat history
   const clearChat = () => {
-    setMessages([{ text: 'Hi! What is your name and phone number?', sender: 'bot' }]);
+    setMessages([{ text: 'Hi! What is your name?', sender: 'bot' }]);
     setStep(0);
     setNewMessageCount(0);
   };
 
-  // Exit the chat window
+  // Exit the chat window and reset conversation
   const exitChat = () => {
     setIsChatOpen(false);
-    setMessages([]);
+    setMessages([{ text: 'Hi! What is your name?', sender: 'bot' }]);
+    setStep(0);
     setNewMessageCount(0);
   };
 
@@ -170,8 +159,8 @@ function ChatbotButton() {
           className="relative flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-full shadow-lg hover:bg-gradient-to-r hover:from-blue-700 hover:to-indigo-800 transition duration-300 transform hover:scale-110"
         >
           <img
-            src="https://cdn-icons-png.freepik.com/256/15675/15675949.png?ga=GA1.1.1943424079.1732703638&semt=ais_hybrid" // Replace this with the path to your custom woman's AI icon
-            alt="AI Woman"
+            src="https://cdn-icons-png.freepik.com/256/15692/15692984.png?ga=GA1.1.1190226747.1734413316&semt=ais_hybrid" // Replace this with the path to your custom woman's AI icon
+            alt="AI"
             className="m-auto w-10 h-10 object-cover"
           />
           {newMessageCount > 0 && (
@@ -193,6 +182,14 @@ function ChatbotButton() {
             backgroundPosition: 'center',
           }}
         >
+          {/* Close Button */}
+          <button
+            onClick={exitChat}
+            className="absolute top-2 right-2 text-2xl text-blue-600"
+          >
+            <FaTimes />
+          </button>
+
           {/* Chat */}
           <div className="h-72 sm:h-96 overflow-y-auto mb-4 space-y-4">
             {messages.map((msg, index) => (
@@ -200,7 +197,7 @@ function ChatbotButton() {
                 <div
                   className={`text-sm p-4 ${msg.sender === 'bot' ? 'bg-gradient-to-r from-blue-100 to-blue-200 text-blue-600' : 'bg-gradient-to-r from-gray-200 to-gray-300 text-gray-800'} rounded-lg shadow-md w-max max-w-[80%] break-words`}
                 >
-                  <strong>{msg.sender === 'bot' ? 'Alice' : 'You'}:</strong> {msg.text}
+                  <strong>{msg.sender === 'bot' ? 'Dinesh' : 'You'}:</strong> {msg.text}
                 </div>
               </div>
             ))}

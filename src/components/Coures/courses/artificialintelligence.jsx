@@ -1,6 +1,7 @@
 import React from 'react';
 import { Footer } from '../../Footer/Footer';
 import Nav2 from '../../nav2/nav2';
+  
 
 const MergedBlog = () => {
   return (

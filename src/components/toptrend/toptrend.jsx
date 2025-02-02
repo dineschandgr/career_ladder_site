@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import master from "../../asset/toptrend/master.webp";
 import java from "../../asset/toptrend/java.webp";
 import python from "../../asset/toptrend/python.webp";
@@ -45,18 +44,15 @@ function Top() {
     <div className="p-5 mt-10 mb-10">
       {/* Heading Section with Bold and Centered Text */}
       <h1 className="text-4xl lg:text-5xl font-serif text-center text-blue-800 mb-10">
-        Top Trending <span className="text-blue-800">Courses</span>
+        <span className="text-blue-800">Courses</span>
       </h1>
 
       {/* Course Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {top.map((course, index) => (
-          <motion.div
+          <div
             key={index}
-            className="bg-white rounded-2xl shadow-lg transform transition-all  "
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 + index * 0.3, duration: 1 }}
+            className="bg-white rounded-2xl shadow-lg transform transition-all"
           >
             <div className="flex flex-col lg:flex-row h-full">
               {/* Image Section */}
@@ -83,7 +79,7 @@ function Top() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
     </div>

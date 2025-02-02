@@ -5,6 +5,7 @@ import { Footer } from "../Footer/Footer";
 import { Helmet } from 'react-helmet'; // For SEO optimizations
 import WhatsAppButton from '../whatsapp/whatsapp';
 import './blog.css'; // Ensure this CSS is properly linked
+import ScrollToTopOnArrowPress from "../scrollup/scrollup.jsx";
 
 export class Blog extends Component {
   constructor(props) {
@@ -71,6 +72,7 @@ export class Blog extends Component {
         <Nav />
         <Nav2 />
         <WhatsAppButton />
+        <ScrollToTopOnArrowPress/>
         {/* SEO Optimization using Helmet */}
         <Helmet>
           <title>Free Software Development Courses Blog</title>
