@@ -1,15 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-93825961-5"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-93825961-5');
-    </script>
-
+    
     <!-- PageSense Analytics Script -->
     <script src="https://cdn.pagesense.io/js/874079522/58d876631f6349b086671becd4f1f64f.js"></script>
 
@@ -17,6 +9,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2F10MPXPEQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2F10MPXPEQ');
+</script>
     
     <!-- Description for search engines -->
     <meta name="description" content="Learn Data Science, Data Analytics, Digital Marketing, Full Stack, Cyber Security, and Automation Testing at Career Ladder. Get 100% job help and interview support. Start your tech career today!" />
@@ -39,6 +41,7 @@
     <!-- Favicon for the website -->
     <link rel="icon" href="https://Careerladderedu.com/favicon.ico" />
 
+
     <!-- Apple Touch Icon -->
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
 
@@ -52,112 +55,129 @@
 
     <!-- Canonical link to avoid IP canonicalization -->
     <link rel="canonical" href="https://www.Careerladderedu.com" />
-
-    <!-- Schema.org JSON-LD Markup for CareerLadder and Local Business -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "EducationalOrganization",
-        "name": "Career Ladder Software Training Institute",
-        "url": "https://careerladderedu.com",
-        "logo": "https://Careerladderedu.com/images/logo.png",
-        "description": "CareerLadder is the top software training institute in Coimbatore offering courses in software development, programming, data science, machine learning, and more.].",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "267, 1st Floor, Avinashi Road, Opposite GRG ladies Hostel, Periyar Nagar,Hope College",
-          "addressLocality": "Coimbatore",
-          "addressRegion": "Tamil Nadu",
-          "postalCode": "641004",
-          "addressCountry": "India"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+91-8807148869",
-          "contactType": "customer service"
-        },
-        "sameAs": [
-          "https://www.facebook.com/CareerLadder",
-          "https://www.instagram.com/careerladder_coimbatore",        
-          "https://www.linkedin.com/company/careerladder-coimbatore-hope-college-sundarapuram/"
-        ]
+    
+    
+<!-- Schema.org JSON-LD Markup for CareerLadder and Local Business -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Career Ladder Software Training Institute",
+    "url": "https://careerladderedu.com",
+    "logo": "https://Careerladderedu.com/images/logo.png",
+    "description": "CareerLadder is the top software training institute in Coimbatore offering courses in software development, programming, data science, machine learning, and more.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "267, 1st Floor, Avinashi Road, Opposite GRG ladies Hostel, Periyar Nagar, Hope College",
+      "addressLocality": "Coimbatore",
+      "addressRegion": "Tamil Nadu",
+      "postalCode": "641004",
+      "addressCountry": "India"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-8807148869",
+      "contactType": "customer service"
+    },
+    "sameAs": [ 
+    "https://www.facebook.com/CareerLadder",
+    "https://www.instagram.com/careerladder_coimbatore",
+    "https://www.linkedin.com/company/careerladder-coimbatore-hope-college-sundarapuram/"
+  ]  
+    "offers": {
+      "@type": "Offer",
+      "url": "https://careerladderedu.com/courses",
+      "priceCurrency": "INR",
+      "price": "Varies",
+      "eligibleRegion": {
+        "@type": "Place",
+        "name": "India"
       }
-      </script>
+    }
+  }
+</script>
 
-    <!-- Reviews and Ratings Schema -->
-    <script type="application/ld+json">
+<!-- Reviews and Ratings Schema -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Data Science Program",
+    "description": "Learn Data Science from beginner to advanced level.",
+    "provider": {
+      "@type": "EducationalOccupationalCredential",
+      "name": "CareerLadder",
+      "sameAs": "https://www.careerladderedu.com"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7",
+      "reviewCount": "720"
+    },
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": "In-Person",
+      "courseMode": "Online"
+    }
+  }
+</script>
+
+<!-- Schema.org JSON-LD Markup for Course List -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
       {
-        "@context": "https://schema.org",
-        "@type": "Course",
-        "name": "Data Science Program",
-        "description": "Learn Data Science from beginner to advanced level.",
-        "provider": {
-          "@type": "SoftwareTrainingInstitute",
-          "name": "CareerLadder",
-          "sameAs": "https://www.careerladderedu.com"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.7",
-          "reviewCount": "720"
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Course",
+          "name": "Data Science Program - Beginner to Advanced",
+          "url": "https://www.careerladderedu.com/courses/data-science-program",
+          "description": "A comprehensive data science program that covers everything from the basics to advanced topics in machine learning, data analysis, and more.",
+          "provider": {
+            "@type": "EducationalOccupationalCredential",
+            "name": "CareerLadder",
+            "sameAs": "https://www.careerladderedu.com"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Course",
+          "name": "Data Analytics Program - Master Data Analytics",
+          "url": "https://www.careerladderedu.com/courses/data-analytics-program",
+          "description": "Learn data analytics techniques to transform raw data into actionable insights using various tools and methods.",
+          "provider": {
+            "@type": "EducationalOccupationalCredential",
+            "name": "CareerLadder",
+            "sameAs": "https://www.careerladderedu.com"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "Course",
+          "name": "Full Stack Development - Web Design & Programming",
+          "url": "https://www.careerladderedu.com/courses/full-stack-development-program",
+          "description": "Learn the foundations of web development, from designing websites using HTML and CSS to building dynamic applications using JavaScript.",
+          "provider": {
+            "@type": "EducationalOccupationalCredential",
+            "name": "CareerLadder",
+            "sameAs": "https://www.careerladderedu.com"
+          }
         }
       }
-    </script>
+    ]
+  }
+</script>
 
-    <!-- Schema.org JSON-LD Markup for Course List -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "ItemList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "item": {
-              "@type": "Course",
-              "url": "https://www.careerladderedu.com/courses",
-              "name": "Data Science Program",
-              "description": "Data science course from Beginner to Advanced.",
-              "provider": {
-                "@type": "SoftwareTrainingInstitute",
-                "name": "Careerladder",
-                "sameAs": "https://www.careerladderedu.com"
-              }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "item": {
-              "@type": "Course",
-              "url": "https://www.careerladderedu.com/courses",
-              "name": "Data Analytics Program",
-              "description": "Learn Data Analytics.",
-              "provider": {
-                "@type": "SoftwareTrainingInstitute",
-                "name": "Careerladder",
-                "sameAs": "https://www.careerladderedu.com"
-              }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "item": {
-              "@type": "Course",
-              "url": "https://www.careerladderedu.com/courses",
-              "name": "Full Stack Development",
-              "description": "Learn the foundations of web design using HTML and CSS.",
-              "provider": {
-                "@type": "SoftwareTrainingInstitute",
-                "name": "Careerladder",
-                "sameAs": "https://www.careerladderedu.com"
-              }
-            }
-          }
-          // Add additional courses here
-        ]
-      }
-    </script>
+
 
     <!-- Add robots meta tag for controlling indexing and crawling -->
     <meta name="robots" content="index, follow" />

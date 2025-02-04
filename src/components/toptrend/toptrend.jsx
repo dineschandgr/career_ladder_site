@@ -6,6 +6,7 @@ import data from "../../asset/toptrend/dataa.webp";
 import { Link } from "react-router-dom";
 import hack from "../../asset/toptrend/hack.webp";
 
+
 function Top() {
   const top = [
     {

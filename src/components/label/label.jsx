@@ -29,7 +29,7 @@ function About() {
           }}
         >
           <p className="text-xs sm:text-sm md:text-base lg:text-lg font-sans">
-            Software Training Institute | Up to 30% OFFER for all IT Courses!
+            Software & Hardware Training Institute | Up to 30% OFFER for all IT Courses!
           </p>
         </div>
 
