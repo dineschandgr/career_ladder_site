@@ -45,24 +45,65 @@ export const Footer = () => {
                         <img className="h-[10vh] bg-white rounded-2xl mb-4" src={live} alt="CareerLadder Logo" />
                     </div>
 
-                  {/* Right Section - Follow Us */}
-<div className="mt-8 flex flex-col sm:flex-row items-center gap-6">
-  <h2 className="font-semibold text-lg mr-4 mb-4 sm:mb-0">Social Media :</h2>
-  <div className="flex gap-6 mt-3 flex-wrap justify-center sm:justify-start">
-    <a href="https://www.instagram.com/careerladder_coimbatore/">
-      <img className="h-9 w-9 hover:opacity-80 transition-opacity duration-300 mb-4 sm:mb-0" src={instagram} alt="Instagram" />
+                    <div className="mt-8 flex flex-col sm:flex-row items-center gap-6">
+  <h2 className="font-semibold text-lg mr-4 mb-1 sm:mb-0">Social Media :</h2>
+  <div className="flex gap-6 mt-1 mb-4 flex-wrap justify-center sm:justify-start">
+    <a
+      href="https://www.instagram.com/careerladder_coimbatore/"
+      className="relative group"
+    >
+      <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center border-3 border-white overflow-hidden relative group">
+        <img
+          src={instagram} // Add Instagram icon path here
+          alt="Instagram"
+          className="h-6 w-6 object-contain group-hover:opacity-80 transition-opacity duration-300 ml-2 mt-2"
+        />
+        <span className="absolute inset-0 bg-[#E4405F] transform translate-y-full group-hover:translate-y-0 transition-transform duration-500"></span>
+      </div>
     </a>
-    <a href="https://www.facebook.com/people/CareerLadder-Hopescollege-Coimbatore/61552807079875/">
-      <img className="h-9 w-9 hover:opacity-80 transition-opacity duration-300 mb-4 sm:mb-0" src={facebook} alt="Facebook" />
+    <a
+      href="https://www.facebook.com/people/CareerLadder-Hopescollege-Coimbatore/61552807079875/"
+      className="relative group"
+    >
+      <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center border-3 border-white overflow-hidden relative group">
+        <img
+          src={facebook} // Add Facebook icon path here
+          alt="Facebook"
+          className="h-6 w-6 object-contain group-hover:opacity-80 transition-opacity duration-300 ml-2 mt-2"
+        />
+        <span className="absolute inset-0 bg-[#3b5999] transform translate-y-full group-hover:translate-y-0 transition-transform duration-500"></span>
+      </div>
     </a>
-    <a href="https://www.linkedin.com/company/careerladder-coimbatore-hope-college-sundarapuram">
-      <img className="h-9 w-9 hover:opacity-80 transition-opacity duration-300 mb-4 sm:mb-0" src={linkedin} alt="LinkedIn" />
+    <a
+      href="https://www.linkedin.com/company/careerladder-coimbatore-hope-college-sundarapuram"
+      className="relative group"
+    >
+      <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center border-3 border-white overflow-hidden relative group">
+        <img
+          src={linkedin} // Add LinkedIn icon path here
+          alt="LinkedIn"
+          className="h-6 w-6 object-contain group-hover:opacity-80 transition-opacity duration-300 ml-2 mt-2"
+        />
+        <span className="absolute inset-0 bg-[#0077b5] transform translate-y-full group-hover:translate-y-0 transition-transform duration-500"></span>
+      </div>
     </a>
-    <a href="https://www.youtube.com/@CareerLadder-CL">
-      <img className="h-9 w-9 hover:opacity-80 transition-opacity duration-300 mb-4 sm:mb-0" src={youtube} alt="YouTube" />
+    <a
+      href="https://www.youtube.com/@CareerLadder-CL"
+      className="relative group"
+    >
+      <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center border-3 border-white overflow-hidden relative group">
+        <img
+          src={youtube} // Add YouTube icon path here
+          alt="YouTube"
+          className="h-6 w-6 object-contain group-hover:opacity-80 transition-opacity duration-300 ml-2 mt-2"
+        />
+        <span className="absolute inset-0 bg-[#FF0000] transform translate-y-full group-hover:translate-y-0 transition-transform duration-500"></span>
+      </div>
     </a>
   </div>
 </div>
+
+
 </div>
 
 

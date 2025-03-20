@@ -1,58 +1,75 @@
-import review from "../../asset/reviews/reviews.png";
+import review from "../../asset/reviews/reviews.png"; // Example review image
 
 function Reviews() {
   return (
-    <div className="bg-blue-100 lg:p-4 shadow-md">
-      <div className="lg:flex lg:justify-center lg:items-center gap-16 lg:mx-36 flex-col lg:flex-row">
-        
-        {/* Left Column: Text */}
-        <div className="text-center lg:text-left lg:w-1/2">
-          <h1 className="text-3xl font-sans font-bold text-blue-800 pt-4 lg:pt-0">
-            Hear from Our Students
-          </h1>
-          <h2 className="text-lg font-sans text-gray-700 mt-4">
-            CareerLadder students talk about their enjoyable learning experiences that included practical training, best practices, job prospects, and exposure to reputable businesses and organizations.
-          </h2>
-          
-          {/* Centered See More Testimonial */}
-          <a 
-            href="https://youtube.com/shorts/yff1Vbg_FZ8?feature=shared" 
-            className="flex justify-center mt-4"
-            title="Watch more student testimonials on YouTube"
+    <div className="bg-gray-100 py-20 px-8">
+      <div className="max-w-screen-xl mx-auto text-center">
+
+        {/* Heading Section */}
+        <h1 className="text-4xl font-extrabold text-gray-800 mb-8">
+          Hear From Our Students
+        </h1>
+        <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
+          Watch this video testimonial and read some of the amazing experiences from students who have transformed their careers.
+        </p>
+
+        {/* Main Testimonial Video Section */}
+        <div className="mb-16">
+          <a
+            href="https://youtube.com/shorts/A9f1_3rfQls?si=xwMtdL64U1MzJSYr" // Your YouTube Video URL
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <div className="flex items-center gap-2">
-              <p className="font-semibold text-black text-center">See More Testimonial</p>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                className="w-6 h-6 mb-3"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                />
-              </svg>
-            </div>
+            <iframe
+              className="mx-auto rounded-xl shadow-lg"
+              width="100%" // Make the video responsive
+              height="450"
+              src="https://www.youtube.com/embed/A9f1_3rfQls" // Embed the YouTube video
+              title="Student Testimonial"
+              frameBorder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
           </a>
         </div>
 
-        {/* Right Column: Image */}
-        <div className="text-center lg:text-left lg:w-1/2 mt-8 lg:mt-0">
-          <a 
-            href="https://youtube.com/shorts/A9f1_3rfQls?si=xwMtdL64U1MzJSYr" 
-            title="Watch student reviews video"
-          >
-            <img 
-              className="h-[35vh] w-auto rounded-2xl mx-auto" 
-              src={review} 
-              alt="CareerLadder student sharing their review" 
-              loading="lazy" 
-            />
-          </a>
+        {/* Review Sections (Left and Right) */}
+        <div className="flex flex-col sm:flex-row justify-center gap-8 sm:gap-16">
+          {/* Left Review Section */}
+          <div className="w-full sm:w-1/3 bg-white p-8 rounded-lg shadow-xl">
+            <h3 className="text-2xl font-semibold text-gray-800 mb-4">Anusiya</h3>
+            <p className="text-md text-gray-600 mb-6">Data Science Program</p>
+            <p className="text-gray-700">
+              "I had an incredible learning experience with CareerLadder. The instructors were top-notch, and the
+              practical projects helped me secure a position at a leading tech company."
+            </p>
+            <div className="flex justify-start mt-6">
+              <img
+                className="w-16 h-16 rounded-full border-4 border-gray-300"
+                src={review}
+                alt="Student Review"
+              />
+              <p className="ml-4 text-gray-600">Anusiya</p>
+            </div>
+          </div>
+
+          {/* Right Review Section */}
+          <div className="w-full sm:w-1/3 bg-white p-8 rounded-lg shadow-xl">
+            <h3 className="text-2xl font-semibold text-gray-800 mb-4">Rithika</h3>
+            <p className="text-md text-gray-600 mb-6">Full Stack Development</p>
+            <p className="text-gray-700">
+              "The full-stack program was a game-changer for me. The curriculum was well-organized and provided me
+              with the necessary skills to land my first job as a developer."
+            </p>
+            <div className="flex justify-start mt-6">
+              <img
+                className="w-16 h-16 rounded-full border-4 border-gray-300"
+                src={review}
+                alt="Student Review"
+              />
+              <p className="ml-4 text-gray-600">Rithika</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

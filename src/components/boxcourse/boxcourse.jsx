@@ -20,12 +20,15 @@ const courses = [
 function Top() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handleDotClick = (index) => {
-    setCurrentIndex(index * 4); // Change to 4 to display 4 courses at a time
+  const handlePrevClick = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 4 + courses.length) % courses.length);
+  };
+
+  const handleNextClick = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 4) % courses.length);
   };
 
   const displayedCourses = courses.slice(currentIndex, currentIndex + 4); // Show 4 courses at a time
-  const numDots = Math.ceil(courses.length / 4); // Update to reflect number of groups of 4
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -37,8 +40,9 @@ function Top() {
 
   return (
     <div className="p-6 mt-8 mb-12">
-      <h1 className="text-4xl lg:text-5xl font-serif text-center text-gray-800 mb-10">
-        Trending <span className="text-blue-800">Courses</span>
+      {/* Updated Heading with New Text Styles */}
+      <h1 className="text-4xl lg:text-5xl font-bold text-center text-gray-800 mb-10 tracking-wide">
+        Trending <span className="text-indigo-600">Courses</span>
       </h1>
 
       {/* Scrolling Container */}
@@ -47,12 +51,12 @@ function Top() {
           className="flex justify-center space-x-8 flex-wrap md:flex-nowrap"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
+          transition={{ duration: 1, ease: "easeInOut" }}
         >
           {displayedCourses.map((course) => (
             <motion.div
               key={course.id}
-              className="bg-white rounded-2xl shadow-lg p-6 w-full md:w-80 flex-shrink-0 mb-4 md:mb-0 transform transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl course-card-shadow relative"
+              className="bg-white rounded-2xl shadow-lg p-6 w-full md:w-80 flex-shrink-0 mb-4 md:mb-0 course-card-shadow relative"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 * course.id, duration: 0.5 }}
@@ -71,22 +75,22 @@ function Top() {
 
               {/* Card Content */}
               <div className="bg-white rounded-xl p-4 mb-6">
-                <h2 className="font-semibold text-xl mb-4 text-blue-800">
+                <h2 className="font-semibold text-xl mb-4 text-blue-800 font-serif">
                   {course.title}
                 </h2>
 
                 {/* Bullet-point text with checkmark */}
                 <ul className="checkmark-list list-inside">
-                  <li className="text-md mb-2 text-black font-serif">
+                  <li className="text-md mb-2 text-gray-700 font-serif">
                     Online & Offline class available
                   </li>
-                  <li className="text-md mb-2 text-black font-serif">
+                  <li className="text-md mb-2 text-gray-700 font-serif">
                     365 Days Flexi Pass
                   </li>
-                  <li className="text-md mb-2 text-black font-serif">
+                  <li className="text-md mb-2 text-gray-700 font-serif">
                     Internship + Job Assistance
                   </li>
-                  <li className="text-md mb-4 text-black font-serif">
+                  <li className="text-md mb-4 text-gray-700 font-serif">
                     25 Capstone & 1 Client Project
                   </li>
                 </ul>
@@ -117,30 +121,31 @@ function Top() {
         </motion.div>
       </div>
 
-      {/* Dot Navigation */}
-      <div className="flex justify-center mt-6">
-        <ul className="flex space-x-3">
-          {Array.from({ length: numDots }).map((_, index) => (
-            <li
-              key={index}
-              onClick={() => handleDotClick(index)}
-              className="cursor-pointer"
-            >
-              <motion.div
-                className={`w-5 h-5 rounded-full transition-all duration-300 ease-in-out ${
-                  currentIndex === index * 4
-                    ? "bg-purple-600 scale-125"
-                    : "bg-blue-400 hover:bg-gray-500 hover:scale-110"
-                }`}
-                whileHover={{ scale: 1.2 }}
-                transition={{ type: "spring", stiffness: 200 }}
-              ></motion.div>
-            </li>
-          ))}
-        </ul>
+      {/* Arrow Navigation with Circle Background */}
+      <div className="flex justify-center mt-6 space-x-6">
+        {/* Left Arrow Button */}
+        <motion.div
+          className="cursor-pointer flex items-center justify-center w-12 h-12 rounded-full bg-blue-800 text-white text-2xl"
+          onClick={handlePrevClick}
+          whileHover={{ scale: 1.2 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        >
+          &#8592; {/* Left Arrow */}
+        </motion.div>
+        
+        {/* Right Arrow Button */}
+        <motion.div
+          className="cursor-pointer flex items-center justify-center w-12 h-12 rounded-full bg-blue-800 text-white text-2xl"
+          onClick={handleNextClick}
+          whileHover={{ scale: 1.2 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        >
+          &#8594; {/* Right Arrow */}
+        </motion.div>
       </div>
     </div>
   );
 }
 
 export default Top;
+  

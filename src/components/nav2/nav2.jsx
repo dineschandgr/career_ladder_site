@@ -39,6 +39,12 @@ function Nav2() {
               COURSES
             </Link>
             <Link
+              to="/Services"
+              className="px-6 py-3 rounded-md cursor-pointer text-sm sm:text-lg text-black font-bold hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-400 transition duration-300"
+            >
+              SERVICES
+            </Link>
+            <Link
               to="/blog"
               className="px-6 py-3 rounded-md cursor-pointer text-sm sm:text-lg text-black font-bold hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-400 transition duration-300"
             >
@@ -90,6 +96,12 @@ function Nav2() {
               className="block px-6 py-3 mt-2 text-sm font-bold text-black hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-400"
             >
               Courses
+            </Link>
+            <Link
+              to="/Services"
+              className="block px-6 py-3 mt-2 text-sm font-bold text-black hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-400"
+            >
+              Services
             </Link>
             <Link
               to="/blog"

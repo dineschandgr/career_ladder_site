@@ -13,6 +13,7 @@ import BoxCourse from "../boxcourse/boxcourse.jsx";
 import Aichatbot from "../aichatbot/aichat.jsx";
 import Insights from "../insights/insights.jsx";
 import ScrollToTopOnArrowPress from "../scrollup/scrollup.jsx";
+import Service  from "../Services/service.jsx";
 
 
 
@@ -28,9 +29,10 @@ function Homepage() {
             <Hero />
             <Insights />
             <BoxCourse />
-            <Top />
+            <Service />
             <Partner />
             <About />
+            <Top />
             <Workshop />
             <Reviews />
             <Intern />

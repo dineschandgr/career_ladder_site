@@ -1,27 +1,82 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 function Stats() {
+  const [studentsPlaced, setStudentsPlaced] = useState(0);
+  const [studentsTrained, setStudentsTrained] = useState(0);
+  const [studentsTrainedInIndustry, setStudentsTrainedInIndustry] = useState(0);
+
+  useEffect(() => {
+    const timer1 = setInterval(() => {
+      setStudentsPlaced(prev => (prev < 100) ? prev + 1 : prev);
+    }, 10);
+
+    const timer2 = setInterval(() => {
+      setStudentsTrained(prev => (prev < 500) ? prev + 1 : prev);
+    }, 5);
+
+    const timer3 = setInterval(() => {
+      setStudentsTrainedInIndustry(prev => (prev < 1000) ? prev + 1 : prev);
+    }, 3);
+
+    return () => {
+      clearInterval(timer1);
+      clearInterval(timer2);
+      clearInterval(timer3);
+    };
+  }, []);
+
   return (
-    <div className="flex flex-col sm:flex-row justify-center items-center gap-8 mt-12">
-      {/* First Rectangle Box */}
-      <div className="bg-blue-600 text-white px-8 py-6 rounded-xl shadow-2xl transform transition-transform hover:scale-105 hover:rotate-3 hover:shadow-3xl hover:bg-indigo-500 hover:transition duration-500 ease-in-out w-full sm:w-80 lg:w-96">
-        <h3 className="text-2xl sm:text-3xl font-semibold text-center animate__animated animate__fadeInUp animate__delay-1s">
-          100+ Students Got Placed
-        </h3>
-      </div>
+    <div className="mt-16 px-6 py-12 bg-gray-50">
+      <h2 className="text-4xl sm:text-5xl text-center font-bold text-gray-800 mb-12">
+        Our Achievements
+      </h2>
 
-      {/* Second Rectangle Box */}
-      <div className="bg-blue-600 text-white px-8 py-6 rounded-xl shadow-2xl transform transition-transform hover:scale-105 hover:rotate-3 hover:shadow-3xl hover:bg-indigo-500 hover:transition duration-500 ease-in-out w-full sm:w-80 lg:w-96">
-        <h3 className="text-2xl sm:text-3xl font-semibold text-center animate__animated animate__fadeInUp animate__delay-1s">
-          500+ Students Trained
-        </h3>
-      </div>
+      {/* Stats Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+        {/* First Stats Card */}
+        <div className="bg-white text-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 p-8 text-center border border-gray-200">
+          <div className="flex justify-center mb-4">
+            <span className="text-4xl font-bold text-blue-600">
+              {studentsPlaced}+ {/* Dynamic Counter */}
+            </span>
+          </div>
+          <h3 className="text-2xl font-semibold text-blue-600 mb-4">
+            Students Got Placed
+          </h3>
+          <p className="text-lg font-medium text-gray-600">
+            Our placement rate continues to grow with more students finding career success each year.
+          </p>
+        </div>
 
-      {/* Third Rectangle Box */}
-      <div className="bg-blue-600 text-white px-8 py-6 rounded-xl shadow-2xl transform transition-transform hover:scale-105 hover:rotate-3 hover:shadow-3xl hover:bg-indigo-500 hover:transition duration-500 ease-in-out w-full sm:w-80 lg:w-96">
-        <h3 className="text-2xl sm:text-3xl font-semibold text-center animate__animated animate__fadeInUp animate__delay-1s">
-          Industrial Training for 1000+ Students
-        </h3>
+        {/* Second Stats Card */}
+        <div className="bg-white text-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 p-8 text-center border border-gray-200">
+          <div className="flex justify-center mb-4">
+            <span className="text-4xl font-bold text-green-600">
+              {studentsTrained}+ {/* Dynamic Counter */}
+            </span>
+          </div>
+          <h3 className="text-2xl font-semibold text-green-600 mb-4">
+            Students Trained
+          </h3>
+          <p className="text-lg font-medium text-gray-600">
+            We have trained hundreds of students in industry-relevant skills that are in high demand.
+          </p>
+        </div>
+
+        {/* Third Stats Card */}
+        <div className="bg-white text-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 p-8 text-center border border-gray-200">
+          <div className="flex justify-center mb-4">
+            <span className="text-4xl font-bold text-purple-600">
+              {studentsTrainedInIndustry}+ {/* Dynamic Counter */}
+            </span>
+          </div>
+          <h3 className="text-2xl font-semibold text-purple-600 mb-4">
+            Industrial Training for Students
+          </h3>
+          <p className="text-lg font-medium text-gray-600">
+            We provide hands-on experience with industrial training programs, preparing students for real-world challenges.
+          </p>
+        </div>
       </div>
     </div>
   );

@@ -1,9 +1,9 @@
-import React, { useState, useRef, Suspense } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 // Assets
-import data from "../../asset/hero/data.webp"; // Hero Image
+import data from "../../asset/hero/bg.webp"; // Hero Image
 import live from "../../asset/Footer/lw.png"; // Logo Image
 
 const HeroOptimized = () => {
@@ -21,7 +21,6 @@ const HeroOptimized = () => {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
-        
         {/* Meta Tags */}
         <meta
           name="description"
@@ -32,7 +31,6 @@ const HeroOptimized = () => {
           content="CareerLadder, Data Science course, Data Analytics course, Full Stack Development course, Digital Marketing course, Cyber Security course, Automation Testing course, Job Assistance, Interview Support, Tech Career, Coimbatore, Best Data Science course, Top Data Analytics course, Best Full Stack Development course, Top Digital Marketing course, Best Cyber Security course, Top Automation Testing course, Certification course, Top Tech Career, Best Certification in Data Science, Best Full Stack Developer course, Online Data Science certification, Best Data Analytics certification, Tech courses near me, Top certification courses in Coimbatore, Industry-leading courses, Career-oriented certification, Job-ready certification, Online course with job assistance, Job support certification"
         />
         <meta name="robots" content="index, follow" />
-        
         {/* Title for the page */}
         <title>CareerLadder - Flexible Learning & Job Assistance</title>
 
@@ -45,7 +43,7 @@ const HeroOptimized = () => {
         <meta property="og:image" content={data} />
         <meta property="og:url" content="https://www.careerladderedu.com" />
         <meta property="og:type" content="website" />
-        
+
         {/* Preload Resources */}
         <link rel="preload" href={data} as="image" type="image/webp" />
         <link
@@ -82,8 +80,8 @@ const HeroOptimized = () => {
 
       {/* Full-Page Hero Section with a Single Background Image */}
       <div
-        className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] bg-cover bg-center"
-        style={{ backgroundImage: `url(${data})` }}
+        className="relative w-full h-[80vh] flex flex-col justify-center items-center"
+        style={{ backgroundImage: `url(${data})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
       >
         {/* Navigation */}
         <nav className="text-black p-4 sm:px-6 flex justify-between items-center sm:space-x-8 absolute top-0 left-0 right-0 z-10">
@@ -97,8 +95,8 @@ const HeroOptimized = () => {
             />
           </Link>
 
-          {/* Desktop Navigation Menu */}
-          <div className="hidden md:flex space-x-8 ml-auto">
+          {/* Desktop Navigation Menu with background rectangle */}
+          <div className="hidden md:flex bg-gray-800 rounded-2xl p-3">
             <Link
               to="/"
               className="px-6 py-3 rounded-md cursor-pointer text-sm sm:text-sm text-white font-bold hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-400 transition duration-300"
@@ -110,6 +108,12 @@ const HeroOptimized = () => {
               className="px-6 py-3 rounded-md cursor-pointer text-sm sm:text-sm text-white font-bold hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-400 transition duration-300"
             >
               COURSES
+            </Link>
+            <Link
+              to="/services"
+              className="px-6 py-3 rounded-md cursor-pointer text-sm sm:text-sm text-white font-bold hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-400 transition duration-300"
+            >
+              SERVICES
             </Link>
             <Link
               to="/blog"
@@ -161,7 +165,13 @@ const HeroOptimized = () => {
               Courses
             </Link>
             <Link
-              to="/Blog"
+              to="/services"
+              className="block px-6 py-3 mt-2 text-sm font-bold text-black hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-400"
+            >
+              Services
+            </Link>
+            <Link
+              to="/blog"
               className="block px-6 py-3 mt-2 text-sm font-bold text-black hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-400"
             >
               Blog
@@ -187,41 +197,127 @@ const HeroOptimized = () => {
           </div>
         )}
 
-        {/* Hero Text and Button */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6 mt-14">
-          {/* Main Heading */}
-          <h1 className="font-serif text-white font-extrabold text-lg sm:text-xl md:text-2xl lg:text-6xl mb-4">
-            Unlock Your Flexible Learning with Career Ladder
-          </h1>
-
-          {/* Sub-Heading 1 */}
-          <h2 className="font-sans text-white font-semibold text-sm sm:text-lg md:text-xl lg:text-2xl mb-4">
-            Offline and Online Classes. Learn at your place, from anywhere. Start your learning journey today.
-          </h2>
-
-          {/* Sub-Heading 2 */}
-          <p className="font-sans text-white font-medium text-sm sm:text-lg md:text-xl lg:text-2xl mb-4">
-            100% Placement Assistance with Every Program!
-          </p>
-
-          {/* Call to Action Button */}
-          <Link to="/contact">
-            <button className="bg-blue-500 text-white px-6 py-3 rounded-full text-sm sm:text-lg md:text-2xl lg:text-3xl font-serif font-semibold transform hover:scale-110 transition-all duration-300 ease-in-out mt-2 sm:mt-4 lg:mt-8 shadow-md">
+        {/* Hero Section Content */}
+        <div className="relative w-full h-[80vh] flex flex-col justify-center items-center">
+          {/* Desktop View: Horizontal Contact Us Button */}
+          <div className="hidden md:flex items-center justify-center absolute bottom-10 w-full">
+            <Link
+              to="/contact"
+              className="bg-blue-500 text-white px-10 py-4 rounded-full font-semibold hover:bg-blue-700 transition duration-300 mx-4"
+            >
               Contact Us
-            </button>
-          </Link>
+            </Link>
+          </div>
+
+     {/* Mobile View Content */}
+<div className="block md:hidden w-full py-16 px-6 absolute top-14 left-1/2 transform -translate-x-1/2">
+  {/* Content for Career Ladder */}
+  <div className="w-full bg-white p-10 rounded-lg opacity-90 mb-4">
+    <h1 className="font-serif text-black font-extrabold text-sm sm:text-lg mb-2">
+      Unlock Your Learning
+    </h1>
+    <h2 className="font-sans text-black font-semibold text-xs sm:text-sm mb-2">
+      Learn online or offline, anytime, anywhere.
+    </h2>
+    <p className="font-sans text-black font-medium text-xs sm:text-sm">
+      100% Placement Assistance with Every Program!
+    </p>
+  </div>
+
+  {/* Content for Services */}
+  <div className="w-full bg-white p-10 rounded-lg opacity-90 mb-4">
+    <h1 className="font-serif text-black font-extrabold text-sm sm:text-lg mb-2">
+      Business Services
+    </h1>
+    <h2 className="font-sans text-black font-semibold text-xs sm:text-sm mb-2">
+      Digital Marketing, Web Design, and More.
+    </h2>
+    <p className="font-sans text-black font-medium text-xs sm:text-sm">
+      Build Your Online Presence with Our Expertise!
+    </p>
+  </div>
+
+  {/* Content for Placement Support */}
+  <div className="w-full bg-white p-10 rounded-lg opacity-90 mb-4">
+    <h1 className="font-serif text-black font-extrabold text-sm sm:text-lg mb-2">
+      100% Placement Support
+    </h1>
+    <h2 className="font-sans text-black font-semibold text-xs sm:text-sm mb-2">
+      Interview Prep, Resume Building & Job Assistance.
+    </h2>
+    <p className="font-sans text-black font-medium text-xs sm:text-sm">
+      Secure Your Future with Expert Guidance!
+    </p>
+  </div>
+
+  {/* Contact Button */}
+  <div className="w-full flex justify-center mt-6">
+    <a
+      href="/contact" // You can change this to the actual contact section or form URL
+      className="bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg text-center transition-all duration-300 hover:bg-blue-700"
+    >
+      Contact Us
+    </a>
+  </div>
+</div>
+
+{/* Desktop View Content */}
+<div className="hidden md:flex md:justify-center md:items-center md:space-x-8 md:absolute md:left-1/2 md:top-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 w-full">
+  {/* Content Block 1: Flexible Learning */}
+  <div className="flex-1 max-w-md h-[400px] bg-blue-200 p-4 rounded-lg opacity-90">
+    <div className="flex items-center mb-4">
+      <i className="fas fa-laptop-house text-3xl mr-3 text-blue-600"></i>
+      <h1 className="font-serif text-black font-extrabold text-lg sm:text-xl md:text-2xl lg:text-4xl">
+        Unlock Your Flexible Learning
+      </h1>
+    </div>
+    <h2 className="font-sans text-black font-semibold text-sm sm:text-lg md:text-xl lg:text-2xl mb-4">
+      Offline and Online Classes. Learn at your place, from anywhere. Start your learning journey today.
+    </h2>
+    <p className="font-sans text-black font-medium text-sm sm:text-lg md:text-xl lg:text-2xl mb-4">
+      100% Placement Assistance with Every Program!
+    </p>
+  </div>
+
+  {/* Content Block 2: Elevate Your Business */}
+  <div className="flex-1 max-w-md h-[400px] bg-white p-4 rounded-lg opacity-90">
+    <div className="flex items-center mb-4">
+      <i className="fas fa-chart-line text-3xl mr-3 text-blue-600"></i>
+      <h1 className="font-serif text-black font-extrabold text-lg sm:text-xl md:text-2xl lg:text-4xl">
+        Elevate Your Business with Our Services
+      </h1>
+    </div>
+    <h2 className="font-sans text-black font-semibold text-sm sm:text-lg md:text-xl lg:text-2xl mb-4">
+      Offering Expert Services in Digital Marketing, Web Design, Web Development & E-commerce Solutions.
+    </h2>
+    <p className="font-sans text-black font-medium text-sm sm:text-lg md:text-xl lg:text-2xl mb-4">
+      Let's Build Your Online Presence with Customized Solutions!
+    </p>
+  </div>
+
+  {/* Content Block 3: Placement Support */}
+  <div className="flex-1 max-w-md h-[400px] bg-purple-200 p-4 rounded-lg opacity-90">
+    <div className="flex items-center mb-4">
+      <i className="fas fa-briefcase text-3xl mr-3 text-blue-600"></i>
+      <h1 className="font-serif text-black font-extrabold text-lg sm:text-xl md:text-2xl lg:text-4xl">
+        Get 100% Placement Support
+      </h1>
+    </div>
+    <h2 className="font-sans text-black font-semibold text-sm sm:text-lg md:text-xl lg:text-2xl mb-4">
+      We Provide Interview Training, Resume Building, and Job Assistance.
+    </h2>
+    <p className="font-sans text-black font-medium text-sm sm:text-lg md:text-xl lg:text-2xl mb-4">
+      Secure Your Future with Our Expert Placement Support!
+    </p>
+  </div>
+</div>
+
+
+
         </div>
       </div>
     </div>
   );
 };
 
-const HeroPage = () => {
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <HeroOptimized />
-    </Suspense>
-  );
-};
-
-export default HeroPage;
+export default HeroOptimized;

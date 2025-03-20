@@ -29,33 +29,14 @@ function About() {
           }}
         >
           <p className="text-xs sm:text-sm md:text-base lg:text-lg font-sans">
-            Software & Hardware Training Institute | Up to 30% OFFER for all IT Courses!
+          Software & Hardware Training Institute | Up to 30% OFFER for all IT Courses! | We provide services like Digital Marketing, Web Development, Web Design.
+ 
           </p>
         </div>
 
       
 
-        {/* Modal for email and phone number */}
-        {isModalOpen && (
-          <div className="fixed inset-0 bg-gray-500 bg-opacity-50 flex justify-center items-center z-50">
-            <div className="bg-white p-6 rounded-lg shadow-lg w-80 sm:w-96">
-              <h2 className="text-xl font-bold mb-4">Contact Us</h2>
-              <p className="mb-2">
-                <strong>Email:</strong> example@email.com
-              </p>
-              <p>
-                <strong>Phone:</strong> +123-456-7890
-              </p>
-              <button
-                className="mt-4 text-white bg-blue-600 px-4 py-2 rounded-lg"
-                onClick={toggleModal}
-              >
-                Close
-              </button>
-            </div>
-          </div>
-        )}
-
+   
       </div>
     </div>
   );

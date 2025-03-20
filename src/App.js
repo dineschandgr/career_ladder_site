@@ -31,6 +31,7 @@ import ES from './components/Coures/courses/embeddedsystem';
 import AT from './components/Coures/courses/automationtesting';
 import Label from './components/label/label';
 import BoxCourse from "./components/boxcourse/boxcourse";
+import Services from "./components/Services/services";
 
 
 
@@ -73,6 +74,10 @@ function App() {
     {
       path:'/courses',
       element:<Courses />
+    },
+    {
+      path:'/services',
+      element:<Services />
     },
     {
       path:'/DS',

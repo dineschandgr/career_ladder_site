@@ -28,28 +28,19 @@ function About() {
   };
 
   return (
-    <div className="p-5 mt-6 mb-6 flex justify-center items-center font-sans">
-      <div className="lg:w-4/5 w-full">
+    <div className="p-8 mt-12 mb-12 bg-white flex justify-center items-center font-sans">
+      <div className="lg:w-4/5 w-full max-w-7xl space-y-16">
         {/* SEO Meta Tags and Schema.org using Helmet */}
         <Helmet>
           <meta
             name="description"
-            content="Learn about CareerLadder, the best software training institute in Coimbatore. Explore our expert-led software development course, programming course, and data science courses. Start your tech career today!"
+            content="Discover CareerLadder’s unique approach to software development training. Dive deep into cutting-edge technologies like AI, ML, Cloud Computing, and more. Start your journey with us today!"
           />
-          <meta
-  name="keywords"
-  content="CareerLadder, Data Science course, Data Analytics course, Full Stack Development course, Digital Marketing course, Cyber Security course, Automation Testing course, Job Assistance, Interview Support, Tech Career, Coimbatore, Best Data Science course, Top Data Analytics course, Best Full Stack Development course, Top Digital Marketing course, Best Cyber Security course, Top Automation Testing course, Certification course, Top Tech Career, Best Certification in Data Science, Best Full Stack Developer course, Online Data Science certification, Best Data Analytics certification, Tech courses near me, Top certification courses in Coimbatore, Industry-leading courses,
-   Career-oriented certification, Job-ready certification, Online course with job assistance, Job support certification, Data Science Training in Coimbatore, Data Science Course in Coimbatore, Best Data Science Course in Coimbatore, Best Data Science Training Institute in Coimbatore, Data Science Course Training in Coimbatore, Data Science Training Institute in Coimbatore, Data Analytics Training in Coimbatore, Data Analytics Course in Coimbatore, Best Data Analytics Course in Coimbatore, Best Data Analytics Training Institute in Coimbatore, Data Analytics Course Training in Coimbatore, Data Analytics Training Institute in Coimbatore, Data Analytics Certification Course in Coimbatore, 
-   Data Analytics for Beginners Course in Coimbatore, Advanced Data Analytics Course in Coimbatore, Livewire Coimbatore offers Data Analytics Course in Coimbatore, Data Analytics Course Online in Coimbatore, Best Data Analytics Training Center in Coimbatore, Cybersecurity Training in Coimbatore, Cybersecurity Course in Coimbatore, Best Cybersecurity Course in Coimbatore, Cybersecurity Certification Course in Coimbatore, Cybersecurity Training Institute in Coimbatore, Advanced Cybersecurity Course in Coimbatore, Ethical Hacking Course in Coimbatore, Network Security Course in Coimbatore, Cybersecurity Course Online in Coimbatore, Cloud Computing Training in Coimbatore, Cloud Computing Course in Coimbatore, 
-   Best Cloud Computing Course in Coimbatore, Cloud Computing Certification Course in Coimbatore, Cloud Computing Course Training in Coimbatore, Cloud Computing Training Institute in Coimbatore, Cloud Computing for Data Science in Coimbatore, Cloud Architecture Course in Coimbatore, Full Stack Development Training in Coimbatore, Full Stack Development Course in Coimbatore, Best Full Stack Development Course in Coimbatore, 
-  Full Stack Development Certification Course in Coimbatore, Full Stack Development Course Training in Coimbatore, Full Stack Development Training Institute in Coimbatore, Advanced Full Stack Development Course in Coimbatore, UI/UX Design Training in Coimbatore, UI/UX Design Course in Coimbatore, Best UI/UX Design Course in Coimbatore, UI/UX Design Certification Course in Coimbatore, UI/UX Design Training Institute in Coimbatore, Digital Marketing Training in Coimbatore, Digital Marketing Course in Coimbatore, Best Digital Marketing Course in Coimbatore, Digital Marketing Certification Course in Coimbatore, SEO Training Course in Coimbatore, Google Ads Course in Coimbatore"
-/>
-
           <meta name="robots" content="index, follow" />
           <meta property="og:title" content="About Us - CareerLadder" />
           <meta
             property="og:description"
-            content="Learn about CareerLadder, the best software training institute in Coimbatore. Explore our expert-led software development, programming, and data science courses."
+            content="Discover CareerLadder’s unique approach to software development training. Dive deep into cutting-edge technologies like AI, ML, Cloud Computing, and more."
           />
           <meta property="og:image" content={about1} />
           <meta property="og:image:alt" content="CareerLadder - About Us" />
@@ -59,121 +50,125 @@ function About() {
           <meta property="og:image:width" content="1200" />
           <meta property="og:image:height" content="630" />
           <meta property="og:locale" content="en_IN" />
-
-          {/* Canonical Link Tag */}
           <link rel="canonical" href="https://www.careerladderedu.com/aboutus" />
-
-          {/* Schema.org Structured Data (JSON-LD) */}
           <script type="application/ld+json">
             {JSON.stringify(schemaOrgData)}
           </script>
         </Helmet>
 
-        {/* Centered Heading */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl lg:text-5xl font-serif text-indigo-900">
+        {/* Section Title */}
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-indigo-900 leading-tight">
             About Us
           </h1>
+          <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
+            We are a premier software training institute offering cutting-edge courses in technologies like AI, ML, Cloud Computing, and more. Join us today to accelerate your career!
+          </p>
         </div>
 
-        {/* Images in a straight horizontal line with lazy loading */}
-        <div className="flex justify-center mb-8 gap-6">
-          <div className="w-auto">
+        {/* Visual Elements with Image Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="w-full">
             <img
-              className="h-auto max-w-full rounded-2xl"
+              className="w-full h-auto rounded-2xl shadow-lg"
               src={about2}
               alt="Hands-on experience with the latest tools"
               loading="lazy"
             />
-            <p className="text-center mt-4 text-base sm:text-lg md:text-xl lg:text-2xl text-gray-800 font-semibold font-sans">
+            <p className="mt-4 text-center text-lg text-gray-700 font-semibold">
               Hands-on experience with the latest tools
             </p>
           </div>
-          <div className="w-auto">
+          <div className="w-full">
             <img
-              className="h-auto max-w-full rounded-2xl"
+              className="w-full h-auto rounded-2xl shadow-lg"
               src={about1}
               alt="Real-world applications of skills"
               loading="lazy"
             />
-            <p className="text-center mt-4 text-base sm:text-lg md:text-xl lg:text-2xl text-gray-800 font-semibold font-sans">
+            <p className="mt-4 text-center text-lg text-gray-700 font-semibold">
               Real-world applications of skills
             </p>
           </div>
-          <div className="w-auto">
+          <div className="w-full">
             <img
-              className="h-auto max-w-full rounded-2xl"
+              className="w-full h-auto rounded-2xl shadow-lg"
               src={about3}
-              alt="Develop in-demand skills with CareerLadder"
+              alt="Develop in-demand skills"
               loading="lazy"
             />
-            <p className="text-center mt-4 text-base sm:text-lg md:text-xl lg:text-2xl text-gray-800 font-semibold font-sans">
+            <p className="mt-4 text-center text-lg text-gray-700 font-semibold">
               Develop In-Demand Skills
             </p>
           </div>
         </div>
 
-        {/* Text and Description Section */}
-        <div className="font-sans mb-12">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mt-2 mb-2 text-indigo-800 font-sans">
-            Develop In-Demand Skills at the Best Software Training Institute in Coimbatore
+        {/* Section: Core Training Features */}
+        <div className="space-y-8">
+          <h2 className="text-3xl sm:text-4xl font-semibold text-indigo-800 mb-4">
+            Core Training Features
           </h2>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-blue-600 leading-relaxed mb-2 font-sans ">
-            CareerLadder is the top software training institute in Coimbatore, offering comprehensive courses in software development, programming, data science, machine learning, and more. Our on-demand courses in emerging technologies equip you with the practical knowledge and hands-on experience you need to succeed in today's fast-paced tech world.
-            Join CareerLadder today, and start building your career with the best software development training in Coimbatore. Our training programs are designed to give you a competitive edge in the tech industry.
-            <br />
-            <Link to="/contact" className="text-indigo-700 underline">Contact us today</Link> to learn more about our courses!
+          <p className="text-lg sm:text-xl text-gray-700">
+            At CareerLadder, we ensure that every student receives a holistic, real-world learning experience that prepares them for the ever-changing tech industry. Here’s what we offer:
           </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+            <div className="p-6 bg-white rounded-xl shadow-xl">
+              <h3 className="font-semibold text-xl text-indigo-800 mb-3">
+                Comprehensive Curriculum
+              </h3>
+              <p className="text-gray-700">
+                Covering topics from basic programming to advanced machine learning algorithms, ensuring a broad understanding of the technology landscape.
+              </p>
+            </div>
+            <div className="p-6 bg-white rounded-xl shadow-xl">
+              <h3 className="font-semibold text-xl text-indigo-800 mb-3">
+                Hands-On Experience
+              </h3>
+              <p className="text-gray-700">
+                Gain practical skills through real-world projects, live sessions, and assignments designed to make you job-ready.
+              </p>
+            </div>
+            <div className="p-6 bg-white rounded-xl shadow-xl">
+              <h3 className="font-semibold text-xl text-indigo-800 mb-3">
+                Expert Trainers
+              </h3>
+              <p className="text-gray-700">
+                Learn from industry veterans with extensive experience in the tech field, offering valuable insights and practical advice.
+              </p>
+            </div>
+          </div>
         </div>
 
-        {/* Comprehensive Learning Experience Section */}
-        <div className="font-sans mb-12">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-2 text-indigo-800 font-sans">
-            Comprehensive Learning Experience at the Top Software Institute
+        {/* Industry-Relevant Technologies Section */}
+        <div className="space-y-8">
+          <h2 className="text-3xl sm:text-4xl font-semibold text-indigo-800 mb-6">
+            Work with Industry-Relevant Technologies
           </h2>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-blue-600 leading-relaxed mb-2 font-sans">
-            CareerLadder is dedicated to providing high-quality, industry-relevant courses that equip students with the skills they need to succeed in the evolving tech landscape. With expertise in teaching programming, data science, full-stack development, machine learning, cloud computing, and more, we prepare students to excel in their careers.
-            Our flexible, affordable courses include personalized attention and hands-on learning experiences designed to ensure that you gain the expertise needed to excel in the tech world. Whether you're interested in <Link to="/courses" className="text-indigo-700 underline">software engineering</Link>, artificial intelligence, or cybersecurity, we have a course for you.
+          <p className="text-lg sm:text-xl text-gray-700">
+            We provide training in the most current and cutting-edge technologies that are transforming industries. Below are some key areas we focus on:
           </p>
-        </div>
-
-        {/* Courses Information Section */}
-        <div className="font-sans mb-8">
-          <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 text-indigo-800 font-roboto">
-            Our Courses - Top 10 Software Development Courses
-          </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-sm sm:text-base md:text-lg lg:text-xl text-gray-800 leading-relaxed mb-6 font-sans">
-            {/* Course items */}
-            {[{ icon: 'https://cdn-icons-png.freepik.com/256/5973/5973227.png', title: 'Full Stack Web Development' },
-              { icon: 'https://cdn-icons-png.freepik.com/256/2103/2103650.png', title: 'Data Science & Machine Learning' },
-              { icon: 'https://cdn-icons-png.freepik.com/256/8055/8055576.png', title: 'Artificial Intelligence (AI)' },
-              { icon: 'https://cdn-icons-png.freepik.com/256/7858/7858975.png', title: 'UI/UX Designing' },
-              { icon: 'https://cdn-icons-png.freepik.com/256/2920/2920349.png', title: 'Data Analytics' },
-              { icon: 'https://cdn-icons-png.freepik.com/256/11643/11643012.png', title: 'Cloud Computing (AWS)' },
-              { icon: 'https://cdn-icons-png.freepik.com/256/4744/4744315.png', title: 'Cybersecurity & Ethical Hacking' },
-              { icon: 'https://cdn-icons-png.freepik.com/256/14528/14528628.png', title: 'Digital Marketing' },
-              { icon: 'https://cdn-icons-png.freepik.com/256/6867/6867265.png', title: 'DevOps & Automation' }
-            ].map((course, index) => (
-              <div key={index} className="flex items-center font-bold">
-                <img src={course.icon} alt={course.title} className="w-6 h-6 mr-2" />
-                {course.title}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+            {[{ title: 'Blockchain Development', description: 'Understand decentralized systems and how blockchain is revolutionizing industries.', color: 'bg-green-200' },
+              { title: 'IoT (Internet of Things)', description: 'Build smart, connected devices and learn the architecture of IoT systems.', color: 'bg-blue-200' },
+              { title: 'AR/VR (Augmented and Virtual Reality)', description: 'Create immersive environments and experiences for various applications.', color: 'bg-purple-200' },
+              { title: 'RPA (Robotic Process Automation)', description: 'Automate repetitive tasks in business processes using advanced RPA tools.', color: 'bg-yellow-200' },
+              { title: 'Quantum Computing', description: 'Explore the future of computing with quantum algorithms and techniques.', color: 'bg-pink-200' }
+            ].map((tech, index) => (
+              <div key={index} className={`${tech.color} p-6 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300`}>
+                <h3 className="font-bold text-xl text-indigo-800 mb-4">{tech.title}</h3>
+                <p className="text-gray-600">{tech.description}</p>
               </div>
             ))}
           </div>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-blue-600 leading-relaxed mb-8 font-sans">
-            These courses are designed to keep you ahead in today’s tech landscape. Gain skills in software engineering, data science, cloud computing, artificial intelligence, and more. CareerLadder ensures all courses meet the latest industry standards.
-            <br />
-            <a href="https://www.careerladderedu.com/courses" className="text-indigo-700 underline" target="_blank" rel="noopener noreferrer">Explore all our courses here.</a>
-          </p>
         </div>
 
-        {/* Call to Action Button */}
+        {/* Call-to-Action Button */}
         <div className="text-center mt-12">
           <Link
-            to="/blog"
-            className="bg-indigo-700 text-white font-semibold text-xl sm:text-2xl md:text-3xl lg:text-4xl hover:bg-indigo-800 py-3 px-6 sm:py-4 sm:px-8 lg:py-5 lg:px-10 rounded-full transition-all"
+            to="/contact"
+            className="bg-indigo-700 text-white text-xl sm:text-2xl font-semibold py-4 px-8 rounded-full hover:bg-indigo-800 transition-all duration-300"
           >
-            Read our latest blog posts
+            Get in Touch with Us!
           </Link>
         </div>
       </div>
