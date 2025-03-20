@@ -70,7 +70,7 @@ const HeroOptimized = () => {
               ],
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+91 8807148869/+91 8807028071",
+                "telephone": "+91 8870275880/+91 8807028071",
                 "contactType": "Customer Service"
               }
             })

@@ -15,7 +15,7 @@ function About() {
 
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+91-8807148869",
+      "telephone": "+91-8870275880",
       "contactType": "customer service",
       "areaServed": "IN",
       "availableLanguage": "Tamil,English"
