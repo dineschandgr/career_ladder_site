@@ -15,7 +15,7 @@ function About() {
 
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+91-8870275880",
+      "telephone": "+91-8807148869",
       "contactType": "customer service",
       "areaServed": "IN",
       "availableLanguage": "Tamil,English"
@@ -50,7 +50,6 @@ function About() {
           <meta property="og:image:width" content="1200" />
           <meta property="og:image:height" content="630" />
           <meta property="og:locale" content="en_IN" />
-          <link rel="canonical" href="https://www.careerladderedu.com/aboutus" />
           <script type="application/ld+json">
             {JSON.stringify(schemaOrgData)}
           </script>

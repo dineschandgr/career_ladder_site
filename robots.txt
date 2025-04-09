@@ -1,0 +1,17 @@
+# robots.txt file for CareerLadder
+
+# Allow all search engines to index all pages
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /checkout/
+
+# Allow specific bots or crawlers to access certain directories
+User-agent: Googlebot
+Allow: /public/
+
+# Crawl delay to avoid overloading the server
+Crawl-delay: 10
+
+# Sitemap location (ensure the path is correct)
+Sitemap: https://www.careerladderedu.com/sitemap.xml

@@ -117,7 +117,7 @@ export const Footer = () => {
                     <div className="mb-6">
                         <h3 className="font-semibold text-xl">CareerLadder (Main Office)</h3>
                         <h4 className="text-lg">
-                            <strong>Phone :</strong> +91 8870275880
+                            <strong>Phone :</strong> +91 88071 48869
                         </h4>
                         <h4 className="text-lg">
                             <strong>Address :</strong> CareerLadder <br /> Door No. 207, Avinasi Road, Opp GRG Ladies Hostel, B.R Puram, Coimbatore - 641004

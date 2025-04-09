@@ -21,10 +21,10 @@ const HeroOptimized = () => {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
-        {/* Meta Tags */}
+        {/* Meta Tags with Keywords */}
         <meta
           name="description"
-          content="Unlock your tech career with CareerLadder. Offering Data Science, Full Stack Development, and more with 100% job assistance. Start learning online and offline today!"
+          content="Unlock your tech career with CareerLadder. Offering Data Science, Full Stack Development, Digital Marketing, Cyber Security, Automation Testing courses, and more with 100% job assistance. Start learning online and offline today!"
         />
         <meta
           name="keywords"
@@ -32,7 +32,7 @@ const HeroOptimized = () => {
         />
         <meta name="robots" content="index, follow" />
         {/* Title for the page */}
-        <title>CareerLadder - Flexible Learning & Job Assistance</title>
+        <title>CareerLadder - Flexible Learning, Industry-leading Courses & Job Assistance</title>
 
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="Unlock Flexible Learning with CareerLadder" />
@@ -70,7 +70,7 @@ const HeroOptimized = () => {
               ],
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+91 8870275880/+91 8807028071",
+                "telephone": "+91 8807148869/+91 8807028071",
                 "contactType": "Customer Service"
               }
             })
@@ -209,114 +209,101 @@ const HeroOptimized = () => {
             </Link>
           </div>
 
-     {/* Mobile View Content */}
-<div className="block md:hidden w-full py-16 px-6 absolute top-14 left-1/2 transform -translate-x-1/2">
-  {/* Content for Career Ladder */}
-  <div className="w-full bg-white p-10 rounded-lg opacity-90 mb-4">
-    <h1 className="font-serif text-black font-extrabold text-sm sm:text-lg mb-2">
-      Unlock Your Learning
-    </h1>
-    <h2 className="font-sans text-black font-semibold text-xs sm:text-sm mb-2">
-      Learn online or offline, anytime, anywhere.
-    </h2>
-    <p className="font-sans text-black font-medium text-xs sm:text-sm">
-      100% Placement Assistance with Every Program!
-    </p>
-  </div>
+          {/* Mobile View Content */}
+          <div className="block md:hidden w-full py-16 px-6 absolute top-14 left-1/2 transform -translate-x-1/2">
+            {/* Content for Career Ladder */}
+            <div className="w-full bg-white p-10 rounded-lg opacity-90 mb-4">
+              <h1 className="font-serif text-black font-extrabold text-sm sm:text-lg mb-2">
+                Unlock Your Learning
+              </h1>
+              <h2 className="font-sans text-black font-semibold text-xs sm:text-sm mb-2">
+                Learn online or offline, anytime, anywhere.
+              </h2>
+              <p className="font-sans text-black font-medium text-xs sm:text-sm">
+                100% Placement Assistance with Every Program!
+              </p>
+            </div>
 
-  {/* Content for Services */}
-  <div className="w-full bg-white p-10 rounded-lg opacity-90 mb-4">
-    <h1 className="font-serif text-black font-extrabold text-sm sm:text-lg mb-2">
-      Business Services
-    </h1>
-    <h2 className="font-sans text-black font-semibold text-xs sm:text-sm mb-2">
-      Digital Marketing, Web Design, and More.
-    </h2>
-    <p className="font-sans text-black font-medium text-xs sm:text-sm">
-      Build Your Online Presence with Our Expertise!
-    </p>
-  </div>
+            {/* Content for Services */}
+            <div className="w-full bg-white p-10 rounded-lg opacity-90 mb-4">
+              <h1 className="font-serif text-black font-extrabold text-sm sm:text-lg mb-2">
+                Business Services
+              </h1>
+              <h2 className="font-sans text-black font-semibold text-xs sm:text-sm mb-2">
+                Digital Marketing, Web Design, and More.
+              </h2>
+              <p className="font-sans text-black font-medium text-xs sm:text-sm">
+                <Link to="/services" className="text-blue-500 hover:underline">Learn more about our services.</Link>
+              </p>
+            </div>
 
-  {/* Content for Placement Support */}
-  <div className="w-full bg-white p-10 rounded-lg opacity-90 mb-4">
-    <h1 className="font-serif text-black font-extrabold text-sm sm:text-lg mb-2">
-      100% Placement Support
-    </h1>
-    <h2 className="font-sans text-black font-semibold text-xs sm:text-sm mb-2">
-      Interview Prep, Resume Building & Job Assistance.
-    </h2>
-    <p className="font-sans text-black font-medium text-xs sm:text-sm">
-      Secure Your Future with Expert Guidance!
-    </p>
-  </div>
+            {/* Placement Assistance */}
+            <div className="w-full bg-purple-200 p-10 rounded-lg opacity-90">
+              <h1 className="font-serif text-black font-extrabold text-sm sm:text-lg mb-2">
+                100% Placement Support
+              </h1>
+              <h2 className="font-sans text-black font-semibold text-xs sm:text-sm mb-2">
+                Secure Your Future with Our Expert Placement Support!
+              </h2>
+              <p className="font-sans text-black font-medium text-xs sm:text-sm">
+                <Link to="/placement" className="text-blue-500 hover:underline">Explore Placement Assistance</Link>
+              </p>
+            </div>
+          </div>
+        </div>
+           {/* Desktop View Content */}
+           <div className="hidden md:flex md:justify-center md:items-center md:space-x-8 md:absolute md:left-1/2 md:top-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 w-full">
+            {/* Content Block 1: Flexible Learning */}
+            <div className="flex-1 max-w-md h-[400px] bg-blue-200 p-4 rounded-lg opacity-90">
+              <div className="flex items-center mb-4">
+                <i className="fas fa-laptop-house text-3xl mr-3 text-blue-600"></i>
+                <h1 className="font-serif text-black font-extrabold text-lg sm:text-xl md:text-2xl lg:text-4xl">
+                  Unlock Your Flexible Learning
+                </h1>
+              </div>
+              <h2 className="font-sans text-black font-semibold text-sm sm:text-lg md:text-xl lg:text-2xl mb-4">
+                Offline and Online Classes. Learn at your place, from anywhere. Start your learning journey today.
+              </h2>
+              <p className="font-sans text-black font-medium text-sm sm:text-lg md:text-xl lg:text-2xl mb-4">
+                100% Placement Assistance with Every Program!
+              </p>
+            </div>
 
-  {/* Contact Button */}
-  <div className="w-full flex justify-center mt-6">
-    <a
-      href="/contact" // You can change this to the actual contact section or form URL
-      className="bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg text-center transition-all duration-300 hover:bg-blue-700"
-    >
-      Contact Us
-    </a>
-  </div>
-</div>
+            {/* Content Block 2: Elevate Your Business */}
+            <div className="flex-1 max-w-md h-[400px] bg-white p-4 rounded-lg opacity-90">
+              <div className="flex items-center mb-4">
+                <i className="fas fa-chart-line text-3xl mr-3 text-blue-600"></i>
+                <h1 className="font-serif text-black font-extrabold text-lg sm:text-xl md:text-2xl lg:text-4xl">
+                   Our Services
+                </h1>
+              </div>
+              <h2 className="font-sans text-black font-semibold text-sm sm:text-lg md:text-xl lg:text-2xl mb-4">
+                Offering Expert Services in Digital Marketing, Web Design, Web Development & E-commerce Solutions.
+              </h2>
+              <p className="font-sans text-black font-medium text-sm sm:text-lg md:text-xl lg:text-2xl mb-4">
+                Let's Build Your Online Presence with Customized Solutions!
+              </p>
+            </div>
 
-{/* Desktop View Content */}
-<div className="hidden md:flex md:justify-center md:items-center md:space-x-8 md:absolute md:left-1/2 md:top-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 w-full">
-  {/* Content Block 1: Flexible Learning */}
-  <div className="flex-1 max-w-md h-[400px] bg-blue-200 p-4 rounded-lg opacity-90">
-    <div className="flex items-center mb-4">
-      <i className="fas fa-laptop-house text-3xl mr-3 text-blue-600"></i>
-      <h1 className="font-serif text-black font-extrabold text-lg sm:text-xl md:text-2xl lg:text-4xl">
-        Unlock Your Flexible Learning
-      </h1>
-    </div>
-    <h2 className="font-sans text-black font-semibold text-sm sm:text-lg md:text-xl lg:text-2xl mb-4">
-      Offline and Online Classes. Learn at your place, from anywhere. Start your learning journey today.
-    </h2>
-    <p className="font-sans text-black font-medium text-sm sm:text-lg md:text-xl lg:text-2xl mb-4">
-      100% Placement Assistance with Every Program!
-    </p>
-  </div>
-
-  {/* Content Block 2: Elevate Your Business */}
-  <div className="flex-1 max-w-md h-[400px] bg-white p-4 rounded-lg opacity-90">
-    <div className="flex items-center mb-4">
-      <i className="fas fa-chart-line text-3xl mr-3 text-blue-600"></i>
-      <h1 className="font-serif text-black font-extrabold text-lg sm:text-xl md:text-2xl lg:text-4xl">
-        Elevate Your Business with Our Services
-      </h1>
-    </div>
-    <h2 className="font-sans text-black font-semibold text-sm sm:text-lg md:text-xl lg:text-2xl mb-4">
-      Offering Expert Services in Digital Marketing, Web Design, Web Development & E-commerce Solutions.
-    </h2>
-    <p className="font-sans text-black font-medium text-sm sm:text-lg md:text-xl lg:text-2xl mb-4">
-      Let's Build Your Online Presence with Customized Solutions!
-    </p>
-  </div>
-
-  {/* Content Block 3: Placement Support */}
-  <div className="flex-1 max-w-md h-[400px] bg-purple-200 p-4 rounded-lg opacity-90">
-    <div className="flex items-center mb-4">
-      <i className="fas fa-briefcase text-3xl mr-3 text-blue-600"></i>
-      <h1 className="font-serif text-black font-extrabold text-lg sm:text-xl md:text-2xl lg:text-4xl">
-        Get 100% Placement Support
-      </h1>
-    </div>
-    <h2 className="font-sans text-black font-semibold text-sm sm:text-lg md:text-xl lg:text-2xl mb-4">
-      We Provide Interview Training, Resume Building, and Job Assistance.
-    </h2>
-    <p className="font-sans text-black font-medium text-sm sm:text-lg md:text-xl lg:text-2xl mb-4">
-      Secure Your Future with Our Expert Placement Support!
-    </p>
-  </div>
-</div>
-
-
-
+            {/* Content Block 3: Placement Support */}
+            <div className="flex-1 max-w-md h-[400px] bg-purple-200 p-4 rounded-lg opacity-90">
+              <div className="flex items-center mb-4">
+                <i className="fas fa-briefcase text-3xl mr-3 text-blue-600"></i>
+                <h1 className="font-serif text-black font-extrabold text-lg sm:text-xl md:text-2xl lg:text-4xl">
+                  Get 100% Placement Support
+                </h1>
+              </div>
+              <h2 className="font-sans text-black font-semibold text-sm sm:text-lg md:text-xl lg:text-2xl mb-4">
+                We Provide Interview Training, Resume Building, and Job Assistance.
+              </h2>
+              <p className="font-sans text-black font-medium text-sm sm:text-lg md:text-xl lg:text-2xl mb-4">
+                Secure Your Future with Our Expert Placement Support!
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+   
   );
 };
 

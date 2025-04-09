@@ -28,7 +28,7 @@ export const Contact = () => {
     {
       image: phone,
       tittle: "PHONE NUMBER",
-      text: "+91 8870275880",
+      text: "+91 8807148869",
     },
     {
       image: mail,

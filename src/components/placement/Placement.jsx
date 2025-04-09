@@ -43,6 +43,11 @@ import company2 from "../../asset/companies/ibots.png";
 import company3 from "../../asset/companies/knowillence.jpg";
 import company4 from "../../asset/companies/tekhosl.png";
 import ScrollToTopOnArrowPress from "../scrollup/scrollup.jsx";
+import company5 from "../../asset/companies/app.png";
+import company6 from "../../asset/companies/nrj.png";
+import company7 from "../../asset/companies/Crafti.png";
+import company8 from "../../asset/companies/saastrail.webp";
+
 
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
@@ -270,39 +275,75 @@ const Placement = () => {
       </div>
 
       {/* Section: Associated Companies */}
-      <div className="my-10 px-5 py-10 bg-gray-50 border-t-2 border-gray-300">
-        <h2 className="text-center text-3xl font-semibold mb-10">Associated Companies</h2>
-        <div className="flex flex-wrap justify-center items-center gap-14">
-          <img
-            src={company1}
-            alt="Company 1"
-            className="h-16"
-            loading="lazy"
-          />
-          <img
-            src={company2}
-            alt="Company 2"
-            className="h-16"
-            loading="lazy"
-          />
-          <div className="flex flex-col justify-center items-center">
-            <img
-              src={company3}
-              alt="Company 3"
-              className="h-24"
-              loading="lazy"
-            />
-            <p className="font-bold text-xl mt-2">Knowillence</p>
-          </div>
-          <div className="flex flex-col justify-center items-center">
-            <img
-              src={company4}
-              alt="Company 4"
-              className="h-16"
-              loading="lazy"
-            />
-            <p className="font-bold text-xl mt-2">TEKHOSL</p>
-          </div>
+<div className="my-10 px-6 py-12 bg-gray-50 border-t-2 border-gray-300">
+  <h2 className="text-center text-3xl font-semibold mb-10">Associated Companies</h2>
+  <div className="flex flex-wrap justify-center items-center gap-16">
+    <div className="flex flex-col justify-center items-center w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6">
+      <img
+        src={company1}
+        alt="Company 1"
+        className="h-16"
+        loading="lazy"
+      />
+    </div>
+    <div className="flex flex-col justify-center items-center w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6">
+      <img
+        src={company2}
+        alt="Company 2"
+        className="h-16"
+        loading="lazy"
+      />
+    </div>
+    <div className="flex flex-col justify-center items-center w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6">
+      <img
+        src={company3}
+        alt="Company 3"
+        className="h-20"
+        loading="lazy"
+      />
+    </div>
+    <div className="flex flex-col justify-center items-center w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6">
+      <img
+        src={company4}
+        alt="Company 4"
+        className="h-16"
+        loading="lazy"
+      />
+    </div>
+    <div className="flex flex-col justify-center items-center w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6">
+      <img
+        src={company5}
+        alt="Company 5"
+        className="h-18"
+        loading="lazy"
+      />
+    </div>
+    <div className="flex flex-col justify-center items-center w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6">
+      <img
+        src={company6}
+        alt="Company 6"
+        className="h-18"
+        loading="lazy"
+      />
+    </div>
+    <div className="flex flex-col justify-center items-center w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6">
+      <img
+        src={company7}
+        alt="Company 7"
+        className="h-18"
+        loading="lazy"
+      />
+    </div>
+    <div className="flex flex-col justify-center items-center w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6">
+      <img
+        src={company8}
+        alt="Company 8"
+        className="h-18"
+        loading="lazy"
+      />
+    </div>
+
+
         </div>
       </div>
 
